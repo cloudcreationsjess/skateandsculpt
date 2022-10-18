@@ -1,0 +1,135 @@
+/***********************************************************************/
+/* VARIABLES ==========================================================*/
+/***********************************************************************/
+
+/***********************************************************************/
+/*==== SITE COLORS ====================================================*/
+/***********************************************************************/
+/* Primary Color */
+@primary-color: #FFFFFF;
+@footer-color: #F8FAF9;
+
+/* Secondary Color */
+@secondary-color: #FFFDF8;
+@secondary-color-dark: #F1EEE4;
+
+/* Accent Color */
+@accent-color: #F5F97A;
+@accent-color-dark: #F4FE79;
+@accent-grey: #F8FAF9;
+@accent-pink: #EFE7DF;
+@accent-tan: #F1EEE4;
+
+/* Text Color */
+@text-color-primary: #000000;
+@text-color-secondary: #FFFFFF;
+@text-color-light: #FFFFFF; // Fonts on a dark background
+@text-color-dark: #263238; // Fonts on a light background
+
+/* Body Color (default text color) */
+@body-color: #000000;
+
+/* Background Color (For page. Typically white or grey) */
+@background-color: @white;
+@background-color-light: #FFFDF8;
+@background-color-dark: #F1EEE4;
+
+/* Link color <a> */
+@link-color: @text-color-primary;
+@link-hover-color: @text-color-primary;
+
+/* Input Place Holder Color */
+@input-placeholder-color: #bbbbbb;
+
+/* Border color (default) */
+@border-color: #d7d7d7;
+
+/*********************************************************************/
+/*==== DEFAULT COLORS ================================================*/
+/***********************************************************************/
+/* Shades */
+@white: #ffffff;
+@grey: #808080;
+@black: #000000;
+@red-light: #ed6c63;
+@red-dark: #bb2011;
+@danger-color: @red-dark;
+@success-color: #28a745;
+
+/* Social Media Colors */
+@color-twitter: #00aced;
+@color-facebook: #3b5998;
+@color-pinterest: #cb2027;
+@color-linkedin: #007bb6;
+@color-youtube: #bb0000;
+@color-vimeo: #aad450;
+@color-tumblr: #32506d;
+@color-instagram: #517fa4;
+@color-flickr: #ff0084;
+@color-wordpress: #21759b;
+@color-stumbleupon: #EB4823;
+@color-soundcloud: #ff3a00;
+
+/***********************************************************************/
+/*==== TYPOGRAPHY =====================================================*/
+/***********************************************************************/
+
+// FONT LOADING EXAMPLES ===============================================
+
+// OPENTYPE ------------------------------------------------------------
+@font-face {
+  font-family: 'Haute Couture';
+  src: url(../fonts/HauteCouture-Regular.otf) format('opentype');
+}
+
+// TRUETYPE ------------------------------------------------------------
+@font-face {
+  font-family: 'Libre';
+  src: url(../fonts/LibreFranklin-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ivy Mode';
+  src: url(../fonts/IvyMode-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ivy Mode Italic';
+  src: url(../fonts/IvyMode-LightItalic.ttf) format('truetype');
+}
+
+/* Font families */
+// Set from fonts loading above or in ../inc/enqueue.php
+// Some fonts have different font-families for different font weights. Set them here.
+
+@font-bold: 'Libre', sans-serif;
+@font-italic: 'Ivy Mode Italic', sans-serif;
+@font-normal: 'Libre', sans-serif;
+@font-light: 'Ivy Mode', sans-serif;
+@font-script: 'Haute Couture', serif;
+
+/* Font Weights */
+@weight-thin: 100;
+@weight-normal: 300;
+@weight-medium: 500;
+@weight-bold: 700;
+
+// Set font-family that will be used for titles, text, buttons, and nav.
+@font-heading: @font-light;
+@font-text: @font-normal;
+@font-btn: @font-bold;
+@font-nav: @font-normal;
+
+@font-awesome: 'Font Awesome 5 Free';
+
+/***********************************************************************/
+/*==== PAGE MEASUREMENTS ==============================================*/
+/***********************************************************************/
+@baseline: 20px;
+@bl: @baseline;
+
+/* Header (Main navigation) */
+@header-height: @baseline*4;
+
+/***********************************************************************/
+/*==== OTHER ==========================================================*/
+/***********************************************************************/
+@easing: all 0.2s ease-in-out;
