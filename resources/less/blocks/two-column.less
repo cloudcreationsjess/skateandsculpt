@@ -1,0 +1,66 @@
+#two-column {
+    overflow: hidden;
+    height: 100%;
+
+    .two-column__container {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: fit-content(1em);
+
+        .two-column__container__col-one {
+            grid-column: 1;
+            height: 100%;
+            justify-self: start;
+            align-self: center;
+            padding: 10px 0;
+
+        }
+
+        .two-column__container__col-two {
+            grid-column: 2;
+            height: 100%;
+            margin-left: 52px;
+            display: grid;
+            grid-auto-columns: minmax(0, 1fr);
+            grid-auto-flow: column;
+            grid-gap: 11px;
+            overflow: hidden;
+
+            .two-column__image-one, .two-column__image-two {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    object-position: center;
+                    object-fit: cover;
+                    max-height: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+
+            }
+
+            .two-column__image-one {
+
+               img {
+                   width: 100%;
+                   height: auto;
+                   object-fit: cover;
+                   object-position: center;
+                   min-height: 100%;
+               }
+            }
+
+            .two-column__image-two {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+}

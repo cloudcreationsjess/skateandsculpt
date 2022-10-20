@@ -30,98 +30,115 @@ $(document).ready(() => {
 /*
  * Any on scroll functionality should be placed here so only one window scroll is called
  */
-function scroller() {
-
-    // == Change Header on scroll ==
-//     var header = $(".js__header");
-//
-//     // ******* SCROLL ************\\
-//     $(window).on('scroll', function () {
-//
-//         // == Change Header on scroll ==
-//         scroll = $(window).scrollTop();
-//         // set scroll amount (px)
-//         if (scroll >= 60) {
-//             header.addClass("header--secondary");// if scroll is further than #px change class
-//             // splashBox.css("z-index", -100);
-//         } else {
-//             header.removeClass("header--secondary"); // if not (is at top) change class back
-//         }
-//
-//     });
+// function scroller() {
 //
 //     // == Change Header on scroll ==
-//     var scroll = scroll;
-//     if (scroll >= 60) {
-//         header.addClass("header--secondary");// if scroll is further than #px change class
-//     } else {
-//         header.removeClass("header--secondary"); // if not (is at top) change class back
-//     }
-}
+// //     var header = $(".js__header");
+// //
+// //     // ******* SCROLL ************\\
+// //     $(window).on('scroll', function () {
+// //
+// //         // == Change Header on scroll ==
+// //         scroll = $(window).scrollTop();
+// //         // set scroll amount (px)
+// //         if (scroll >= 60) {
+// //             header.addClass("header--secondary");// if scroll is further than #px change class
+// //             // splashBox.css("z-index", -100);
+// //         } else {
+// //             header.removeClass("header--secondary"); // if not (is at top) change class back
+// //         }
+// //
+// //     });
+// //
+// //     // == Change Header on scroll ==
+// //     var scroll = scroll;
+// //     if (scroll >= 60) {
+// //         header.addClass("header--secondary");// if scroll is further than #px change class
+// //     } else {
+// //         header.removeClass("header--secondary"); // if not (is at top) change class back
+// //     }
+// }
 
 /*
  * Adds scroll to animation functionality
  * add class="animation-element" to an element you want to be triggered when scrolled to,
  * then your animation found in animation.less
  */
-function animateOnScroll() {
-    var $animation_elements = $('.animation-element');
-    var $tab_animation_elements = $('.tab-animation-element');
-    var $force_in_view = $('.force-in-view');
-    var $window = $(window);
+// function animateOnScroll() {
+//     var $animation_elements = $('.animation-element');
+//     var $tab_animation_elements = $('.tab-animation-element');
+//     var $force_in_view = $('.force-in-view');
+//     var $window = $(window);
+//
+//     function check_if_in_view() {
+//         var window_height = $window.height() - 200;
+//         var window_top_position = $window.scrollTop();
+//         var window_bottom_position = (window_top_position + window_height);
+//
+//         if ($animation_elements) {
+//             $.each($animation_elements, function () {
+//                 var $element = $(this);
+//                 var element_height = $element.outerHeight();
+//                 var element_top_position = $element.offset().top;
+//                 var element_bottom_position = (element_top_position + element_height);
+//
+//                 //check to see if this current container is within viewport
+//                 if ((element_bottom_position >= window_top_position) &&
+//                     (element_top_position <= window_bottom_position)) {
+//                     $element.addClass('in-view');
+//                 }
+//             });
+//         }
+//         if ($force_in_view) {
+//             $.each($force_in_view, function () {
+//                 $(this).addClass('in-view');
+//             });
+//         }
+//     }
+//
+//     $(window).load(function () {
+//         setTimeout(function () {
+//             $window.on('scroll resize', check_if_in_view);
+//             $window.trigger('scroll');
+//         }, 600);
+//     });
+// }
 
-    function check_if_in_view() {
-        var window_height = $window.height() - 200;
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
 
-        if ($animation_elements) {
-            $.each($animation_elements, function () {
-                var $element = $(this);
-                var element_height = $element.outerHeight();
-                var element_top_position = $element.offset().top;
-                var element_bottom_position = (element_top_position + element_height);
+//swiper////////////////////////////////
 
-                //check to see if this current container is within viewport
-                if ((element_bottom_position >= window_top_position) &&
-                    (element_top_position <= window_bottom_position)) {
-                    $element.addClass('in-view');
-                }
-            });
-        }
-        if ($force_in_view) {
-            $.each($force_in_view, function () {
-                $(this).addClass('in-view');
-            });
-        }
-    }
+// init Swiper:
 
-    $(window).load(function () {
-        setTimeout(function () {
-            $window.on('scroll resize', check_if_in_view);
-            $window.trigger('scroll');
-        }, 600);
-    });
-}
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    modules: [Pagination],
+    direction: 'horizontal',
+    loop: true,
 
-//Navigation bold on current page
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        bulletActiveClass: 'swiper-pagination-bullet-active',
+        bulletClass: 'swiper-pagination-bullet',
+        clickable: true,
+    },
 
-$(function(){
+    //fade
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
 
-    $(function() {
-        // this will get the full URL at the address bar
-        var url = window.location.href;
+    //accessible
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
 
-        // passes on every "a" tag
-        $("#main-menu a").each(function() {
-            // checks if its the same on the address bar
-            if (url == (this.href)) {
-                $(this).closest("li").addClass("active");
-                //for making parent of submenu active
-                $(this).closest("li").parent().parent().addClass("active");
-            }
-        });
-    });
-
+    a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+    },
 });
 

@@ -11,6 +11,13 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     @yield('styles')
 
     @stack('header.scripts')
@@ -27,7 +34,7 @@
 
 <div id="app">
 
-<!-- MOBILE NAV -->
+    <!-- MOBILE NAV -->
 
-    @include('partials.nav')
-    {{--        @include('partials.mega-nav')--}}
+@include('partials.nav')
+{{--        @include('partials.mega-nav')--}}

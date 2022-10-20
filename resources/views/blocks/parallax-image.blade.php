@@ -2,7 +2,7 @@
   Title: Parallax Image
   Description: This is section with a full width image that has a parallax effect
   Category: formatting
-  Icon: imageS
+  Icon: format-image
   Keywords: parallax image
   Mode: edit
   Align: center
@@ -10,14 +10,12 @@
   SupportsAlign: left right
   SupportsMode: false
   SupportsMultiple: true
-  EnqueueStyle: styles/style.css
-  EnqueueScript: scripts/script.js
   EnqueueAssets:
 --}}
 
 
-<section class="parallax-image">
-    <div class="parallax">
-        <img src='{{ the_field('image') }}' alt="Green Source Nutrition">
+<section id="parallax-image">
+    <div class="parallax" style="background-image: url('{{ the_field('image') }}')">
+
     </div>
 </section>

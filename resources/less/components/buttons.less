@@ -13,7 +13,7 @@ button:focus {outline: 0 !important;}
     user-select: none;
     .font-size(15);
     line-height: 1.5;
-    font-weight: normal;
+    font-weight: 600;
     text-transform: uppercase;
     background-color: @black;
     color: @text-color-light;
@@ -46,13 +46,12 @@ button:focus {outline: 0 !important;}
 
 /* Primary Button */
 .btn--primary, .btn--primary:visited {
-    height: 50px;
-    line-height: 50px;
-    .border-radius(25px);
-    background-color: @primary-color;
+    height: 45px;
+    line-height: 45px;
+    background-color: @text-color-primary;
     border: none;
     color: @white;
-    padding: 0 40px;
+    padding: 0 15px;
     box-shadow: none;
 
     /* Hover */
@@ -60,7 +59,6 @@ button:focus {outline: 0 !important;}
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
         border: none;
         background-color: @accent-color;
-        .box-shadow();
     }
 
     /* Click */

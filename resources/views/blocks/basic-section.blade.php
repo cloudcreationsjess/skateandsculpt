@@ -10,28 +10,23 @@
   SupportsAlign: left right
   SupportsMode: false
   SupportsMultiple: true
-  EnqueueStyle: styles/style.css
-  EnqueueScript: scripts/script.js
-  EnqueueAssets:
 --}}
 
-<section class="background-color-{{ get_field('background_color') }}">
-
-    @if(have_rows('content'))
-
-        <div class="content">
+<section id="basic-section" class="background-color--{{ get_field('background_color') }}">
+    <div class="basic-section__container {{ get_field('width') == 'Wide' ? 'container' : '' }}">
+        @if(have_rows('content'))
 
                 <?php while (have_rows('content')): the_row(); ?>
 
 
             @if( get_row_layout() == 'spacer')
                 @php($space = get_sub_field('space'))
-                <div class="space-{{ $space }}"></div>
+                <div class="spacer" style="height: {{ $space }}px;"></div>
             @endif
 
             @if( get_row_layout() == 'heading')
                 @php($text = get_sub_field('text'))
-                <div class='heading'>{!! $text !!}</div>
+                <div class='basic-heading h1'>{!! $text !!}</div>
             @endif
 
             @if( get_row_layout() == 'script_heading')
@@ -46,7 +41,7 @@
 
             @if( get_row_layout() == 'button')
                 @php($button = get_sub_field('button'))
-                <a class="button-primary" href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
+                <a class="btn btn--primary" href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
             @endif
 
             @if( get_row_layout() == 'underlined_text_link')
@@ -54,14 +49,22 @@
                 <a class="underlined-text-link" href='{{ $link['url'] }}'>{!! $link['call_to_action'] !!}</a>
             @endif
 
-            @if( get_row_layout() == "image")
-                @php($img = get_sub_field('image'))
-                <img src='{{ $img }}' alt='Green Source Nutrition'>
+            @if( get_row_layout() == "two_images")
+                @php($img = get_sub_field('image_left'))
+                @php($img2 = get_sub_field('image_right'))
+                <div class="two-images">
+                    <div class="two-images__one">
+                        <img src='{{ $img }}' alt='Green Source Nutrition'>
+                    </div>
+                    <div class="two-images__two">
+                        <img src='{{ $img2 }}' alt='Green Source Nutrition'>
+                    </div>
+                </div>
             @endif
 
             @if( get_row_layout() == "basic_content")
                 @php($text = get_sub_field('text'))
-                {{ $text }}
+                {!! $text !!}
             @endif
 
             @if( get_row_layout() == "icon_list")
@@ -70,13 +73,8 @@
                 <ul class="icon-list">
                     @foreach($list_item as $item)
                         <li class="icon-list__item">
-                            @if( $list_type == 'Icon List')
-                                <div class="icon-list__icon">{{ the_image($item["icon"]) }}</div>
-                            @endif
-                            @if( $list_type == 'Colored Icon List' || 'Accordion Icon List')
-                                <div class="icon-list__colored-icon">{{ the_image($item["icon"]) }}</div>
-                            @endif
-                            <div class="icon-list__content">
+                            <div class="{{ $list_type == 'Icon List' ? 'icon-list__icon' : 'icon-list__colored-icon' }}">{{ the_image($item["icon"]) }}</div>
+                            <div class="icon-list__content {{ $list_type == 'Icon List' ? 'icon-list__content--wide' : '' }}">
                                 @if($item)
                                     <h5>{!! $item['title'] !!}</h5>
                                     @if( $item['accordion_content'] )
@@ -104,6 +102,6 @@
             @endif
 
             <?php endwhile; ?>
-        </div>
-    @endif
+        @endif
+    </div>
 </section>

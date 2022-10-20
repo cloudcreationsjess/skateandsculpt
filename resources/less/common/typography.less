@@ -10,10 +10,10 @@
 
 body {
     font-family: @font-text;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1;
-    color: @body-color;
+    color: @text-color-primary;
 }
 
 /***********************************************************************/
@@ -24,13 +24,19 @@ body {
 }
 
 h1, .h1 {
-    .font-size(45);
-    line-height: 1.2;
+    .font-size(40);
+    line-height: 55px;
     font-family: @font-heading;
-    color: @primary-color;
-    margin-bottom: @baseline;
+    color: @text-color-primary;
+    margin-bottom: @baseline * 1.5;
+    margin-top: @baseline;
     letter-spacing: 0px;
     text-transform: none;
+    font-weight: @weight-normal;
+
+    span {
+        text-decoration-color: @accent-color !important;
+    }
 }
 
 h2, .h2 {
@@ -87,13 +93,13 @@ h6, .h6 {
 /*********** Paragraphs and Text Effects *******************************/
 /***********************************************************************/
 p, .p {
-    .font-size(16);
+    .font-size(18);
     line-height: 1.5;
     font-family: @font-text;
-    color: @body-color;
-    margin-bottom: @baseline;
-    letter-spacing: 0px;
+    color: @text-color-primary;
+    letter-spacing: 0.36px;
     text-transform: none;
+    margin-bottom: 10px;
 }
 
 i, em {

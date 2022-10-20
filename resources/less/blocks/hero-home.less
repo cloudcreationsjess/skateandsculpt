@@ -1,0 +1,48 @@
+#hero-home {
+    height: calc(100vh - @header-height);
+    width: 100%;
+    position: relative;
+    margin-top: @header-height;
+    overflow: hidden;
+
+    .hero-home__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .flex-row(flex-start);
+        height: calc(100vh - @header-height);
+        width: auto;
+        z-index: 0;
+
+        .hero-home__background--1 {
+            width: calc(70% - 18px);
+            margin-right: 18px;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-home__background--2 {
+            width: 30%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+
+    .hero-home__content-box {
+        background-color: @white;
+        padding: 50px 30px;
+        .flex-column();
+        height: 100%;
+        max-width: 640px;
+        margin-left: 50%;
+        margin-top: 50vh;
+        transform: translate(-20%, -50%);
+        z-index: 1;
+        text-align: center;
+
+        .btn {
+            margin-bottom: 7px;
+        }
+    }
+}
