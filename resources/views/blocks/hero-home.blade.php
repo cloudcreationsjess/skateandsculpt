@@ -32,9 +32,3 @@
     </div>
 
 </section>
-
-<style type="text/css">
-    [data-{{ $block['id'] }}] {
-        background: {{ get_field('color') }};
-    }
-</style>

@@ -81,6 +81,14 @@
         echo '</div>';
     }
 
+    //ADD OPTIONS PAGE
+
+    if( function_exists('acf_add_options_page') ) {
+
+        acf_add_options_page();
+
+    }
+
     //AUTOMATICALLY REGISTER BLOCKS BY MAKING FILE/////////////////////////////////
 
     // Check whether WordPress and ACF are available; bail if not.

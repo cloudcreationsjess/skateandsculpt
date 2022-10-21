@@ -1,0 +1,64 @@
+#cta-banner {
+    .cta-banner__container {
+        display: grid;
+        position: relative;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: min-content;
+        width: 100%;
+        overflow: hidden;
+
+        .cta-banner__container__image {
+            grid-column: 1;
+            height: 100%;
+            width: auto;
+            position: relative;
+
+            img {
+                height: auto;
+                width: 100%;
+                object-position: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+
+        }
+
+        .cta-banner__container__content {
+            grid-column: 2;
+            .flex-column();
+            position: relative;
+            background-color: @accent-tan;
+            padding: 100px 70px;
+            text-align: center;
+
+            .content__circle {
+                position: absolute;
+                top: 8%;
+                left: -8%;
+                background-color: @accent-color;
+                height: 100px;
+                width: 100px;
+                .flex-column();
+                border-radius: 50%;
+                font-family: @font-script;
+                .font-size(28);
+                line-height: 39px;
+                transform: rotate(-15deg);
+
+            }
+
+            .all-caps-heading {
+                margin-bottom: 18px;
+                max-width: 500px;
+            }
+
+            .basic-content {
+                margin-bottom: 30px;
+                max-width: 360px;
+            }
+
+        }
+    }
+}

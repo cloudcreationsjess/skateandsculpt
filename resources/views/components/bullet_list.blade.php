@@ -1,7 +1,8 @@
+@php($list = get_sub_field('list'))
 <ul class="bullet-list">
     @foreach($list as $item)
         <li class="bullet-list__item">
-           {{ $item['text'] }}
+            {{ $item['text'] }}
         </li>
     @endforeach
 </ul>

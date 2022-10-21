@@ -2,6 +2,14 @@
  * External Dependencies
  */
 import 'jquery';
+// core version + navigation, pagination modules:
+import Swiper, { Navigation, Pagination } from 'swiper';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 $(document).ready(() => {
     // windowLoad();
@@ -103,42 +111,4 @@ $(document).ready(() => {
 //         }, 600);
 //     });
 // }
-
-
-//swiper////////////////////////////////
-
-// init Swiper:
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    modules: [Pagination],
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-        bulletClass: 'swiper-pagination-bullet',
-        clickable: true,
-    },
-
-    //fade
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true,
-    },
-
-    //accessible
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-    },
-
-    a11y: {
-        prevSlideMessage: 'Previous slide',
-        nextSlideMessage: 'Next slide',
-    },
-});
 
