@@ -1,5 +1,5 @@
 {{--
-  Title: Content and Image
+  Title: Image and Content
   Description: This is a customizable section with half image half content
   Category: formatting
   Icon: menu
@@ -12,14 +12,13 @@
   SupportsMultiple: true
 --}}
 
-<section id="hero-home" class="background-color--{{ get_field('background_color') }}">
+<section id="image-and-content" class="background-color--{{ get_field('background_color') }}">
 
     <div class='container-fluid'>
-        <div class="row">
-            <div class='hero-home__background'>
+        <div class="image-and-content__container">
+            <div class='image-and-content__image'>
                 <img src='{{ the_field('image') }}' alt='Green Source Nutrition'>
-
-                <div class="hero-home__content">
+                <div class="image-and-content__content">
                     <x-basic_content/>
                 </div>
             </div>

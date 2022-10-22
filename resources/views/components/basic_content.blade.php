@@ -46,17 +46,21 @@
         </div>
     @endif
 
+    @if( get_row_layout() == "image_and_content")
+        <x-image_and_content />
+    @endif
+
     @if( get_row_layout() == "basic_content")
         @php($text = get_sub_field('text'))
         {!! $text !!}
     @endif
 
     @if( get_row_layout() == "icon_list")
-        <x-icon_list />
+        <x-icon_list/>
     @endif
 
     @if( get_row_layout() == "bullet_list")
-        <x-bullet_list />
+        <x-bullet_list/>
     @endif
 
     <?php endwhile; ?>

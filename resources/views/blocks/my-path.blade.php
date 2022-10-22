@@ -17,22 +17,39 @@
         <div class="my-path__container">
             <div class="my-path__section-one">
                 <div class="image-left">
-                    <img src="" alt="">
-                    <div class="image-left__logo"></div>
+                    <img src="{{ get_field('image_left') }}" alt="">
+                    <div class="image-left__logo">
+                        <img src="{{ get_field('logo') }}" alt="">
+                    </div>
                 </div>
                 <div class="basic-content">
-                    <x-basic_content />
+                    <div class="script-heading">
+                        {!! get_field('script_heading') !!}
+                    </div>
+                    {!! get_field('text_section_one') !!}
                 </div>
             </div>
-            <div class="image-parallax">
-                <img src="" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="parallax-image">
+            <div class="parallax" style="background-image: url('{{ the_field('image_parallax') }}')">
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="my-path__container">
             <div class="my-path__section-two">
-                <div class="basic-content">
-                    <x-basic_content />
+                <div class="content">
+                    <div class="all-caps-heading">
+                        {!! get_field('all_caps_heading') !!}
+                    </div>
+                    <div class="basic-content">
+                        {!! get_field('text_section_two') !!}
+                    </div>
                 </div>
                 <div class="image-right">
-                    <img src="" alt="">
+                    <img src="{{ get_field('image_right') }}" alt="">
                 </div>
             </div>
         </div>

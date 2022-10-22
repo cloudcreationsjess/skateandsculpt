@@ -1,13 +1,23 @@
 #my-path {
     padding: 60px 0;
 
+
+    .parallax-image {
+
+        .parallax {
+            background-size: contain;
+        }
+
+    }
+
+
     .my-path__container {
         background-color: @white;
-        padding: 50px 0;
+        padding: 50px 80px;
 
         .my-path__section-one {
             display: grid;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 25% auto;
             grid-template-rows: 1fr;
             grid-column-gap: 60px;
 
@@ -15,10 +25,12 @@
                 width: 345px;
                 height: 471px;
                 position: relative;
+                overflow: hidden;
+                margin-left: -40px;
 
                 img {
-                    width: 100%;
-                    height: auto;
+                    width: auto;
+                    height: 100%;
                     object-fit: cover;
                     object-position: center;
                     position: absolute;
@@ -30,7 +42,7 @@
                     position: absolute;
                     bottom: 0;
                     right: 0;
-                    transform: translate(50%, 25%)
+                    transform: translate(50%, 25%);
                     width: 159px;
                     height: 159px;
 
@@ -41,9 +53,37 @@
 
                 }
 
-
             }
         }
 
+
+        .my-path__section-two {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 1fr;
+            grid-column-gap: 60px;
+
+            .basic-content {
+
+            }
+
+            .image-right {
+                width: 345px;
+                height: 471px;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    object-position: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+            }
+        }
     }
 }
