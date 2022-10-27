@@ -9,11 +9,6 @@
             <div class="icon-list__content {{ $list_type == 'Icon List' ? 'icon-list__content--wide' : '' }}">
                 @if($item)
                     <h5>{!! $item['title'] !!}</h5>
-                    @if( $item['accordion_content'] )
-                        <div class='js-accordion'>
-                            <p>{!! $item['accordion_content'] !!}</p>
-                        </div>
-                    @endif
                 @endif
             </div>
         </li>

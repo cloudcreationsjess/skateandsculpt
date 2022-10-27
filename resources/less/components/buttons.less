@@ -20,7 +20,7 @@ button:focus {outline: 0 !important;}
     letter-spacing: 0.75px;
     border: none;
     border-radius: 0px;
-    padding: 0px 15px;
+    padding: 0px 25px;
     .transition();
     .appearance();
 
@@ -51,14 +51,16 @@ button:focus {outline: 0 !important;}
     background-color: @text-color-primary;
     border: none;
     color: @white;
-    padding: 0 15px;
+    padding: 0 25px;
     box-shadow: none;
+    min-width: 200px;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
         border: none;
         background-color: @accent-color;
+        color: @text-color-primary;
     }
 
     /* Click */
@@ -66,6 +68,7 @@ button:focus {outline: 0 !important;}
     &:focus {
         border: none;
         background-color: @accent-color;
+        color: @text-color-primary;
         box-shadow: none;
     }
 }

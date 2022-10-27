@@ -335,5 +335,14 @@
             return class_exists('Roots\Acorn\Application');
         }
 
+    // Prevent WP from adding <p> tags on pages
+    function disable_wp_auto_p( $content ) {
+        if ( is_singular( 'page' ) ) {
+            remove_filter( 'the_content', 'wpautop' );
+            remove_filter( 'the_excerpt', 'wpautop' );
+        }
+        return $content;
+    }
+    add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 
 

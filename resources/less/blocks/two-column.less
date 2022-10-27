@@ -1,66 +1,57 @@
 #two-column {
     overflow: hidden;
     height: 100%;
+    padding-top: 85px;
+    padding-bottom: 120px;
 
-    .two-column__container {
-        display: grid;
-        position: relative;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: fit-content(1em);
+    .column-one__content {
 
-        .two-column__container__col-one {
-            grid-column: 1;
-            height: 100%;
-            justify-self: start;
-            align-self: center;
-            padding: 10px 0;
-
+        .script-heading {
+            margin-bottom: 8px;
         }
 
-        .two-column__container__col-two {
-            grid-column: 2;
+    }
+
+    .two-column__image-one {
+        height: 100%;
+        width: 100%;
+        padding-right: 11px;
+        position: relative;
+
+        img {
             height: 100%;
-            margin-left: 52px;
-            display: grid;
-            grid-auto-columns: minmax(0, 1fr);
-            grid-auto-flow: column;
-            grid-gap: 11px;
-            overflow: hidden;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
 
-            .two-column__image-one, .two-column__image-two {
-                height: 100%;
+        .spinning-logo__container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-50%, 50%);
+            width: 159px;
+            height: 159px;
+
+            img.spinning-logo {
                 width: 100%;
-                overflow: hidden;
-                position: relative;
-
-                img {
-                    object-position: center;
-                    object-fit: cover;
-                    max-height: 100%;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translateY(-50%) translateX(-50%);
-                }
-
-            }
-
-            .two-column__image-one {
-
-               img {
-                   width: 100%;
-                   height: auto;
-                   object-fit: cover;
-                   object-position: center;
-                   min-height: 100%;
-               }
-            }
-
-            .two-column__image-two {
-                width: 100%;
-                height: 100%;
+                height: auto;
             }
 
         }
     }
+
+    .two-column__image-two {
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
+
+    }
+
 }

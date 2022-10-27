@@ -1,0 +1,35 @@
+#blog-hero {
+    height: calc(100vh - @header-height);
+    width: 100%;
+    position: relative;
+    margin-top: @header-height;
+    overflow: hidden;
+
+
+    .column-one__container {
+        width: 100%;
+        height: calc(100vh - 80px);
+        overflow: hidden;
+
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0px 15%;
+        }
+    }
+
+    .column-two__container {
+        height: 100%;
+        width: 100%;
+        max-width: 421px;
+        text-align: center;
+        margin: auto;
+
+        .blog-title {
+            margin-bottom: 25px;
+        }
+
+    }
+}

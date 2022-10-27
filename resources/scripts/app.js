@@ -21,7 +21,21 @@ $(document).ready(() => {
     // if (url_pathname == "/page-name/") {
         // yourScript();
     // }
+    $('.collapse').collapse()
+
+    window.onscroll = function () {
+        scrollRotate();
+    };
+
+    function scrollRotate() {
+        let images = document.querySelector(".spinning-logo");
+        images.style.transform = "rotate(" + window.scrollY/5 + "deg)";
+    }
+
+
+
 });
+
 
 /*
  * Removes loading animation when page load is completed
@@ -111,4 +125,5 @@ $(document).ready(() => {
 //         }, 600);
 //     });
 // }
+
 

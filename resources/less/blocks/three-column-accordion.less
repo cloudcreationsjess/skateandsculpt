@@ -1,0 +1,95 @@
+#three-column-accordion {
+    padding: 85px 0;
+    text-align: center;
+
+    .basic-heading {
+        margin-bottom: 55px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .accordion {
+
+        .row {
+            margin-right: -25px;
+            margin-left: -25px;
+        }
+
+        .accordion-item {
+            margin-bottom: 70px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+
+            .accordion-header {
+                font-family: @font-normal;
+                text-transform: uppercase;
+                .font-size(20);
+                letter-spacing: 0.4px;
+                line-height: 30px;
+                margin-bottom: 25px;
+
+                .accordion-button {
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                    height: auto;
+                    text-align: left;
+                    position: relative;
+
+                    .plus{display: none;}
+                    .minus{display: block;}
+
+                    &.collapsed {
+                        .plus{display: block}
+                        .minus{display: none;}
+                    }
+
+                    .accordion-button__bar {
+                        height: 28px;
+                        width: 100%;
+                        border-bottom: 1px solid @black;
+                        display: block;
+                        margin-bottom: 17.5px;
+                        position: relative;
+
+                        .accordion-icon {
+                            height: 10px;
+                            width: 10px;
+                            stroke-width: 4;
+
+                        }
+
+                    }
+
+                    .accordion-button__heading {
+                        .flex-row(@justify: flex-start, @align: flex-start);
+
+                        .number {
+                            font-weight: bold;
+                            margin-right: 11px;
+                            margin-top: -2px;
+                        }
+
+                        .all-caps-heading {
+                            font-weight: normal;
+                        }
+                    }
+
+                }
+
+            }
+
+            .accordion-body {
+                text-align: left;
+            }
+
+        }
+    }
+
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

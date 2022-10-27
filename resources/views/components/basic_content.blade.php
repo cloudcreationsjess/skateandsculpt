@@ -33,6 +33,14 @@
         <a class="underlined-text-link" href='{{ $link['url'] }}'>{!! $link['call_to_action'] !!}</a>
     @endif
 
+    @if( get_row_layout() == 'logo')
+        @php($link = get_sub_field('logo'))
+        <div class="basic-logo">
+            <img src="{{ $link }}" alt="Green Source Nutrition">
+        </div>
+    @endif
+
+
     @if( get_row_layout() == "two_images")
         @php($img = get_sub_field('image_left'))
         @php($img2 = get_sub_field('image_right'))
@@ -47,7 +55,7 @@
     @endif
 
     @if( get_row_layout() == "image_and_content")
-        <x-image_and_content />
+        <x-image_and_content/>
     @endif
 
     @if( get_row_layout() == "basic_content")
@@ -58,6 +66,10 @@
     @if( get_row_layout() == "icon_list")
         <x-icon_list/>
     @endif
+
+        @if( get_row_layout() == "accordion_icon_list")
+            <x-accordion_colored_icon_list/>
+        @endif
 
     @if( get_row_layout() == "bullet_list")
         <x-bullet_list/>

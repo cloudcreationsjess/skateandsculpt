@@ -16,17 +16,23 @@
     <div class="container">
         <div class="my-path__container">
             <div class="my-path__section-one">
-                <div class="image-left">
-                    <img src="{{ get_field('image_left') }}" alt="">
-                    <div class="image-left__logo">
-                        <img src="{{ get_field('logo') }}" alt="">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="image-left">
+                            <img src="{{ get_field('image_left') }}" alt="">
+                            <div class="spinning-logo__container">
+                                <img class="spinning-logo" src='{{ the_field('logo') }}' alt='Green Source Nutrition'>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="basic-content">
-                    <div class="script-heading">
-                        {!! get_field('script_heading') !!}
+                    <div class="col">
+                        <div class="basic-content">
+                            <div class="script-heading">
+                                {!! get_field('script_heading') !!}
+                            </div>
+                            {!! get_field('text_section_one') !!}
+                        </div>
                     </div>
-                    {!! get_field('text_section_one') !!}
                 </div>
             </div>
         </div>

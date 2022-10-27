@@ -1,8 +1,8 @@
 @php($list = get_sub_field('list'))
 <ul class="bullet-list">
-    @foreach($list as $item)
+    <?php while (have_rows('list')): the_row(); ?>
         <li class="bullet-list__item">
-            {{ $item['text'] }}
+            {{ get_sub_field('text') }}
         </li>
-    @endforeach
+    <?php endwhile; ?>
 </ul>

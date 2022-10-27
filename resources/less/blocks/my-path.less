@@ -5,7 +5,7 @@
     .parallax-image {
 
         .parallax {
-            background-size: contain;
+
         }
 
     }
@@ -16,37 +16,38 @@
         padding: 50px 80px;
 
         .my-path__section-one {
-            display: grid;
-            grid-template-columns: 25% auto;
-            grid-template-rows: 1fr;
-            grid-column-gap: 60px;
+
+            .basic-content {
+                padding-left: 60px;
+
+                .script-heading {
+                    margin-bottom: 9px;
+                }
+            }
+
+
 
             .image-left {
-                width: 345px;
-                height: 471px;
-                position: relative;
-                overflow: hidden;
                 margin-left: -40px;
+                margin-bottom: 100px;
+                position: relative;
 
                 img {
-                    width: auto;
+                    width:100%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                 }
 
-                .image-left__logo {
+                .spinning-logo__container {
                     position: absolute;
                     bottom: 0;
                     right: 0;
-                    transform: translate(50%, 25%);
+                    transform: translate(50%, 50%);
                     width: 159px;
                     height: 159px;
 
-                    img {
+                    img.spinning-logo {
                         width: 100%;
                         height: auto;
                     }
@@ -62,6 +63,10 @@
             grid-template-columns: 60% 40%;
             grid-template-rows: 1fr;
             grid-column-gap: 60px;
+
+            .all-caps-heading {
+                margin-bottom: 20px;
+            }
 
             .basic-content {
 
