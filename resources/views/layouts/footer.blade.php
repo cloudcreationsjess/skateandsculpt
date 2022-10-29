@@ -8,15 +8,19 @@
                     <div class="subscribe-text">{{ the_field('subscribe_text', 'option') }}</div>
                     <div class="socials">
                         <?php while (have_rows('socials', 'option')): the_row(); ?>
-                        <a href="{{ get_sub_field('url') }}">
+                        <a target="_blank" href="{{ get_sub_field('url') }}">
                             <img src="{{ get_sub_field('icon') }}" alt=""></a>
                         <?php endwhile; ?>
                     </div>
                 </div>
                 <div class="form">
-                    <input type="text">
-                    <input type="text">
-                    <button class="btn btn--primary">SUBMIT</button>
+                    <div id="fd-form-635c7e168ee4395073b536cd"></div>
+                    <script>
+                        window.fd('form', {
+                            formId: '635c7e168ee4395073b536cd',
+                            containerEl: '#fd-form-635c7e168ee4395073b536cd'
+                        });
+                    </script>
                 </div>
             </div>
             <div class='footer__top__logo'>
@@ -47,11 +51,17 @@
         </div>
     </div>
 </footer>
+</div> <!-- #panel ends -->
 </div><!-- #app end -->
 
 @php(do_action('get_footer'))
 @php(wp_footer())
 @stack('footer.scripts')
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script>

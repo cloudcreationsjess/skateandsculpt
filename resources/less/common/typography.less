@@ -42,27 +42,29 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    .font-size(36);
+    .font-size(20);
     line-height: 1.2;
     font-family: @font-heading;
-    color: @primary-color;
+    color: @text-color-primary;
     margin-bottom: @baseline;
     letter-spacing: 0px;
-    text-transform: none;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 h3, .h3 {
-    .font-size(24);
+    .font-size(18);
     line-height: 1.2;
-    font-family: @font-heading;
-    color: @primary-color;
+    font-family: @font-normal;
+    color: @text-color-primary;
     margin-bottom: @baseline;
     letter-spacing: 0px;
-    text-transform: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 h4, .h4 {
-    .font-size(20);
+    .font-size(18);
     line-height: 1;
     font-family: @font-heading;
     color: @text-color-primary;
@@ -72,8 +74,8 @@ h4, .h4 {
 }
 
 h5, .h5 {
-    .font-size(18);
-    line-height: 1;
+    .font-size(15);
+    line-height: 20px;
     font-family: @font-text;
     color: @text-color-primary;
     margin-bottom: @bl*0.5;
@@ -125,7 +127,7 @@ sup, sub {
 /*********** Links *****************************************************/
 /***********************************************************************/
 a, a:visited {
-    color: @link-color;
+    color: @text-color-primary;
     text-decoration: none;
     outline: none;
     .transition();

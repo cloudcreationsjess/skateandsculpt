@@ -1,16 +1,231 @@
 /***********************************************************************/
 /*********** CONTACT PAGE **********************************************/
 /***********************************************************************/
+#contact-page-hero {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: @header-height;
+    overflow: hidden;
+
+    .contact-page__section-one {
+        width: 100%;
+        height: 100%;
+
+        .contact-page__section-one__content {
+            margin-top: 185px;
+            max-width: 572px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .script-heading {
+                margin-bottom: 10px;
+            }
+
+            .basic-heading {
+                margin-bottom: 80px;
+            }
+
+            .all-caps-heading {
+                margin-bottom: 30px;
+            }
+
+            .basic-content {
+                margin-bottom: 30px;
+            }
+
+        }
+
+        .contact-page__section-one__images {
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            .contact-page__image-one {
+                height: 90vh;
+                width: auto;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: bottom left;
+                }
+            }
+
+            .contact-page__image-two {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translate(-25%, 40%);
+                aspect-ratio: 1/1.2;
+                max-height: 419px;
+                height: 100%;
+                width: auto;
+                overflow: hidden;
+                z-index: 3;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-position: left;
+                    object-fit: cover;
+                }
+            }
+
+            .contact-page__image-two {
+
+            }
+
+        }
+    }
+
+    .contact-page__section-two {
+        width: 100%;
+        height: 100%;
+
+        .contact-page__section-two__content {
+            max-width: 572px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .basic-content {
+                margin-top: 30px;
+                margin-bottom: 60px;
+            }
+
+        }
+
+        .contact-page__section-two__image {
+            z-index: 0;
+            aspect-ratio: 1.3/1;
+            width: 80%;
+            margin-left: auto;
+            margin-bottom: 85px;
+            margin-top: 70px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
+    }
+
+}
+
+#contact-page-form {
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+
+    .contact-page-form {
+        .flex-column();
+        text-align: center;
+
+        .basic-heading {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .all-caps-heading {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+
 
 /***********************************************************************/
 /*** CONTACT FORM 7 ****************************************************/
 /***********************************************************************/
 
 .wpcf7-form-control-wrap {
+
+    input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-bottom: 1px solid black;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: @font-normal;
+        .font-size(15);
+        letter-spacing: 0.3px;
+        line-height: 20px;
+        color: @black;
+
+        &:focus {
+            border: 1px solid @black;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: #000 !important;
+        opacity: 1;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000 !important;
+        opacity: 1;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #000 !important;
+        opacity: 1;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #000 !important;
+        opacity: 1;
+    }
+
+}
+
+.wpcf7 {
+    width: 55%;
+    text-align: center;
+
+    label {
+        text-transform: uppercase;
+        font-family: @font-normal;
+        .font-size(15);
+        letter-spacing: 0.3px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    textarea {
+        border: 1px solid black;
+        background-color: @white;
+        margin-top: 7px;
+        color: black;
+        text-transform: none;
+        text-align: left;
+    }
+
+    button {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.wpcf7-form-control {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .wpcf7-not-valid-tip {
-
+    text-transform: uppercase;
+    font-family: @font-normal;
+    .font-size(15);
+    letter-spacing: 0.3px;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {

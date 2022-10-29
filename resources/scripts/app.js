@@ -2,12 +2,6 @@
  * External Dependencies
  */
 import 'jquery';
-// core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from 'swiper';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 
 
@@ -32,10 +26,36 @@ $(document).ready(() => {
         images.style.transform = "rotate(" + window.scrollY/5 + "deg)";
     }
 
+    mobileMenu();
+
 
 
 });
 
+/* MOBILE MENU */
+function mobileMenu() {
+    var $menu = document.querySelector('#mobile-menu')
+    var html = document.querySelector('html');
+    //hamburger
+    var hamburger = document.querySelector('.js__slideout-toggle');
+    hamburger.addEventListener('click',() => {
+        html.classList.toggle('is--mobile-nav__active');
+    });
+
+    document.querySelector('.mobile-popout').addEventListener('click', () => {
+        html.classList.remove('is--mobile-nav__active')
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    });
+}
 
 /*
  * Removes loading animation when page load is completed

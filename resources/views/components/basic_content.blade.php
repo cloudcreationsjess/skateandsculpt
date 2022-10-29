@@ -24,8 +24,7 @@
     @endif
 
     @if( get_row_layout() == 'button')
-        @php($button = get_sub_field('button'))
-        <a class="btn btn--primary" href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
+        <x-button/>
     @endif
 
     @if( get_row_layout() == 'underlined_text_link')
@@ -44,14 +43,7 @@
     @if( get_row_layout() == "two_images")
         @php($img = get_sub_field('image_left'))
         @php($img2 = get_sub_field('image_right'))
-        <div class="two-images">
-            <div class="two-images__one">
-                <img src='{{ $img }}' alt='Green Source Nutrition'>
-            </div>
-            <div class="two-images__two">
-                <img src='{{ $img2 }}' alt='Green Source Nutrition'>
-            </div>
-        </div>
+        <x-two-images/>
     @endif
 
     @if( get_row_layout() == "image_and_content")
@@ -67,9 +59,9 @@
         <x-icon_list/>
     @endif
 
-        @if( get_row_layout() == "accordion_icon_list")
-            <x-accordion_colored_icon_list/>
-        @endif
+    @if( get_row_layout() == "accordion_icon_list")
+        <x-accordion_colored_icon_list/>
+    @endif
 
     @if( get_row_layout() == "bullet_list")
         <x-bullet_list/>
