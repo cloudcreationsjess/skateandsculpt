@@ -5,6 +5,12 @@
     margin-top: @header-height;
     overflow: hidden;
 
+    .md({
+        height: 100%;
+        overflow: unset;
+        padding-bottom: 44px;
+    });
+
     .hero-home__background {
         position: absolute;
         top: 0;
@@ -20,12 +26,19 @@
             min-height: 100%;
             object-fit: cover;
             object-position: center;
+            .sm({
+               width: 100%;
+            });
         }
         .hero-home__background--2 {
             width: 30%;
             height: 100%;
             object-fit: cover;
             object-position: right;
+
+            .sm({
+               display: none;
+            });
         }
     }
 
@@ -40,6 +53,22 @@
         transform: translate(-20%, -50%);
         z-index: 1;
         text-align: center;
+
+        .lg({
+            margin-top: 45vh;
+        });
+
+        .md({
+            margin-left: auto;
+            margin-right: auto;
+            transform: none;
+        });
+
+        .sm({
+           width: 80%;
+            padding: 30px 20px;
+            margin-top: 80vh;
+        });
 
         .btn {
             margin-bottom: 7px;

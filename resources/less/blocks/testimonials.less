@@ -1,18 +1,40 @@
 #testimonials {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
     .testimonials__box {
-        height: 62vh;
+        height: auto;
         width: 100%;
-        .flex-row();
         background-color: #F7F7F9;
-        padding-left: 60px;
+        aspect-ratio: 2;
+        max-height: 60vh;
 
-        .swiper {
+        .md({
+           aspect-ratio: 1.4;
+            max-height: unset;
+            background-color: #F0F1F5;
+        });
+    }
+
+    .swiper {
+        height: 100%;
+        width: 100%;
+        max-width: 465px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .md({
+            padding-top: 50px;
+        });
+
+        .xs({
+           padding: 30px 22px;
+        });
+
+        .swiper-wrapper {
             height: auto;
-            width: 100%;
-            max-width: 465px;
-            padding-top: 100px;
-            padding-bottom: 100px;
-
 
             .swiper-slide {
                 width: 100%;
@@ -24,12 +46,21 @@
                     height: 100%;
                     width: 100%;
 
+                    .md({
+                        align-items: center;
+                    });
+
                     .swiper-slide__content__text {
                         font-style: italic;
                         .font-size(20);
                         letter-spacing: 0.4px;
                         line-height: 30px;
                         margin-bottom: 20px;
+                        font-family: @font-heading;
+
+                        .md({
+                            text-align: center;
+                        });
                     }
 
                     .swiper-slide__content__name {
@@ -49,6 +80,11 @@
                 width: auto;
                 bottom: 0;
 
+                .md({
+                    left: unset;
+                    width: 100%;
+                });
+
                 .swiper-pagination-bullet-active {
                     background-color: @black;
 
@@ -56,27 +92,53 @@
 
                 .swiper-pagination-bullet {
 
-
                 }
-            }
-
-        }
-
-        .testimonials__box__image {
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
-            position: relative;
-
-            img {
-                width: 100%;
-                height: auto;
-                position: absolute;
-                top: -74%;
-                right: -17%;
             }
         }
 
     }
+
+    .testimonials__box__image {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+
+        .md({
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        });
+
+        .sm({
+           height: 64vh;
+        });
+
+        .xs({
+           height: 44vh;
+        });
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: right;
+            max-height: 60vh;
+
+            .md({
+
+                position: absolute;
+                right: 0;
+                max-height: unset;
+                height: auto;
+            });
+
+            .xs({
+                top: -26px;
+            });
+        }
+
+    }
+
 }
+
 

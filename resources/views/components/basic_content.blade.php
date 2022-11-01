@@ -5,7 +5,7 @@
 
     @if( get_row_layout() == 'spacer')
         @php($space = get_sub_field('space'))
-        <div class="spacer" style="height: {{ $space }}px;"></div>
+        <div class="spacer--{{$space}}"></div>
     @endif
 
     @if( get_row_layout() == 'heading')

@@ -1,32 +1,18 @@
 #number-list {
     .number-list__container {
-        display: grid;
-        position: relative;
-        grid-template-columns: auto 57%;
-        grid-template-rows: max-content;
 
         .number-list__one {
-            grid-column: 1;
             height: 100%;
             width: 100%;
-            justify-self: start;
-            align-self: center;
+            overflow: hidden;
 
-            .number-list__one__image {
-                position: relative;
+
+            img {
+
+                object-fit: cover;
+                object-position: center;
                 height: 100%;
                 width: 100%;
-                overflow: hidden;
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    object-fit: scale-down;
-                    object-position: center;
-                    height: 100%;
-                    width: auto;
-                }
             }
         }
 
@@ -41,6 +27,11 @@
         grid-auto-flow: column;
         overflow: hidden;
 
+        .md({
+            margin-left: 0;
+            margin-top: 37px;
+        });
+
         ol {
             margin-top: 0;
         }
@@ -50,6 +41,10 @@
 
             &:not(:last-of-type) {
                 margin-bottom: 50px;
+
+                .md({
+                    margin-bottom: 30px;
+                });
             }
 
             .number-list__numbered-list__item__number {
@@ -70,6 +65,10 @@
 
                 .btn {
                     margin-top: 50px;
+
+                    .md({
+                        margin-top: 30px;
+                    });
                 }
             }
 

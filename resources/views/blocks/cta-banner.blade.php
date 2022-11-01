@@ -15,10 +15,12 @@
 <section id="cta-banner">
     <div class="{{ get_field('size') == 'large' ? 'container-fluid' : 'container' }}">
         <div class="row">
-            <div class="cta-banner__container">
+            <div class="col-lg-8 p-0">
                 <div class="cta-banner__container__image">
                     <img src="{{ the_field('image') }}" alt="">
                 </div>
+            </div>
+            <div class="col-lg-4 p-0">
                 <div class="cta-banner__container__content">
                     @php( $content = get_field('content') )
                     <div class="content__circle">{{ $content['circle_text'] }}</div>

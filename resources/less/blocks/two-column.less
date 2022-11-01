@@ -4,7 +4,25 @@
     padding-top: 85px;
     padding-bottom: 120px;
 
+    .sm({
+        padding-bottom: 40px;
+        padding-top: 40px;
+    });
+
+    .row {
+        height: 100%;
+
+        .xs({
+           margin-right: unset;
+            margin-left: unset;
+        });
+    }
+
     .column-one__content {
+
+        .md({
+            margin-top: 80px;
+        });
 
         .script-heading {
             margin-bottom: 8px;
@@ -32,6 +50,8 @@
             transform: translate(-50%, 50%);
             width: 159px;
             height: 159px;
+
+            .md({});
 
             img.spinning-logo {
                 width: 100%;

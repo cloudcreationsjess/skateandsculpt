@@ -17,7 +17,7 @@
 
     <div class="container">
         <div class="row">
-            <div class='col-4 align-self-center'>
+            <div class='col-xl-4 col-lg-5 col-12 order-2 order-lg-1 align-self-center'>
                 <div class="column-one__content">
                     @php( $content = get_field('content'))
                     @if( $content )
@@ -27,7 +27,7 @@
                     @endif
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-xl-8 col-lg-7 col-12 order-1 order-lg-2">
                 <div class="row">
                     <div class="col-6 p-0">
                         <div class="two-column__image-one">
