@@ -20,7 +20,7 @@
                 <img src="{{ get_field('image_left') }}" alt="Green Source Nutrition">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
             <div class="basic-content">
                 <x-basic_content/>
             </div>

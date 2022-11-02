@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="hero-half" class="background-color--{{ get_field('background_color') }}">
+<section id="hero-half" class="background-color--{{ get_field('background_color') }} {{ get_field('class') }}">
     <div class="row">
         <div class="col-md-6 align-self-center">
             <div class="basic-content">

@@ -14,12 +14,12 @@
 
 <section id="two-column-content" class="background-color--{{ get_field('background_color') }}">
     <div class="row">
-        <div class="col-md-6 align-self-center">
+        <div class="col-lg-6 align-self-center">
             <div class="basic-content">
                 <x-basic_content />
             </div>
         </div>
-        <div class="col-md-6 align-self-center">
+        <div class="col-lg-6 align-self-center">
             <div class="bullet-list">
                 <x-bullet_list />
             </div>

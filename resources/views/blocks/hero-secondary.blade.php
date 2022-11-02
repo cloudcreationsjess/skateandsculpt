@@ -15,12 +15,12 @@
 <section id="hero-secondary" class="background-color--{{ get_field('background_color') }}">
 
     <div class="row">
-        <div class="col-5 align-self-center">
+        <div class="col-md-5 align-self-center">
             <div class="hero-secondary__content">
                 <x-basic_content/>
             </div>
         </div>
-        <div class="col-7 align-self-center">
+        <div class="col-md-7">
             <div class='hero-secondary__background'>
                 <img src='{{ the_field('image') }}' alt='Green Source Nutrition'>
             </div>

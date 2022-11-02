@@ -1,5 +1,5 @@
 #hero-half {
-    height: calc(100vh - @header-height);
+    height: 100%;
     width: 100%;
     position: relative;
     margin-top: @header-height;
@@ -24,5 +24,19 @@
         max-width: 500px;
         text-align: center;
         margin: auto;
+
+        .lg({
+           padding-left: 30px;
+        });
+
+        .sm({
+           padding: 30px 22px;
+        });
+
+
     }
+}
+
+.remove-header-spacing {
+    margin-top: 0!important;
 }

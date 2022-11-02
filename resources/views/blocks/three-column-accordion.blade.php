@@ -19,7 +19,7 @@
             <div class="row">
                 <?php $i = 1; ?>
                 <?php while (have_rows('accordion')): the_row(); ?>
-                <div class="accordion-item col-4">
+                <div class="accordion-item col-lg-4 col-md-6 col-12">
                     <div class="accordion-header" id="heading--{{ $i }}">
                         <div role=button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="true" aria-controls="collapse{{ $i }}">
                             <div class="accordion-button__bar">

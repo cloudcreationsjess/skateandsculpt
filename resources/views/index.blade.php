@@ -4,12 +4,12 @@
 
     <section id="blog-hero" class="background-color--grey">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="column-one__container">
                     <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
                 </div>
             </div>
-            <div class="col-6 align-self-center">
+            <div class="col-md-6 align-self-center">
                 <div class="column-two__container">
                     <div class="blog-title basic-heading">{!! get_the_title() !!}</div>
                     <div class="blog-preview-text basic-content">{!! get_field('preview_text') !!}</div>
@@ -62,7 +62,7 @@
                                 ?>
 
                         @if(get_the_permalink() !== $recentPostPerma)
-                            <div class="col-4">
+                            <div class="col-md-4 col-sm-6 col-6">
                                 <div class="blog-posts__single">
                                     <a href="{{ get_the_permalink() }}">
                                         <div class="featured-image">

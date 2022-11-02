@@ -1,14 +1,30 @@
 #two-column-content {
     padding: 85px 0;
 
+    .md({
+       padding: 40px 0;
+    });
+
     .basic-content {
         .flex-column(center, center);
         max-width: 500px;
         text-align: center;
         margin: auto;
+
+        .lg({
+           padding: 0 30px;
+        });
+
+        .md({
+            margin-bottom: 40px;
+        });
     }
 
     .bullet-list {
         .flex-column(center, flex-start);
+
+        .lg({
+           padding: 0 30px;
+        });
     }
 }

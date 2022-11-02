@@ -5,8 +5,20 @@
     align-items: flex-start;
     width: 100%;
 
+    .md({
+       flex-wrap: wrap;
+        justify-content: center;
+    });
+
     .icon-list__item {
         .flex-column();
+        margin-right: 10px;
+        margin-left: 10px;
+
+        .sm({
+           width: 40%;
+            margin-bottom: 30px;
+        });
 
         .icon-list__colored-icon {
             height: 91px;
@@ -32,7 +44,6 @@
             max-width: 54px;
             .flex-column();
             margin-bottom: 20px;
-
 
             img {
                 height: 100%;
@@ -75,7 +86,6 @@
                 letter-spacing: 0.4px;
                 line-height: 30px;
 
-
                 h5 {
                     min-height: 65px;
                 }
@@ -101,5 +111,13 @@
             }
 
         }
+    }
+}
+
+//SPECIAL ICON LISTS
+
+.icon-list__no-wrap {
+    .icon-list {
+        flex-wrap: nowrap;
     }
 }

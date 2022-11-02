@@ -1,24 +1,27 @@
 #my-path {
     padding: 60px 0;
 
-
-    .parallax-image {
-
-        .parallax {
-
-        }
-
-    }
+    .sm({
+       padding: 30px 0;
+    });
 
 
     .my-path__container {
         background-color: @white;
         padding: 50px 80px;
 
+        .sm({
+           padding: 20px 20px;
+        });
+
         .my-path__section-one {
 
             .basic-content {
                 padding-left: 60px;
+
+                .md({
+                   padding-left: 0;
+                });
 
                 .script-heading {
                     margin-bottom: 9px;
@@ -31,6 +34,12 @@
                 margin-left: -40px;
                 margin-bottom: 100px;
                 position: relative;
+
+                .md({
+                    margin-left: 0;
+                    margin-right: 80px;
+                    margin-bottom: 60px;
+                });
 
                 img {
                     width:100%;
@@ -47,6 +56,11 @@
                     width: 159px;
                     height: 159px;
 
+                    .xs({
+                       width: 129px;
+                        height: 129px;
+                    });
+
                     img.spinning-logo {
                         width: 100%;
                         height: auto;
@@ -59,10 +73,6 @@
 
 
         .my-path__section-two {
-            display: grid;
-            grid-template-columns: 60% 40%;
-            grid-template-rows: 1fr;
-            grid-column-gap: 60px;
 
             .all-caps-heading {
                 margin-bottom: 20px;
@@ -73,19 +83,20 @@
             }
 
             .image-right {
-                width: 345px;
-                height: 471px;
-                position: relative;
+                width: 100%;
+                height: 100%;
                 overflow: hidden;
+                aspect-ratio: 1/1.2;
+
+                .md({
+                   display: none;
+                });
 
                 img {
-                    width: 100%;
-                    height: auto;
+                    width: auto;
+                    height: 100%;
                     object-fit: cover;
-                    object-position: center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                    object-position: right bottom;
                 }
 
             }

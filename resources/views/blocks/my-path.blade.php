@@ -17,7 +17,7 @@
         <div class="my-path__container">
             <div class="my-path__section-one">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-lg-4">
                         <div class="image-left">
                             <img src="{{ get_field('image_left') }}" alt="">
                             <div class="spinning-logo__container">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg">
                         <div class="basic-content">
                             <div class="script-heading">
                                 {!! get_field('script_heading') !!}
@@ -46,16 +46,22 @@
     <div class="container">
         <div class="my-path__container">
             <div class="my-path__section-two">
-                <div class="content">
-                    <div class="all-caps-heading">
-                        {!! get_field('all_caps_heading') !!}
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="content">
+                            <div class="all-caps-heading">
+                                {!! get_field('all_caps_heading') !!}
+                            </div>
+                            <div class="basic-content">
+                                {!! get_field('text_section_two') !!}
+                            </div>
+                        </div>
                     </div>
-                    <div class="basic-content">
-                        {!! get_field('text_section_two') !!}
+                    <div class="col-lg-4">
+                        <div class="image-right">
+                            <img src="{{ get_field('image_right') }}" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="image-right">
-                    <img src="{{ get_field('image_right') }}" alt="">
                 </div>
             </div>
         </div>

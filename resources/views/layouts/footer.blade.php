@@ -2,48 +2,58 @@
     {{--  @php(dynamic_sidebar('sidebar-footer'))--}}
     <div class="footer-container">
         <div class='footer__top'>
-            <div class='footer__top__subscribe'>
-                <div class="content">
-                    <div class="basic-heading">{{ the_field('italic_title', 'option') }}</div>
-                    <div class="subscribe-text">{{ the_field('subscribe_text', 'option') }}</div>
-                    <div class="socials">
-                        <?php while (have_rows('socials', 'option')): the_row(); ?>
-                        <a target="_blank" href="{{ get_sub_field('url') }}">
-                            <img src="{{ get_sub_field('icon') }}" alt=""></a>
-                        <?php endwhile; ?>
+            <div class="row">
+                <div class="col-lg col-12 align-self-center">
+                    <div class="content">
+                        <div class="basic-heading">{{ the_field('italic_title', 'option') }}</div>
+                        <div class="subscribe-text">{{ the_field('subscribe_text', 'option') }}</div>
+                        <div class="socials">
+                            <?php while (have_rows('socials', 'option')): the_row(); ?>
+                            <a target="_blank" href="{{ get_sub_field('url') }}">
+                                <img src="{{ get_sub_field('icon') }}" alt=""></a>
+                            <?php endwhile; ?>
+                        </div>
                     </div>
                 </div>
-                <div class="form">
-                    <div id="fd-form-635c7e168ee4395073b536cd"></div>
-                    <script>
-                        window.fd('form', {
-                            formId: '635c7e168ee4395073b536cd',
-                            containerEl: '#fd-form-635c7e168ee4395073b536cd'
-                        });
-                    </script>
+                <div class="col-lg col-12 align-self-start">
+                    <div class="form">
+                        <div id="fd-form-635c7e168ee4395073b536cd"></div>
+                        <script>
+                            window.fd('form', {
+                                formId: '635c7e168ee4395073b536cd',
+                                containerEl: '#fd-form-635c7e168ee4395073b536cd'
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12 align-self-center">
+                    <div class='footer__top__logo'>
+                        <img src="{{ the_field('logo', 'option') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <ul class='footer__top__links'>
+                        <?php while (have_rows('footer_links', 'option')): the_row(); ?>
+                        <li><a href="{{ get_sub_field('url') }}">{{ get_sub_field('label') }}</a></li>
+                        <?php endwhile; ?>
+                    </ul>
                 </div>
             </div>
-            <div class='footer__top__logo'>
-                <img src="{{ the_field('logo', 'option') }}" alt="">
-            </div>
-            <ul class='footer__top__links'>
-                <?php while (have_rows('footer_links', 'option')): the_row(); ?>
-                <li><a href="{{ get_sub_field('url') }}">{{ get_sub_field('label') }}</a></li>
-                <?php endwhile; ?>
-            </ul>
         </div>
         <div class='footer__bottom'>
             <div class="container">
-
                 <div class="content">
-                    <div class="copyright">© Copyright <?php echo date('Y'); ?> {!! the_field('business_name', 'options') !!}</div>
-                    &bull;
-                    <a href="/privacy-policy/">Privacy</a>
-                    &bull;
-                    <a href="/terms">Terms</a>
-                    &bull;
-                    <a href='/faq'>faq</a>
-                    &bull;
+                    <div class="copyright">©
+                        Copyright <?php echo date('Y'); ?> {!! the_field('business_name', 'options') !!}</div>
+                    <div class="dot-hide"> &bull;</div>
+                    <div class="terms">
+                        <a href="/privacy-policy/">Privacy</a>
+                        &bull;
+                        <a href="/terms">Terms</a>
+                        &bull;
+                        <a href='/faq'>faq</a>
+                        <div class="dot-hide"> &bull;</div>
+                    </div>
                     <a href='https://saevilrow.co/'>Site design by Saevil Row</a>
                 </div>
 
@@ -68,7 +78,7 @@
 
     //bootstrap accordion
     // $('.collapse').collapse()
-    feather.replace()
+    feather.replace();
 
     //swiper////////////////////////////////
 

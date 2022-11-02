@@ -11,7 +11,7 @@
         <div class="container">
             <div class="faq-hero">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="faq-hero__content">
                             <div class="basic-heading">
                                 {!! get_field('heading') !!}
@@ -23,7 +23,7 @@
                             <a class="btn btn--primary" href="{{ $btn['url'] }}">{{ $btn['call_to_action'] }}</a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 mt-sm-2 mt-md-0">
                         <div class="faq-hero__image">
                             <img src="{{ get_field('image') }}" alt="">
                         </div>
@@ -41,7 +41,7 @@
                                     <div class="col align-self-center">
                                         <div class="number">{{ $i }}.</div>
                                     </div>
-                                    <div class="col-10 align-self-center">
+                                    <div class="col-md-10 col-9 align-self-center">
                                         <h5 class="all-caps-heading">{!! get_sub_field('all_caps_heading') !!}</h5>
                                     </div>
                                     <div class="col align-self-center">

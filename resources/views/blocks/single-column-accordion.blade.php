@@ -25,7 +25,7 @@
                             <div class="col-10">
                                 <h5 class="all-caps-heading">{!! get_sub_field('all_caps_heading') !!}</h5>
                             </div>
-                            <div class="col align-self-end">
+                            <div class="col col-xs-2 align-self-end">
                                 <i class="accordion-icon plus" data-feather="plus"></i>
                                 <i class="accordion-icon minus" data-feather="minus"></i>
                             </div>
