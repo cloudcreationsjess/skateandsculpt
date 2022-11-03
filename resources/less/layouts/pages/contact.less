@@ -8,6 +8,20 @@
     margin-top: @header-height;
     overflow: hidden;
 
+    .desktop-display {
+        .sm({
+           display: none;
+        });
+    }
+
+    .mobile-display {
+        display: none;
+
+        .sm({
+           display: block;
+        });
+    }
+
     .contact-page__section-one {
         width: 100%;
         height: 100%;
@@ -18,12 +32,26 @@
             margin-left: auto;
             margin-right: auto;
 
+            .lg({
+                padding: 80px 30px;
+                padding-bottom: 0;
+                margin-top: 0;
+            });
+
+            .xs({
+                padding: 50px 22px;
+            });
+
             .script-heading {
                 margin-bottom: 10px;
             }
 
             .basic-heading {
                 margin-bottom: 80px;
+
+                .xs({
+                    margin-bottom: 30px;
+                });
             }
 
             .all-caps-heading {
@@ -46,6 +74,12 @@
                 width: auto;
                 overflow: hidden;
 
+                .sm({
+                    aspect-ratio: 1;
+                    width: 100%;
+                    height: auto;
+                });
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -66,16 +100,32 @@
                 overflow: hidden;
                 z-index: 3;
 
+                .xl({
+                    transform: translate(-20%, 40%);
+                });
+
+                .lg({
+                    transform: translate(-10%, 40%);
+                });
+
+                .sm({
+                    transform: translate(-50%, 90%);
+                    left: 50%;
+                    width: 80%;
+                });
+
+                .xs({
+                    aspect-ratio: 1;
+                    height: auto;
+                    width: 86%;
+                });
+
                 img {
                     height: 100%;
                     width: 100%;
                     object-position: left;
                     object-fit: cover;
                 }
-            }
-
-            .contact-page__image-two {
-
             }
 
         }
@@ -85,14 +135,39 @@
         width: 100%;
         height: 100%;
 
+
+        .sm({
+            margin-top: 420px;
+            margin-bottom: 50px;
+        });
+
+        .xs({
+            margin-top: 83%;
+            margin-bottom: 40px;
+        });
+
         .contact-page__section-two__content {
             max-width: 572px;
             margin-left: auto;
             margin-right: auto;
 
+            .lg({
+                padding: 0 30px;
+            });
+
             .basic-content {
                 margin-top: 30px;
                 margin-bottom: 60px;
+
+                .xs({
+                    margin-bottom: 40px;
+                });
+            }
+
+            .all-caps-heading {
+                .sm({
+                    margin-bottom: 15px;
+                });
             }
 
         }
@@ -104,6 +179,18 @@
             margin-left: auto;
             margin-bottom: 85px;
             margin-top: 70px;
+
+            .xl({
+                margin-top: 0;
+            });
+
+            .lg({
+                margin-top: 30px;
+            });
+
+            .sm({
+                display: none;
+            });
 
             img {
                 width: 100%;
@@ -121,6 +208,12 @@
     height: 100%;
     width: 100%;
     padding-top: 60px;
+    padding-bottom: 60px;
+
+    .xs({
+        padding-top: 30px;
+        padding-bottom: 20px;
+    });
 
     .contact-page-form {
         .flex-column();
@@ -129,21 +222,29 @@
         .basic-heading {
             margin-bottom: 20px;
             font-style: italic;
+
+            .xs({
+                padding: 0 30px;
+            });
         }
 
         .all-caps-heading {
             margin-bottom: 60px;
+
+            .xs({
+                margin-bottom: 40px;
+            });
         }
     }
 }
-
-
 
 /***********************************************************************/
 /*** CONTACT FORM 7 ****************************************************/
 /***********************************************************************/
 
 .wpcf7-form-control-wrap {
+
+    width: 100%;
 
     input {
         background-color: transparent;
@@ -156,6 +257,7 @@
         letter-spacing: 0.3px;
         line-height: 20px;
         color: @black;
+        margin-bottom: 35px;
 
         &:focus {
             border: 1px solid @black;
@@ -188,6 +290,14 @@
     width: 55%;
     text-align: center;
 
+    .sm({
+        width: 75%;
+    });
+
+    .xs({
+        width: 100%;
+    });
+
     label {
         text-transform: uppercase;
         font-family: @font-normal;
@@ -205,12 +315,28 @@
         color: black;
         text-transform: none;
         text-align: left;
+        margin-bottom: 35px;
     }
 
     button {
         text-align: center;
         text-transform: uppercase;
     }
+
+    input.btn--primary {
+        line-height: 1;
+        max-width: 243px;
+        margin-right: auto;
+        margin-left: auto;
+
+
+    }
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wpcf7-form-control {
@@ -266,6 +392,13 @@ div.wpcf7-mail-sent-ok {
         .font-size(13);
         padding-right: @baseline;
     }
+}
+
+.wpcf7 form.sent .wpcf7-response-output, .wpcf7 form .wpcf7-response-output {
+    border-color: @accent-color;
+    font-family: @font-normal;
+    margin-top: 20px;
+    border: 2px solid @accent-color;
 }
 
 

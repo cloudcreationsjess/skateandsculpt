@@ -7,7 +7,7 @@
                     <div class="content">
                         <div class="basic-heading">{{ the_field('italic_title', 'option') }}</div>
                         <div class="subscribe-text">{{ the_field('subscribe_text', 'option') }}</div>
-                        <div class="socials">
+                        <div class="socials desktop">
                             <?php while (have_rows('socials', 'option')): the_row(); ?>
                             <a target="_blank" href="{{ get_sub_field('url') }}">
                                 <img src="{{ get_sub_field('icon') }}" alt=""></a>

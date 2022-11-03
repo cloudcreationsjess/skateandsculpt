@@ -3,8 +3,6 @@
  */
 import 'jquery';
 
-
-
 $(document).ready(() => {
     // windowLoad();
     // scroller();
@@ -13,9 +11,9 @@ $(document).ready(() => {
     // Run script on specific page
     // var url_pathname = window.location.pathname;
     // if (url_pathname == "/page-name/") {
-        // yourScript();
+    // yourScript();
     // }
-    $('.collapse').collapse()
+    $('.collapse').collapse();
 
     window.onscroll = function () {
         scrollRotate();
@@ -23,27 +21,27 @@ $(document).ready(() => {
 
     function scrollRotate() {
         let images = document.querySelector(".spinning-logo");
-        images.style.transform = "rotate(" + window.scrollY/5 + "deg)";
+        images.style.transform = "rotate(" + window.scrollY / 5 + "deg)";
     }
 
     mobileMenu();
 
-
+    fixDiv();
 
 });
 
 /* MOBILE MENU */
 function mobileMenu() {
-    var $menu = document.querySelector('#mobile-menu')
+    var $menu = document.querySelector('#mobile-menu');
     var html = document.querySelector('html');
     //hamburger
     var hamburger = document.querySelector('.js__slideout-toggle');
-    hamburger.addEventListener('click',() => {
+    hamburger.addEventListener('click', () => {
         html.classList.toggle('is--mobile-nav__active');
     });
 
     document.querySelector('.mobile-popout').addEventListener('click', () => {
-        html.classList.remove('is--mobile-nav__active')
+        html.classList.remove('is--mobile-nav__active');
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -146,4 +144,41 @@ function mobileMenu() {
 //     });
 // }
 
+function fixDiv() {
+    var $div = $(".blog-search");
+
+    if ($(window).width() > 768) {
+
+        if (($(window).scrollTop() > (($(window).height()) / 2) + 50)) {
+            $div.css({'position': 'fixed', 'top': 'calc(50% + @header-height + 50px)'});
+        } else {
+            $div.css({'position': 'absolute', 'top': '50%', 'right': '0'});
+        }
+    }
+}
+
+$(window).scroll(fixDiv);
+
+//SEARCH POP OUT
+
+const $menu = $('.search-popout');
+
+const onMouseUp = e => {
+    if (!$menu.is(e.target) // If the target of the click isn't the container...
+        && $menu.has(e.target).length === 0) // ... or a descendant of the container.
+    {
+        $menu.removeClass('search-popout__active');
+        $('.sf-field-search').removeClass('display-search');
+    }
+};
+
+$('.search-popout').on('click', () => {
+    $('.sf-field-search').toggleClass('display-search') && $menu.toggleClass('search-popout__active').promise().done(() => {
+        if ($menu.hasClass('search-popout__active')) {
+            $(document).on('mouseup', onMouseUp); // Only listen for mouseup when menu is active...
+        } else {
+            $(document).off('mouseup', onMouseUp); // else remove listener.
+        }
+    });
+});
 

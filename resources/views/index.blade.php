@@ -20,10 +20,16 @@
     </section>
     <?php
         $recentPostPerma = get_permalink();
-        ?>
+    ?>
     <section id="blog-filter">
         <div class="blog-filter">
             {!! do_shortcode('[searchandfilter id="913"]') !!}
+        </div>
+        <div class="blog-search search-popout">
+            <i class="blog-search-icon search-popout" data-feather="search"></i>
+            <div class="search-popout">
+                {!! do_shortcode('[searchandfilter id="913"]') !!}
+            </div>
         </div>
     </section>
 
@@ -61,18 +67,18 @@
                                 $name = $cats[0]->name;
                                 ?>
 
-                        @if(get_the_permalink() !== $recentPostPerma)
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="blog-posts__single">
-                                    <a href="{{ get_the_permalink() }}">
-                                        <div class="featured-image">
-                                            <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
-                                        </div>
-                                        <div class="category"><span>{{ $cats[0]->name }}</span></div>
-                                        <div class="title">{!! get_the_title() !!}</div>
-                                    </a>
+                            @if(get_the_permalink() !== $recentPostPerma)
+                                <div class="col-md-4 col-sm-6 col-6">
+                                    <div class="blog-posts__single">
+                                        <a href="{{ get_the_permalink() }}">
+                                            <div class="featured-image">
+                                                <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
+                                            </div>
+                                            <div class="category"><span>{{ $cats[0]->name }}</span></div>
+                                            <div class="title">{!! get_the_title() !!}</div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
                             @endif
                         @endwhile
                 </div>
