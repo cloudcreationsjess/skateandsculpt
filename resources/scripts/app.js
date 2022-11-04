@@ -28,32 +28,38 @@ $(document).ready(() => {
 
     fixDiv();
 
+    bannerPop();
+
 });
 
 /* MOBILE MENU */
 function mobileMenu() {
-    var $menu = document.querySelector('#mobile-menu');
-    var html = document.querySelector('html');
-    //hamburger
-    var hamburger = document.querySelector('.js__slideout-toggle');
-    hamburger.addEventListener('click', () => {
-        html.classList.toggle('is--mobile-nav__active');
-    });
 
-    document.querySelector('.mobile-popout').addEventListener('click', () => {
-        html.classList.remove('is--mobile-nav__active');
-    });
+    const $mobile = $('.js__slideout-toggle');
+    const $popout = $('.mobile-popout');
+    const $ham = $('.hamburger')
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    const onMouseUp = e => {
+        if (!$mobile.is(e.target) // If the target of the click isn't the container...
+            && $mobile.has(e.target).length === 0) // ... or a descendant of the container.
+        {
+            $popout.removeClass('is--mobile-nav__active');
+            $ham.removeClass('is--mobile-nav__active');
+        }
+    };
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-            });
+    $('.js__slideout-toggle').on('click', () => {
+      $ham.toggleClass('is--mobile-nav__active') && $('.mobile-popout').toggleClass('is--mobile-nav__active').promise().done(() => {
+            if ($popout.hasClass('is--mobile-nav__active')) {
+                $(document).on('mouseup', onMouseUp); // Only listen for mouseup when menu is active...
+            } else {
+                $(document).off('mouseup', onMouseUp); // else remove listener.
+            }
         });
     });
 }
+
+
 
 /*
  * Removes loading animation when page load is completed
@@ -147,7 +153,7 @@ function mobileMenu() {
 function fixDiv() {
     var $div = $(".blog-search");
 
-    if ($(window).width() > 768) {
+    if ($(window).width() > 767) {
 
         if (($(window).scrollTop() > (($(window).height()) / 2) + 50)) {
             $div.css({'position': 'fixed', 'top': 'calc(50% + @header-height + 50px)'});
@@ -182,3 +188,21 @@ $('.search-popout').on('click', () => {
     });
 });
 
+//BANNER POPUP
+
+function bannerPop() {
+
+    const $banner = $('#nav-popup')
+
+    $('.nav-popup-close').on('click', () => {
+        $('#header').removeClass('nav-popup-enabled')
+    });
+
+    $('.nav-popup-close').on('click', () => {
+        $banner.toggleClass('nav-popup--hide')
+    });
+
+    $('.popup-underlined-link').on('click', () => {
+        $banner.toggleClass('nav-popup--hide')
+    });
+}

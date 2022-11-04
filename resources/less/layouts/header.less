@@ -4,12 +4,127 @@
 /* Header styles. Main Nav etc
 /***********************************************************************/
 
+
+/*********Header POPUP BANNER ************************/
+#nav-popup {
+    height: 60px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    .sm({
+       padding: 0 22px;
+    });
+
+    .nav-popup-close {
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &.nav-popup--hide {
+        display: none;
+    }
+
+    .nav-popup-close {
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .nav-popup-container {
+        height: 60px;
+        width: 100%;
+        .flex-row();
+
+        .sm({
+           flex-wrap: wrap;
+            text-align: center;
+        });
+
+        a {
+            font-family: @font-bold;
+            .font-size(15);
+            line-height: 23px;
+            letter-spacing: 0.75px;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            white-space: nowrap;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                height: 10px;
+                width: 100%;
+                background-color: @accent-color;
+                position: absolute;
+                bottom: 2px;
+                left: 0;
+                transform: scaleX(1);
+                transform-origin: left;
+                .transition();
+                z-index: -1;
+
+            }
+
+            &:hover {
+                &:before {
+                    height: 90%;
+                }
+            }
+        }
+        .all-caps-heading {
+            font-family: @font-bold;
+            text-transform: uppercase;
+            .font-size(15);
+            letter-spacing: 0.3px;
+            line-height: 20px;
+            font-weight: 600;
+
+            .sm({
+                .font-size(15);
+                line-height: 22px;
+                text-wrap: wrap;
+            });
+
+            p {
+                font-family: @font-bold;
+                text-transform: uppercase;
+                .font-size(15);
+                letter-spacing: 0.3px;
+                line-height: 20px;
+                font-weight: 600;
+                margin-bottom: 0;
+
+                .sm({
+                    .font-size(15);
+                    line-height: 22px;
+                });
+            }
+
+            span {
+                text-decoration-color: @accent-color !important;
+                text-decoration-thickness: 2px !important;
+                text-underline-offset: 2px !important;
+            }
+        }
+
+    }
+}
+
+
+
 /********** MAIN MENU / MAIN NAV / MAIN HEADER **********************************************************/
 //noinspection LessResolvedByNameOnly
 #header {
     width: 100%;
     z-index: 999;
-    position: fixed;
+
+    &.nav-popup-enabled {
+        top: 60px;
+    }
 
     .current-menu-parent > a:before, .home.current-page-ancestor > a:before {
         //left: 0 !important;
@@ -50,9 +165,7 @@
 .header {
     z-index: 10;
     margin-top: 0px;
-    position: fixed !important;
-    top: 0;
-    left: 0;
+    position: fixed;
     height: @header-height; // edit variable.less
     width: 100%;
     background: @background-color;

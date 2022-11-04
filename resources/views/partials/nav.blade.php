@@ -1,5 +1,5 @@
 <!-- Normal Drop Down Menu -->
-<header id="header" class="header js__header fixed-to-panel" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+<header id="header" class="@if ( get_the_ID() == '17' && get_field('enable_popup_banner', 'option') == 'true' ) nav-popup-enabled @endif header js__header fixed-to-panel" role="banner" itemscope itemtype="https://schema.org/WPHeader">
     <div class="container">
         <div class="row align-items-center">
             <!-- Branding -->
