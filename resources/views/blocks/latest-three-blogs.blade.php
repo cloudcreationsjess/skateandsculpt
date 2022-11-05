@@ -33,16 +33,14 @@
 
 ?>
 
-<section id="latest-blogs">
-    <div class="background"></div>
-    <div class="container">
+</div>
+<section class="latest-blogs">
+    <div class="latest-blogs__container">
         <div class="basic-heading">{!! get_field('title') !!}</div>
-        <div class="desktop">
-            <div class="row">
+        <div class="desktop latest-blogs__item">
                 @if(have_posts())
                     @while(have_posts())
                         @php(the_post())
-                        <div class="col-md-4 col-sm-6 col-6">
                             <div class="blog-posts__single">
                                 <a href="{{ get_the_permalink() }}">
                                     <div class="featured-image">
@@ -52,10 +50,8 @@
                                     <div class="title">{!! get_the_title() !!}</div>
                                 </a>
                             </div>
-                        </div>
                     @endwhile
                 @endif
-            </div>
         </div>
         <div class="mobile">
             @if(have_posts())
@@ -83,5 +79,6 @@
             @endif
         </div>
 </section>
+<div>
 
 @php(wp_reset_query())

@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="image-and-content" class="background-color--{{ get_field('background_color') }}">
+<section class="image-and-content background-color--{{ get_field('background_color') }}">
 
     <div class='container-fluid'>
         <div class="image-and-content__container">

@@ -12,9 +12,9 @@
   SupportsMultiple: true
 --}}
 
-<section id="three-column-accordion" class="background-color--{{ get_field('background_color') }}">
+<section class="three-column-accordion background-color--{{ get_field('background_color') }}">
     <div class="three-column-accordion__container">
-        <div class="basic-heading">{!! get_field('heading') !!}</div>
+        <div class="basic-heading mb-3">{!! get_field('heading') !!}</div>
         <div class="accordion">
                 <?php $i = 1; ?>
                 <?php while (have_rows('accordion')): the_row(); ?>

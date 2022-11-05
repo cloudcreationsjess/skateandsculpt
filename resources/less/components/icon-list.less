@@ -1,5 +1,14 @@
 //ICON LIST
-
+.wider-icon-list-than-all-others{
+    .icon-list .icon-list__item{
+        margin-right: unset;
+        margin-left: unset;
+    }
+    .icon-list .icon-list__item .icon-list__content.icon-list__content--wide{
+        width: 210px;
+        max-width: unset;
+    }
+}
 .icon-list {
     .flex-row(@justify: space-between);
     align-items: flex-start;
@@ -53,23 +62,30 @@
         }
 
         .icon-list__content {
-            max-width: 180px;
+            max-width: 175px;
             font-weight: normal;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            h5 {
+                font-family: @font-normal-semi-bold;
+                letter-spacing: 0.3px;
+                line-height: 20px;
+            }
 
             &.icon-list__content--wide {
                 max-width: 228px;
 
                 p {
                     .font-size(15);
+                    letter-spacing: 0.3px;
+                    line-height: 20px;
+                    font-family: @font-normal;
                 }
 
-                p, h2, h3, h5 {
-
-                    font-family: @font-bold;
-                    font-weight: 300;
+                h2, h3, h5 {
+                    font-family: @font-normal-semi-bold;
                     letter-spacing: 0.3px;
                     line-height: 20px;
 
@@ -78,23 +94,34 @@
 
             .accordion-collapse {
                 .accordion-content-text {
-                    font-weight: 300 !important;
                     margin-top: 20px;
+                    .font-size(15);
+                    letter-spacing: 0.3px;
+                    line-height: 20px;
                 }
             }
 
             .accordion-header {
-                font-family: @font-normal;
-                text-transform: uppercase;
-                .font-size(20);
-                letter-spacing: 0.4px;
-                line-height: 30px;
 
                 h5 {
-                    min-height: 65px;
+                    min-height: 58px;
+                    width: 175px;
+                    font-family: @font-normal-semi-bold;
+                    text-transform: uppercase;
+                    .font-size(15);
+                    letter-spacing: 0px;
+                    line-height: 20px;
                 }
 
                 .accordion-button {
+
+                    .accordion-icon {
+                        font-family: @font-normal-semi-bold;
+                        text-transform: uppercase;
+                        .font-size(18);
+                        letter-spacing: 0.36px;
+                        line-height: 25px;
+                    }
 
                     .plus {display: none;}
 

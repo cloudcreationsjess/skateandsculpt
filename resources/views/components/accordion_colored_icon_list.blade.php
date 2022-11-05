@@ -14,8 +14,8 @@
                     @if( $item['accordion_content'] )
                         <div class="accordion-header" id="heading--{{ $i }}">
                             <div role=button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="true" aria-controls="collapse{{ $i }}">
-                                <i class="accordion-icon plus" data-feather="plus"></i>
-                                <i class="accordion-icon minus" data-feather="minus"></i>
+                                <span class="accordion-icon plus" >+</span>
+                                <span class="accordion-icon minus">-</span>
                             </div>
                         </div>
                         <div id="collapse{{ $i }}" class="accordion-collapse collapse show" aria-labelledby="heading--{{ $i }}">

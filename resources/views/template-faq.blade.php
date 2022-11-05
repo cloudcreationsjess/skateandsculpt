@@ -8,63 +8,45 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <section id="faq">
-        <div class="container">
-            <div class="faq-hero">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="faq-hero__content">
-                            <div class="basic-heading">
-                                {!! get_field('heading') !!}
-                            </div>
-                            <div class="basic-content">
-                                {!! get_field('text') !!}
-                            </div>
-                            @php( $btn = get_field('button'))
-                            <a class="btn btn--primary" href="{{ $btn['url'] }}">{{ $btn['call_to_action'] }}</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-sm-2 mt-md-0">
-                        <div class="faq-hero__image">
-                            <img src="{{ get_field('image') }}" alt="">
-                        </div>
-                    </div>
+        <div class="faq-hero">
+            <div class="faq-hero__content">
+                <div class="basic-heading">
+                    {!! get_field('heading') !!}
                 </div>
+                <div class="basic-content">
+                    {!! get_field('text') !!}
+                </div>
+                @php( $btn = get_field('button'))
+                <a class="btn btn--primary" href="{{ $btn['url'] }}">{{ $btn['call_to_action'] }}</a>
             </div>
-            <div class="faq-accordion">
-                    <?php $i = 1; ?>
-                <ul class="accordion-container">
-                        <?php while (have_rows('accordion')): the_row(); ?>
-                    <li class="accordion-item">
-                        <div class="accordion-header" id="heading--{{ $i }}">
-                            <div role=button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="true" aria-controls="collapse{{ $i }}">
-                                <div class="row">
-                                    <div class="col align-self-center">
-                                        <div class="number">{{ $i }}.</div>
-                                    </div>
-                                    <div class="col-md-10 col-9 align-self-center">
-                                        <h5 class="all-caps-heading">{!! get_sub_field('all_caps_heading') !!}</h5>
-                                    </div>
-                                    <div class="col align-self-center">
-                                        <i class="accordion-icon plus" data-feather="plus"></i>
-                                        <i class="accordion-icon minus" data-feather="minus"></i>
-                                    </div>
-                                </div>
+
+            <div class="faq-hero__image">
+                <img src="{{ get_field('image') }}" alt="">
+            </div>
+
+        </div>
+        <div class="faq-accordion">
+                <?php $i = 1; ?>
+            <ul class="accordion-container">
+                    <?php while (have_rows('accordion')): the_row(); ?>
+                <li class="accordion-item">
+                    <div role=button class="accordion-header accordion-button collapsed" id="heading--{{ $i }}" type="button" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="true" aria-controls="collapse{{ $i }}">
+                        <div class="number">{{ $i }}.</div>
+                        <div class="accordion__content">
+                            <h5 class="all-caps-heading">{!! get_sub_field('all_caps_heading') !!}</h5>
+                            <div id="collapse{{ $i }}" class="accordion-collapse collapse show" aria-labelledby="heading--{{ $i }}">
+                                {!! get_sub_field('text') !!}
                             </div>
                         </div>
-                        <div id="collapse{{ $i }}" class="accordion-collapse collapse show" aria-labelledby="heading--{{ $i }}">
-                            <div class="row">
-                                <div class="col"></div>
-                                <div class="col-10">
-                                    <p class="accordion-content-text">{!! get_sub_field('text') !!}</p>
-                                </div>
-                                <div class="col"></div>
-                            </div>
+                        <div class="accordion__icon-container">
+                            <i class="accordion-icon plus" data-feather="plus"></i>
+                            <i class="accordion-icon minus" data-feather="minus"></i>
                         </div>
-                    </li>
-                        <?php $i++ ?>
-                    <?php endwhile; ?>
-                </ul>
-            </div>
+                    </div>
+                </li>
+                    <?php $i++ ?>
+                <?php endwhile; ?>
+            </ul>
         </div>
     </section>
 

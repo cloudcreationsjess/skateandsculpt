@@ -19,23 +19,29 @@
     });
 
     .nav-popup-close {
-        font-weight: 600;
+        height: 60px;
         cursor: pointer;
+        position: absolute;
+        right: 26px;
+        top: 0;
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-family: @font-normal-semi-bold;
+        color: @text-color-primary;
+        .font-size(18);
+        line-height: 21px;
     }
 
     &.nav-popup--hide {
         display: none;
     }
 
-    .nav-popup-close {
-        height: 60px;
-        margin-right: 15px;
-    }
-
     .nav-popup-container {
         height: 60px;
         width: 100%;
         .flex-row();
+        padding: 0 30px;
 
         .sm({
            flex-wrap: wrap;

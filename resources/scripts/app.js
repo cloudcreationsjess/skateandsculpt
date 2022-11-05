@@ -186,6 +186,8 @@ $('.search-popout').on('click', () => {
             $(document).off('mouseup', onMouseUp); // else remove listener.
         }
     });
+
+    $('input[name="_sf_search[]"]').focus();
 });
 
 //BANNER POPUP
@@ -196,13 +198,13 @@ function bannerPop() {
 
     $('.nav-popup-close').on('click', () => {
         $('#header').removeClass('nav-popup-enabled')
-    });
-
-    $('.nav-popup-close').on('click', () => {
+        $('.has-banner').removeClass('has-banner');
         $banner.toggleClass('nav-popup--hide')
     });
 
     $('.popup-underlined-link').on('click', () => {
+        $('#header').removeClass('nav-popup-enabled')
+        $('.has-banner').removeClass('has-banner');
         $banner.toggleClass('nav-popup--hide')
     });
 }

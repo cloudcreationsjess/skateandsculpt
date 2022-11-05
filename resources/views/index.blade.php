@@ -55,34 +55,28 @@
 
 
     <section id="blog-posts">
-        <div class="container">
-            <div class="blog-list">
-                <div class="row">
-                    @if(have_posts())
-                        @while(have_posts())
-                            @php(the_post())
-                                <?php
-                                $id = get_the_ID();
-                                $cats = get_the_category($id);
-                                $name = $cats[0]->name;
-                                ?>
+        <div class="blog-list">
+            @if(have_posts())
+                @while(have_posts())
+                    @php(the_post())
+                        <?php
+                        $id = get_the_ID();
+                        $cats = get_the_category($id);
+                        $name = $cats[0]->name;
+                        ?>
 
-                            @if(get_the_permalink() !== $recentPostPerma)
-                                <div class="col-md-4 col-sm-6 col-6">
-                                    <div class="blog-posts__single">
-                                        <a href="{{ get_the_permalink() }}">
-                                            <div class="featured-image">
-                                                <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
-                                            </div>
-                                            <div class="category"><span>{{ $cats[0]->name }}</span></div>
-                                            <div class="title">{!! get_the_title() !!}</div>
-                                        </a>
-                                    </div>
+                    @if(get_the_permalink() !== $recentPostPerma)
+                        <div class="blog-posts__single">
+                            <a href="{{ get_the_permalink() }}">
+                                <div class="featured-image">
+                                    <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
                                 </div>
-                            @endif
-                        @endwhile
-                </div>
-            </div>
+                                <div class="category"><span>{{ $cats[0]->name }}</span></div>
+                                <div class="title">{!! get_the_title() !!}</div>
+                            </a>
+                        </div>
+                    @endif
+                @endwhile
         </div>
     </section>
 

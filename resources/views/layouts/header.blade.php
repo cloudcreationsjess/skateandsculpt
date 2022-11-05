@@ -85,16 +85,10 @@
 
 @if ( get_the_ID() == '17' && get_field('enable_popup_banner', 'option') == 'true' )
 <div id="nav-popup" class="background-color--{{ get_field('popup_background_color', 'option') }}">
-    <div class="row">
-    <div class="col-11">
     <div class="nav-popup-container">
         <div class="all-caps-heading">{!! get_field('popup_text', 'option') !!}</div>
     </div>
-    </div>
-    <div class="col align-self-end">
-        <i class="nav-popup-close" data-feather="x"></i>
-    </div>
-    </div>
+    <button type="button" class="btn nav-popup-close">X</button>
 </div>
 @endif
 <div id="app">

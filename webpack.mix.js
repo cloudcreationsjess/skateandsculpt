@@ -13,15 +13,15 @@ require('@tinypixelco/laravel-mix-wp-blocks');
  */
 
 mix
-.setPublicPath('./public')
-.browserSync('sage.test');
+.setPublicPath('./public');
+// .browserSync('sage.test');
 
 mix
 // .sass('resources/sass/app.scss', 'styles')
 .less('resources/less/app.less', 'styles')
 .options({
-  processCssUrls: false,
-  postCss: [require('tailwindcss')],
+    processCssUrls: false,
+    postCss: [require('tailwindcss')],
 });
 
 mix

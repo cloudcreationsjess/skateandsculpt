@@ -13,7 +13,7 @@
   EnqueueAssets:
 --}}
 
-<section id="two-column">
+<section class="two-column">
 
     <div class="two-column__container">
         <div class="column-one__content">

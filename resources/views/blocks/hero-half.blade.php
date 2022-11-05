@@ -12,17 +12,13 @@
   SupportsMultiple: true
 --}}
 
-<section id="hero-half" class="background-color--{{ get_field('background_color') }} {{ get_field('class') }}">
-    <div class="row">
-        <div class="col-md-6 align-self-center">
-            <div class="basic-content">
-                <x-basic_content />
-            </div>
+<section class="hero-half background-color--{{ get_field('background_color') }} {{ get_field('class') }} @if ( get_the_ID() == '17' && get_field('enable_popup_banner', 'option') == 'true' ) has-banner @endif">
+    <div class="basic-content">
+        <div class="basic-content__inner">
+            <x-basic_content/>
         </div>
-        <div class="col-md-6">
-            <div class="hero-image">
-                <img src="{{ get_field('image') }}" alt="">
-            </div>
-        </div>
+    </div>
+    <div class="hero-image">
+        <img src="{{ get_field('image') }}" alt="">
     </div>
 </section>

@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="my-path" class="background-color--{{ get_field('background_color') }}">
+<section class="my-path background-color--{{ get_field('background_color') }}">
     <div class="my-path__container--1">
         <div class="my-path__section-one">
             <div class="image-left">

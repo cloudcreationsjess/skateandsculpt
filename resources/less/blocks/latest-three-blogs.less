@@ -1,11 +1,12 @@
 #main {
 
-    #latest-blogs {
+    .latest-blogs {
         width: 100%;
         height: auto;
         padding: 85px 0;
         text-align: center;
         position: relative;
+        background-color: @accent-cream;
 
         .lg({
             padding-bottom: 30px;
@@ -21,23 +22,17 @@
             padding: 30px 40px;
         });
 
+        .latest-blogs__container {
+            width: 941px;
+            margin: 0 auto;
 
-        .background {
-            position: absolute;
-            bottom: 0;
-            right: -30%;
-            width: 150vw;
-            height: 100%;
-            background-color: @accent-cream;
-            margin-left: 30vw;
-            z-index: 0;
-        }
+            .latest-blogs__item {
+                .flex-row(space-between);
 
-        .container {
-            margin-top: 0;
+            }
 
             .basic-heading {
-                font-style: italic;
+                font-family: @font-italic;
                 margin-bottom: 30px;
                 z-index: 2;
                 position: relative;
@@ -46,6 +41,7 @@
             .blog-posts__single {
                 margin-bottom: 37px;
                 text-align: center;
+                width: 300px;
 
                 .featured-image {
                     width: 100%;

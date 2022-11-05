@@ -14,7 +14,7 @@
 --}}
 
 
-<section id="parallax-image">
+<section class="parallax-image">
     <div class="parallax" style="background-image: url('{{ the_field('image') }}')">
 
     </div>

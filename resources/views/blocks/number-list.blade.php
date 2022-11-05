@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="number-list">
+<section class="number-list">
     <div class="number-list__one">
         <img src='{{ get_field('image') }}' alt="Green Source Nutrition">
     </div>

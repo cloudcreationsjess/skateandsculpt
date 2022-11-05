@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="hero-secondary" class="background-color--{{ get_field('background_color') }}">
+<section class="hero-secondary background-color--{{ get_field('background_color') }}">
     <div class="hero-secondary__content">
         <div class="hero-secondary__content__inner">
             <x-basic_content/>

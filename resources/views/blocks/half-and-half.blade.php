@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section id="half-and-half" class="background-color--{{ get_field('background_color') }}">
+<section class="half-and-half background-color--{{ get_field('background_color') }}">
     <div class="column-one__container">
         <img src="{{ get_field('image') }}" alt="Green Source Nutrition">
     </div>

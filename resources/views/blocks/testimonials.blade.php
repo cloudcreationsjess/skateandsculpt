@@ -13,9 +13,9 @@
   EnqueueAssets:
 --}}
 
-<section id="testimonials">
+<section class="testimonials">
 
-    <div class="container">
+    <div class="testimonials__container">
         <div class="testimonials__box">
             <div class="row">
                 <div class="col-lg-6 justify-content-center pl-lg-3">
