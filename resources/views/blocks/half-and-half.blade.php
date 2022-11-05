@@ -13,16 +13,10 @@
 --}}
 
 <section id="half-and-half" class="background-color--{{ get_field('background_color') }}">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="column-one__container">
-                <img src="{{ get_field('image') }}" alt="Green Source Nutrition">
-            </div>
-        </div>
-        <div class="col-lg-6 align-self-center">
-            <div class="column-two__container">
-                <x-basic_content />
-            </div>
-        </div>
+    <div class="column-one__container">
+        <img src="{{ get_field('image') }}" alt="Green Source Nutrition">
+    </div>
+    <div class="column-two__container">
+        <x-basic_content/>
     </div>
 </section>

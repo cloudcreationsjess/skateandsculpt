@@ -1,10 +1,15 @@
 #three-column-accordion {
     padding: 85px 0;
     text-align: center;
+    .flex-row();
 
     .sm({
        padding: 30px 0;
     });
+
+    .three-column-accordion__container {
+        width: 1132px;
+    }
 
     .basic-heading {
         margin-bottom: 55px;
@@ -18,16 +23,13 @@
     }
 
     .accordion {
-
-        .row {
-            margin-right: -25px;
-            margin-left: -25px;
-        }
+        .flex-row(space-between, flex-start);
+        flex-wrap: wrap;
+        margin: 0 -25px;
 
         .accordion-item {
             margin-bottom: 70px;
-            padding-right: 25px;
-            padding-left: 25px;
+            width: 340px;
 
             .sm({
                 margin-bottom: 30px;
@@ -76,22 +78,24 @@
                     }
 
                     .accordion-button__heading {
-                        .flex-row(@justify: flex-start, @align: flex-start);
-
+                        .flex-row(flex-start, flex-start);
                         .number {
-                            font-weight: bold;
+                            .font-size(18);
+                            font-family: @font-normal-semi-bold;
+                            line-height: 30px;
                             margin-right: 11px;
-                            margin-top: -2px;
 
                             .sm({
                                .font-size(18);
                                 line-height: 22px;
-                                margin-top: 0;
                             });
                         }
 
-                        .all-caps-heading {
-                            font-weight: normal;
+                        .title {
+                            font-family: @font-normal;
+                            text-transform: uppercase;
+                            line-height: 30px;
+                            letter-spacing: 0.4px;
                         }
                     }
 
@@ -101,6 +105,10 @@
 
             .accordion-body {
                 text-align: left;
+                .font-size(15);
+                letter-spacing: 0.3px;
+                line-height: 20px;
+                font-family: @font-normal;
             }
 
         }
@@ -109,6 +117,7 @@
     .btn {
         margin-left: auto;
         margin-right: auto;
+        margin-top: -20px;
 
         .xs({
            width: 240px;

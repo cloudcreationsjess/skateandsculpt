@@ -13,7 +13,7 @@
 --}}
 
 <section id="basic-section" class="background-color--{{ get_field('background_color') }}">
-    <div class="basic-section__container {{ get_field('width') == 'Wide' ? 'container' : '' }} {{ get_field('class') }}">
+    <div class="{{ get_field('width') == 'Wide' ? 'basic-section__container--wide' : (get_field('width') == 'Medium' ? 'basic-section__container--medium' : 'basic-section__container') }} {{ get_field('class') }}">
       <x-basic_content />
     </div>
 </section>

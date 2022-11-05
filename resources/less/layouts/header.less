@@ -168,6 +168,7 @@
     position: fixed;
     height: @header-height; // edit variable.less
     width: 100%;
+    padding: 0 90px;
     background: @background-color;
     .box-shadow();
     .flex-row(space-between);
@@ -185,18 +186,25 @@
 
         #header__site-branding__logo {
             .flex-row();
-            height: 69px;
+            height: 60px;
             width: auto;
-            padding: 5px 0;
 
             .sm({
                height: 57px;
             });
 
-            img {
-                .full-height();
+            .logo--icon {
+                height: 100%;
+                width: auto;
                 object-fit: contain;
-                padding-right: 5px;
+                margin-right: 8px;
+            }
+
+            .logo--text {
+                height: 80%;
+                width: auto;
+                object-fit: contain;
+                margin-right: 5px;
             }
         }
     }

@@ -8,58 +8,54 @@
         padding-bottom: 40px;
     });
 
+    .overlap-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        height: 80px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     .overlap-logo__container {
-        width: 40vw;
-        height: 100%;
+        width: 744px;
+        height: auto;
         text-align: center;
         .flex-column();
         margin: auto;
+        position: relative;
 
         .lg({
-           width: 100%;
+            width: 100%;
             padding: 0 22px;
         });
 
-        .overlap-logo {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 210px;
-            height: 80px;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-        }
-
-        .basic-heading {
-            max-width: 704px;
-        }
-
-
-        .quote-author {
-            position: absolute;
-            right: 25%;
-            bottom: 15%;
-            font-family: @font-script;
-            .font-size(50);
-            transform: rotate(-18deg);
-
-            .xl({
-               bottom: 5%;
-            });
-
-            .lg({
-               position: unset;
-                right: unset;
-                bottom: unset;
-                transform: unset;
-                margin-top: 40px;
-            });
-        }
-
     }
+
+    .quote-author {
+        position: absolute;
+        right: -149px;
+        bottom: -14px;
+        font-family: @font-script;
+        .font-size(50);
+        transform: rotate(-18deg);
+
+        .xl({
+            bottom: 5%;
+        });
+
+        .lg({
+            position: unset;
+            right: unset;
+            bottom: unset;
+            transform: unset;
+            margin-top: 40px;
+        });
+    }
+
 }

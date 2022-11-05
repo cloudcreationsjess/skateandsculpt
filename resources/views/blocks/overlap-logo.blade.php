@@ -13,12 +13,12 @@
 --}}
 
 <section id="overlap-logo" class="background-color--{{ get_field('background_color') }}">
+    @if( get_field('overlap_logo_check') )
+        <div class="overlap-logo">
+            <img src="{{ get_field('overlap_logo') }}" alt="">
+        </div>
+    @endif
     <div class="overlap-logo__container">
-        @if( get_field('overlap_logo_check') )
-            <div class="overlap-logo">
-                <img src="{{ get_field('overlap_logo') }}" alt="">
-            </div>
-        @endif
         <div class='basic-heading h1'>{!! get_field('quote') !!}</div>
         @if( get_field('quote_author_check') )
             <div class="quote-author">

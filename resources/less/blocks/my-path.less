@@ -1,105 +1,113 @@
 #my-path {
     padding: 60px 0;
+    .flex-column();
 
     .sm({
-       padding: 30px 0;
+        padding: 30px 0;
     });
 
-
-    .my-path__container {
+    .my-path__container--1 {
         background-color: @white;
-        padding: 50px 80px;
+        padding: 50px 30px;
+        width: 1124px;
 
         .sm({
-           padding: 20px 20px;
+            padding: 20px 20px;
         });
+    }
 
-        .my-path__section-one {
+    .parallax-image {
+        width: 1124px;
+    }
 
-            .basic-content {
-                padding-left: 60px;
+    .my-path__container--2 {
+        background-color: @white;
+        padding: 60px 79px 0px 79px;
+        width: 1124px;
 
-                .md({
-                   padding-left: 0;
-                });
+        .sm({
+            padding: 20px 20px;
+        });
+    }
 
-                .script-heading {
-                    margin-bottom: 9px;
-                }
+    .my-path__section-one {
+        .flex-row(space-between, flex-start);
+
+        .image-left {
+            width: 345px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
             }
 
+            .spinning-logo__container {
+                position: absolute;
+                bottom: 0;
+                right: 15px;
+                transform: translate(50%, 50%);
+                width: 119px;
+                height: 119px;
 
-
-            .image-left {
-                margin-left: -40px;
-                margin-bottom: 100px;
-                position: relative;
-
-                .md({
-                    margin-left: 0;
-                    margin-right: 80px;
-                    margin-bottom: 60px;
-                });
-
-                img {
-                    width:100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .spinning-logo__container {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    transform: translate(50%, 50%);
-                    width: 159px;
-                    height: 159px;
-
-                    .xs({
-                       width: 129px;
-                        height: 129px;
-                    });
-
-                    img.spinning-logo {
-                        width: 100%;
-                        height: auto;
-                    }
-
+                img.spinning-logo {
+                    width: 100%;
+                    height: auto;
                 }
 
             }
+
         }
 
+        .basic-content {
+            width: 650px;
+            height: auto;
+            margin-bottom: 60px;
 
-        .my-path__section-two {
+            .md({
+                padding-left: 0;
+            });
 
-            .all-caps-heading {
-                margin-bottom: 20px;
+            .script-heading {
+                margin-bottom: 9px;
             }
+        }
+    }
 
-            .basic-content {
+    .my-path__section-two {
+        .flex-row(space-between, flex-start);
+        .content {
+            width: 570px;
+            height: auto;
+        }
 
-            }
+        .all-caps-heading {
+            margin-bottom: 20px;
+        }
 
-            .image-right {
+        .basic-content {
+
+        }
+
+        .image-right {
+            width: 357px;
+            height: auto;
+            overflow: hidden;
+            aspect-ratio: 1/1.2;
+
+            .md({
+                display: none;
+            });
+
+            img {
                 width: 100%;
-                height: 100%;
-                overflow: hidden;
-                aspect-ratio: 1/1.2;
-
-                .md({
-                   display: none;
-                });
-
-                img {
-                    width: auto;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: right bottom;
-                }
-
+                height: auto;
+                object-fit: cover;
+                object-position: right bottom;
             }
+
         }
     }
 }

@@ -13,23 +13,14 @@
 --}}
 
 <section id="three-column-content" class="background-color--{{ get_field('background_color') }}">
-
-    <div class="row">
-        <div class="col align-self-start">
-            <div class="image-left align-top">
-                <img src="{{ get_field('image_left') }}" alt="Green Source Nutrition">
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="basic-content">
-                <x-basic_content/>
-            </div>
-        </div>
-        <div class="col align-self-end">
-            <div class="image-right align-bottom">
-                <img src="{{ get_field('image_right') }}" alt="Green Source Nutrition">
-            </div>
-        </div>
+    <div class="image-left align-top">
+        <img src="{{ get_field('image_left') }}" alt="Green Source Nutrition">
+    </div>
+    <div class="basic-content">
+        <x-basic_content/>
+    </div>
+    <div class="image-right align-bottom">
+        <img src="{{ get_field('image_right') }}" alt="Green Source Nutrition">
     </div>
 
 </section>

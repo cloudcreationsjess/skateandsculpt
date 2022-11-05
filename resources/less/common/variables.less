@@ -86,11 +86,19 @@
 // TRUETYPE ------------------------------------------------------------
 @font-face {
   font-family: 'Libre';
-  src: url(../../fonts/LibreFranklin-VariableFont_wght.ttf) format('truetype');
+  src: url(../../fonts/LibreFranklin-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Libre Bold';
+    src: url(../../fonts/LibreFranklin-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Libre SemiBold';
+    src: url(../../fonts/LibreFranklin-SemiBold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ivy Mode';
-  src: url(../../fonts/IvyMode-Regular.ttf) format('truetype');
+  src: url(../../fonts/IvyMode-Light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ivy Mode Italic';
@@ -101,9 +109,11 @@
 // Set from fonts loading above or in ../inc/enqueue.php
 // Some fonts have different font-families for different font weights. Set them here.
 
-@font-bold: 'Libre', sans-serif;
+@font-bold: 'Libre Bold', sans-serif;
 @font-italic: 'Ivy Mode Italic', sans-serif;
 @font-normal: 'Libre', sans-serif;
+@font-normal-semi-bold: 'Libre SemiBold', sans-serif;
+@font-normal-bold: 'Libre Bold', sans-serif;
 @font-light: 'Ivy Mode', sans-serif;
 @font-script: 'Haute Couture', serif;
 

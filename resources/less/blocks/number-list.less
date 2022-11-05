@@ -1,24 +1,28 @@
 #number-list {
-    .number-list__container {
 
-        .number-list__one {
+    width: 1124px;
+    margin: 0 auto;
+    .flex-row(space-between, stretch);
+
+    .number-list__one {
+        width: 478px;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+
+
+        img {
+
+            object-fit: cover;
+            object-position: 27% 0;
             height: 100%;
             width: 100%;
-            overflow: hidden;
-
-
-            img {
-
-                object-fit: cover;
-                object-position: center;
-                height: 100%;
-                width: 100%;
-            }
         }
-
     }
 
+
     .number-list__two {
+        width: 597px;
         grid-column: 2;
         height: 100%;
         margin-left: 52px;

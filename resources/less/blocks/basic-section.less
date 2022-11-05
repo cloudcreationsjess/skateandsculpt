@@ -2,30 +2,70 @@
     overflow: hidden;
 
     .basic-section__container {
-        width: 50vw;
-        height: 100%;
+        width: 668px;
+        height: auto;
         text-align: center;
         .flex-column();
-        margin: auto;
-
+        margin: 0px auto;
         .lg({
-           width: 60vw;
+            width: 60vw;
         });
 
         .md({
-           width: 70vw;
+            width: 70vw;
         });
 
         .xs({
-           width: 90vw;
+            width: 90vw;
         });
 
-        &.container {
-            width: unset;
+    }
+
+    .basic-section__container--medium {
+        width: 744px;
+        height: auto;
+        text-align: center;
+        .flex-column();
+        margin: 0px auto;
+
+        &.teeny-bit-bigger {
+            width: 857px;
+
         }
 
-        //SEE global.less for other basic section components as they are used globally
+        &.about-education {
+            p {
+                .font-size(20);
+                letter-spacing: 0.4px;
+                line-height: 30px;
+            }
+        }
 
+        &.approach-i-believe {
+            & > .h1:nth-of-type(4){
+                width: 649px;
+                font-family: @font-light;
+            }
+            & > p {
+                width: 696px;
+                font-family: @font-normal;
+                .font-size(20);
+                letter-spacing: 0.4px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    .basic-section__container--wide {
+        width: 1082px;
+        margin: 0px auto;
+        .flex-column();
+        text-align: center;
+    }
+
+    .basic-section__container, .basic-section__container--wide {
+
+        //SEE global.less for other basic section components as they are used globally
 
         .basic-logo {
             margin-left: auto;
