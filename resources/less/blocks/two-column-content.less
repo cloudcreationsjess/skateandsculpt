@@ -2,14 +2,15 @@
     padding: 85px 0;
     .full-width();
 
-    .md({
-       padding: 40px 0;
-    });
-
     .two-column-content__inner {
         width: 1114px;
         margin: 0 auto;
         .flex-row(center);
+
+        .b(tablet; {
+        	width: calc(100% - 40px);
+            .flex-column();
+        });
     }
 
     .basic-content {
@@ -18,21 +19,14 @@
         text-align: center;
         margin-right: 108px;
 
-        .lg({
-           padding: 0 30px;
-        });
-
-        .md({
-            margin-bottom: 40px;
+        .b(tablet; {
+            margin-right: unset;
+            margin-bottom: 30px;
         });
     }
 
     .bullet-list {
         width: 560px;
         .flex-column(center, flex-start);
-
-        .lg({
-           padding: 0 30px;
-        });
     }
 }

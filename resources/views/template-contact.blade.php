@@ -34,8 +34,8 @@
         <div class="contact-page__section-two background-color--white">
             <div class="contact-page__section-two__inner">
                 <div class="contact-page__section-two__content">
-                    <div class="all-caps-heading mobile-display">{!! get_field('all_caps_heading') !!}</div>
-                    <div class="mobile-display">{{ get_field('content_one') }}</div>
+                    <div class="all-caps-heading mobile-display mb-1">{!! get_field('all_caps_heading') !!}</div>
+                    <div class="mobile-display"><p>{{ get_field('content_one') }}</p></div>
                     <div class="basic-content">
                         {!! get_field('content_two') !!}
                     </div>

@@ -8,23 +8,13 @@
         position: relative;
         background-color: @accent-cream;
 
-        .lg({
-            padding-bottom: 30px;
-            padding-top: 60px;
-        });
-
-        .md({
-            padding-top: 40px;
-
-        });
-
-        .xs({
-            padding: 30px 40px;
-        });
-
         .latest-blogs__container {
             width: 941px;
             margin: 0 auto;
+
+            .b(tablet; {
+            	width: calc(100% - 40px);
+            });
 
             .latest-blogs__item {
                 .flex-row(space-between);
@@ -42,6 +32,12 @@
                 margin-bottom: 37px;
                 text-align: center;
                 width: 300px;
+
+                .b(tablet; {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 0px;
+                });
 
                 .featured-image {
                     width: 100%;

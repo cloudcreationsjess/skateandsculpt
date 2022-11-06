@@ -7,18 +7,6 @@
         text-align: center;
         .flex-column();
         margin: 0px auto;
-        .lg({
-            width: 60vw;
-        });
-
-        .md({
-            width: 70vw;
-        });
-
-        .xs({
-            width: 90vw;
-        });
-
     }
 
     .basic-section__container--medium {
@@ -31,6 +19,10 @@
         &.teeny-bit-bigger {
             width: 857px;
 
+            .b(tablet; {
+               width: calc(100% - 40px);
+                max-width: 745px;
+            });
         }
 
         &.about-education {
@@ -62,6 +54,11 @@
         margin: 0px auto;
         .flex-column();
         text-align: center;
+
+        .b(tablet; {
+            width: calc(100% - 40px);
+            max-width: 745px;
+        })
     }
 
     .basic-section__container, .basic-section__container--wide, .basic-section__container--medium {
@@ -86,6 +83,11 @@
         &.services-are-you-ready {
             width: 790px;
 
+            .b(tablet; {
+            	width: calc(100% - 40px);
+                max-width: 745px;
+            });
+
             .basic-logo {
                 margin-left: auto;
                 margin-right: auto;
@@ -108,10 +110,23 @@
 
         &.wider-icon-list-than-all-others {
             width: 1190px;
+
+            .b(laptop; {
+                max-width: 98%;
+            });
+            .b(tablet; {
+            	width: calc(100% - 40px);
+                max-width: 745px;
+            });
         }
 
         &.another-wider-icon-list {
             width: 1124px;
+
+            .b(tablet; {
+            	width: calc(100% - 40px);
+                max-width: 745px;
+            });
         }
 
         &.home-my-goal-a-little-bigger {

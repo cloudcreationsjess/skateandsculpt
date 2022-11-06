@@ -7,6 +7,10 @@
         width:1124px;
         margin: 0 auto;
         padding: 0 15px;
+
+        .b(tablet; {
+           width: calc(100% - 40px);
+        });
     }
 
     .testimonials__box {
@@ -16,10 +20,8 @@
         aspect-ratio: 2;
         max-height: 60vh;
 
-        .md({
-           aspect-ratio: 1.4;
-            max-height: unset;
-            background-color: #F0F1F5;
+        .b(tablet; {
+            padding-top: 30px;
         });
     }
 
@@ -30,14 +32,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        .md({
-            padding-top: 50px;
-        });
-
-        .xs({
-           padding: 30px 22px;
-        });
 
         .swiper-wrapper {
             height: auto;
@@ -52,10 +46,6 @@
                     height: 100%;
                     width: 100%;
 
-                    .md({
-                        align-items: center;
-                    });
-
                     .swiper-slide__content__text {
                         font-style: italic;
                         .font-size(20);
@@ -63,10 +53,6 @@
                         line-height: 30px;
                         margin-bottom: 20px;
                         font-family: @font-heading;
-
-                        .md({
-                            text-align: center;
-                        });
                     }
 
                     .swiper-slide__content__name {
@@ -86,11 +72,6 @@
                 width: auto;
                 bottom: 0;
 
-                .md({
-                    left: unset;
-                    width: 100%;
-                });
-
                 .swiper-pagination-bullet-active {
                     background-color: @black;
 
@@ -109,10 +90,10 @@
         max-height: 538px;
         width: 100%;
 
-        .md({
-            width: 100%;
-            position: relative;
+        .b(tablet; {
+            max-height: 300px;
         });
+
 
         img {
             height: 110%;
@@ -121,16 +102,11 @@
             object-fit: cover;
             object-position: 64px -140px;
 
-            .md({
-
-                position: absolute;
-                right: 0;
-                max-height: unset;
-                height: auto;
-            });
-
-            .xs({
-                top: -26px;
+            .b(tablet; {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: 0 -100px;
             });
         }
 

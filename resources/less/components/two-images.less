@@ -1,15 +1,15 @@
 //TWO IMAGES
 
 .two-images {
-    width: 1124px;
+    width: 100%;
     margin: 0 auto;
     .flex-row(space-between);
 
     .two-images__one, .two-images__two {
         height: auto;
-        width: 554px;
+        width: calc(50% - 8px);
         overflow: hidden;
-        aspect-ratio: 1.6/1;
+        //aspect-ratio: 1.6/1;
 
         img {
             width: 100%;
@@ -18,11 +18,4 @@
             object-position: center;
         }
     }
-
-    .two-images__one {
-        .md({
-            margin-bottom: 11px;
-        });
-    }
-
 }

@@ -176,27 +176,27 @@
 breakpoints
 ########################## */
 .b(desktop; @content) {
-    @media (min-width: 70em) { @content();
+    @media (min-width: 1351px) { @content();
     }
 }
 
-.b(laptop; @content) {
+.b(small-destop; @content) {
     @media (max-width: 1350px) { @content();
     }
 }
 
-.b(tablet; @content) {
-    @media (max-width: 1023px) { @content();
+.b(laptop; @content) {
+    @media (max-width: 1300px) { @content();
     }
 }
 
-.b(phablet; @content) {
-    @media (min-width: 37.5em) { @content();
+.b(tablet; @content) {
+    @media (max-width: 1164px) { @content();
     }
 }
 
 .b(mobile; @content) {
-    @media (max-width: 767px) { @content();
+    @media (max-width: 784px) { @content();
     }
 }
 

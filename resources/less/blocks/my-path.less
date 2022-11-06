@@ -2,23 +2,24 @@
     padding: 60px 0;
     .flex-column();
 
-    .sm({
-        padding: 30px 0;
-    });
-
     .my-path__container--1 {
         background-color: @white;
         padding: 50px 30px 0px 30px;
         width: 1124px;
         margin-bottom: -20px;
 
-        .sm({
-            padding: 20px 20px;
+        .b(tablet; {
+        	width: calc(100% - 40px);
+            max-width: 745px;
         });
     }
 
     .parallax-image {
         width: 1124px;
+        .b(tablet; {
+        	width: calc(100% - 40px);
+            max-width: 745px;
+        });
     }
 
     .my-path__container--2 {
@@ -26,13 +27,20 @@
         padding: 60px 79px 20px 79px;
         width: 1124px;
 
-        .sm({
-            padding: 20px 20px;
+        .b(tablet; {
+           width: calc(100% - 40px);
+            max-width: 745px;
+            padding: 60px 30px 20px 30px;
         });
+
     }
 
     .my-path__section-one {
         .flex-row(space-between, flex-start);
+
+        .b(tablet; {
+           .flex-column();
+        });
 
         .image-left {
             width: 345px;
@@ -67,8 +75,10 @@
             height: auto;
             margin-bottom: 60px;
 
-            .md({
-                padding-left: 0;
+            .b(tablet; {
+                margin-top: 100px;
+                width: 100%;
+                max-width: 745px;
             });
 
             .script-heading {
@@ -82,6 +92,12 @@
         .content {
             width: 570px;
             height: auto;
+            .b(tablet; {
+            	width: 100%;
+                max-width: 745px;
+                margin-right: auto;
+                margin-left: auto;
+            });
         }
 
         .all-caps-heading {
@@ -98,8 +114,8 @@
             overflow: hidden;
             aspect-ratio: 1/1.2;
 
-            .md({
-                display: none;
+            .b(tablet; {
+            	display: none;
             });
 
             img {

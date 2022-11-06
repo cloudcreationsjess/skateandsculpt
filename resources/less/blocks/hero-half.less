@@ -7,23 +7,31 @@
     overflow: hidden;
     .flex-row(center, stretch);
 
+    .b(tablet; {
+        .flex-column();
+    });
+
     .basic-content {
         .flex-column(center, flex-end);
         width: 50%;
         text-align: center;
         margin: auto;
 
-        .lg({
-            padding-left: 30px;
+        .b(laptop; {
+            .flex-column();
         });
 
-        .sm({
-            padding: 30px 22px;
+        .b(tablet; {
+            margin-top: 30px;
+            margin-bottom: 30px;
         });
 
         .basic-content__inner {
             width: 432px;
             margin-right: 105px;
+            .b(laptop; {
+                margin-right: unset;
+            });
         }
 
     }
@@ -34,35 +42,76 @@
         display: flex;
         align-items: stretch;
 
+        .b(tablet; {
+            width: 100%;
+        });
+
         img {
             width: 100%;
             height: 100%;
             object-position: 31% 0px;
             object-fit: cover;
+
+            .b(tablet; {
+                object-position: 0% 20px;
+            });
         }
     }
 
     &.has-banner {
+        .b(tablet; {
+            margin-top: 140px;
+        });
         .hero-image {
             img {
                 object-position: 31% 60px;
+
+                .b(tablet; {
+                    object-position: 31% 20px;
+                });
             }
         }
     }
 
 }
 
-.page-id-17 #main .hero-half:nth-of-type(2) .hero-image img {
-    object-position: 55% 15px;
+.page-id-17 #main section:nth-of-type(12) {
+    .b(tablet; {
+    	.flex-column-reverse();
+    });
+
+    .hero-image {
+        .b(tablet; {
+        	width: calc(100% - 40px);
+            max-width: 745px;
+            margin-top: 10px;
+        });
+
+        img {
+            object-position: 55% 15px;
+        }
+    }
+
+    .basic-content {
+        .b(tablet; {
+            margin-top: 60px;
+            margin-bottom: 10px;
+        });
+    }
 }
 
 .page-id-21 .hero-half {
-    .basic-heading.h1{
+    .basic-heading.h1 {
         width: 424px;
     }
+
     .basic-content .basic-content__inner {
         width: 464px;
         margin-right: 93px;
+
+        .b(laptop; {
+            margin-right: unset;
+        })
     }
 }
 

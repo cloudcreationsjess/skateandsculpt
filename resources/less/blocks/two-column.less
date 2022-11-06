@@ -8,19 +8,21 @@
         margin: 0 auto;
         width: 1124px;
         .flex-row(space-between, stretch);
-    }
 
-    .sm({
-        padding-bottom: 40px;
-        padding-top: 40px;
-    });
+        .b(tablet; {
+            .flex-column-reverse();
+            width: calc(100% - 40px);
+        })
+    }
 
     .column-one__content {
         width: 454px;
         padding: 26px 0px;
 
-        .md({
+        .b(tablet; {
             margin-top: 80px;
+            width: calc(100% - 40px);
+            max-width: 745px;
         });
 
         .script-heading {
@@ -55,7 +57,11 @@
             width: 159px;
             height: 159px;
 
-            .md({});
+            .b(tablet; {
+                left: unset;
+                right: 0;
+                transform: translate(50%, 50%);
+            });
 
             img.spinning-logo {
                 width: 100%;

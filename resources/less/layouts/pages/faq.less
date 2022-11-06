@@ -5,20 +5,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    .md({
-        max-width: 85vw;
-    });
-
-    .sm({
-        max-width: 100%;
-        padding: 0 22px;
-    });
-
     .faq-hero {
         margin-top: 80px;
         .flex-row(space-between, stretch);
 
-        .xs({
+        .b(tablet; {
+        	.flex-column();
             margin-top: 30px;
         });
 
@@ -26,20 +18,13 @@
             .flex-column(center, flex-start);
             width: 377px;
 
+            .b(tablet; {
+            	width: calc(100% - 40px);
+                max-width: 745px;
+            });
+
             .basic-heading {
                 margin-bottom: 20px;
-
-                .md({
-                    .font-size(40);
-                    line-height: 50px;
-                });
-
-                p {
-                    .md({
-                        .font-size(40);
-                        line-height: 50px;
-                    });
-                }
             }
 
             .basic-content {
@@ -57,7 +42,9 @@
             display: flex;
             align-items: stretch;
 
-            .md({
+            .b(tablet; {
+            	width: calc(100% - 40px);
+                max-width: 745px;
                 margin-top: 30px;
             });
 
@@ -74,9 +61,11 @@
         margin-top: 100px;
         margin-bottom: 100px;
 
-        .sm({
-            margin-top: 50px;
-            margin-bottom: 50px;
+        .b(tablet; {
+        	width: calc(100% - 40px);
+            max-width: 745px;
+            margin-left: auto;
+            margin-right: auto;
         });
 
         .accordion-container {
@@ -104,11 +93,6 @@
                         align-self: center;
                         .all-caps-heading {
                             margin-bottom: 0;
-
-                            .md({
-                                margin-left: 20px;
-
-                            });
                         }
                     }
 

@@ -1,14 +1,15 @@
 .three-column-accordion {
-    padding: 85px 0;
+    padding: 68px 0px 85px 0;
     text-align: center;
     .flex-row();
 
-    .sm({
-       padding: 30px 0;
-    });
-
     .three-column-accordion__container {
         width: 1132px;
+
+        .b(tablet; {
+           width: calc(100% - 40px);
+            max-width: 745px;
+        });
     }
 
     .basic-heading {
@@ -16,10 +17,6 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-
-        .sm({
-            margin-bottom: 30px;
-        });
     }
 
     .accordion {
@@ -27,14 +24,13 @@
         flex-wrap: wrap;
         margin: 0 -25px;
 
+        .b(laptop; {
+            margin: 0px 15px;
+        });
+
         .accordion-item {
             margin-bottom: 40px;
             width: 340px;
-
-            .sm({
-                margin-bottom: 30px;
-            });
-
 
             .accordion-header {
                 font-family: @font-normal;
@@ -84,11 +80,6 @@
                             font-family: @font-normal-semi-bold;
                             line-height: 30px;
                             margin-right: 11px;
-
-                            .sm({
-                               .font-size(18);
-                                line-height: 22px;
-                            });
                         }
 
                         .title {
@@ -118,9 +109,5 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: -20px;
-
-        .xs({
-           width: 240px;
-        });
     }
 }

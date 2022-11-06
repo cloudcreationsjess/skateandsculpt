@@ -3,19 +3,14 @@
 @section('content')
 
     <section id="blog-hero" class="background-color--grey">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="column-one__container">
-                    <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
-                </div>
-            </div>
-            <div class="col-md-6 align-self-center">
-                <div class="column-two__container">
-                    <div class="blog-title basic-heading">{!! get_the_title() !!}</div>
-                    <div class="blog-preview-text basic-content">{!! get_field('preview_text') !!}</div>
-                    <a class="underlined-text-link" href="{{ get_permalink() }}">Read More</a>
-                </div>
-            </div>
+        <div class="column-one__container">
+            <img src="{{ get_the_post_thumbnail_url() }}" alt="Green Source Nutrition">
+        </div>
+
+        <div class="column-two__container">
+            <div class="blog-title basic-heading">{!! get_the_title() !!}</div>
+            <div class="blog-preview-text basic-content">{!! get_field('preview_text') !!}</div>
+            <a class="underlined-text-link" href="{{ get_permalink() }}">Read More</a>
         </div>
     </section>
     <?php
