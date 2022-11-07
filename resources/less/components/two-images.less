@@ -5,11 +5,21 @@
     margin: 0 auto;
     .flex-row(space-between);
 
+    .b(mobile; {
+    	.flex-column();
+    });
+
     .two-images__one, .two-images__two {
         height: auto;
         width: calc(50% - 8px);
         overflow: hidden;
         //aspect-ratio: 1.6/1;
+        .b(mobile; {
+        	width: 100%;
+            &:first-of-type {
+                margin-bottom: 11px;
+            }
+        });
 
         img {
             width: 100%;

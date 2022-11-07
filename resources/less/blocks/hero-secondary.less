@@ -11,6 +11,10 @@
        .flex-column();
     });
 
+    .b(mobile; {
+    	justify-content: space-between;
+    });
+
     .hero-secondary__content {
         .flex-column(center, flex-end);
         width: 42.6%;
@@ -25,9 +29,19 @@
             margin-bottom: 30px;
         });
 
+        .b(mobile; {
+        	width: 100%;
+            min-width: 100%;
+            padding: 0px;
+        });
+
         .hero-secondary__content__inner {
             width: 440px;
             .flex-column();
+
+            .b(mobile; {
+            	width: calc(100% - 40px);
+            });
 
             .spacer--85{
                 .b(tablet; {
@@ -73,5 +87,10 @@
                 object-position: 0 0;
             }
         }
+    }
+}
+.page-id-15 {
+    .hero-secondary .hero-secondary__content {
+        padding-top: 30px;
     }
 }

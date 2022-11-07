@@ -7,6 +7,10 @@
     .icon-list .icon-list__item .icon-list__content.icon-list__content--wide{
         width: 210px;
         max-width: unset;
+
+        .b(mobile; {
+        	width: 175px;
+        });
     }
 }
 .icon-list {
@@ -19,6 +23,14 @@
     	flex-wrap: wrap;
         align-items: center;
         margin-bottom: -40px;
+    });
+
+    .b(mobile; {
+        margin-top: 30px;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: 100vw;
+        justify-content: space-evenly;
     });
 
     .icon-list__item {
@@ -69,6 +81,10 @@
             flex-direction: column;
             justify-content: space-between;
 
+            .b(mobile; {
+                margin-bottom: 20px;
+            });
+
             h5 {
                 font-family: @font-normal-semi-bold;
                 letter-spacing: 0.3px;
@@ -77,6 +93,10 @@
 
             &.icon-list__content--wide {
                 max-width: 228px;
+
+                .b(mobile; {
+                	max-width: 175px;
+                });
 
                 p {
                     .font-size(15);

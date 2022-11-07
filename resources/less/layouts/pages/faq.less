@@ -25,6 +25,13 @@
 
             .basic-heading {
                 margin-bottom: 20px;
+
+                p {
+                    .b(mobile; {
+                    	.font-size(40);
+                        line-height: 50px;
+                    });
+                }
             }
 
             .basic-content {
@@ -33,6 +40,12 @@
                 strong {
                     font-family: @font-normal-semi-bold;
                 }
+
+                .b(mobile; {
+                    .font-size(18);
+                    line-height: 25px;
+                    letter-spacing: 0.36px;
+                });
             }
         }
 
@@ -46,6 +59,10 @@
             	width: calc(100% - 40px);
                 max-width: 745px;
                 margin-top: 30px;
+            });
+
+            .b(mobile; {
+            	height: 400px;
             });
 
             img {
@@ -68,6 +85,11 @@
             margin-right: auto;
         });
 
+        .b(mobile; {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        });
+
         .accordion-container {
             border-top: 1px solid @black;
             width: 100%;
@@ -76,6 +98,10 @@
             .accordion-item {
                 border-bottom: 1px solid @black;
                 padding: 47px 50px 47px 0px;
+
+                .b(mobile; {
+                	padding: 47px 0px 47px 0px;
+                });
 
                 .accordion-button {
                     .flex-row(space-between, flex-start);

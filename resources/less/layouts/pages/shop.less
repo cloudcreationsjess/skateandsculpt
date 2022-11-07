@@ -6,6 +6,12 @@
     margin-bottom: 100px;
     .flex-row();
 
+    .b(mobile; {
+    	.flex-column();
+        margin-top: 0px;
+        margin-bottom: 50px;
+    });
+
 
     .shop-page__content {
         .flex-column();
@@ -13,6 +19,12 @@
         align-items: center;
         min-height: 200px;
         margin: 0 30px;
+
+        &:not(:last-of-type){
+            .b(mobile; {
+                margin-bottom: 60px;
+            });
+        }
     }
 
     .shop-logo {

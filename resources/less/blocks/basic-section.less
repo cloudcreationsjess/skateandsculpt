@@ -1,5 +1,9 @@
 .basic-section {
     overflow: hidden;
+    .b(mobile; {
+    	padding: 30px 0px;
+        text-align: center!important;
+    });
 
     .basic-section__container {
         width: 668px;
@@ -7,6 +11,10 @@
         text-align: center;
         .flex-column();
         margin: 0px auto;
+
+        .b(mobile; {
+        	width: calc(100% - 40px);
+        });
     }
 
     .basic-section__container--medium {
@@ -16,6 +24,10 @@
         .flex-column();
         margin: 0px auto;
 
+        .b(mobile; {
+        	width: calc(100% - 40px);
+        });
+
         &.teeny-bit-bigger {
             width: 857px;
 
@@ -23,9 +35,19 @@
                width: calc(100% - 40px);
                 max-width: 745px;
             });
+
+            .b(mobile; {
+                margin-bottom: 30px;
+            });
         }
 
         &.about-education {
+            .basic-heading p {
+                .b(mobile; {
+                	.font-size(30);
+                    line-height: 40px;
+                });
+            }
             p {
                 .font-size(20);
                 letter-spacing: 0.4px;
@@ -34,9 +56,21 @@
         }
 
         &.approach-i-believe {
+            & > .h1:nth-of-type(2) p {
+                .b(mobile; {
+                    width: 100%;
+                    .font-size(40)!important;
+                    line-height: 50px;
+                });
+            }
+
             & > .h1:nth-of-type(4) {
                 width: 649px;
                 font-family: @font-light;
+
+                .b(mobile; {
+                	width: 100%;
+                });
             }
 
             & > p {
@@ -45,6 +79,13 @@
                 .font-size(20);
                 letter-spacing: 0.4px;
                 line-height: 30px;
+
+                .b(mobile; {
+                	width: 100%;
+                    .font-size(18);
+                    line-height: 25px;
+                    letter-spacing: 0.36px;
+                });
             }
         }
     }
@@ -94,6 +135,10 @@
                 max-width: 75px;
                 height: auto;
 
+                .b(mobile; {
+                    margin-bottom: 30px;
+                });
+
                 img {
                     height: 100%;
                     width: 100%;
@@ -105,6 +150,10 @@
 
             .basic-heading {
                 width: 653px;
+
+                .b(mobile; {
+                	width: 100%;
+                });
             }
         }
 
@@ -131,6 +180,9 @@
 
         &.home-my-goal-a-little-bigger {
             width: 682px;
+            .b(mobile; {
+            	width: calc(100% - 40px);
+            });
 
             p {
                 letter-spacing: 0px;

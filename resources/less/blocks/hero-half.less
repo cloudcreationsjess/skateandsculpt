@@ -11,6 +11,10 @@
         .flex-column();
     });
 
+    .b(mobile; {
+    	justify-content: flex-start;
+    });
+
     .basic-content {
         .flex-column(center, flex-end);
         width: 50%;
@@ -26,11 +30,20 @@
             margin-bottom: 30px;
         });
 
+        .b(mobile; {
+        	width: calc(100% - 40px);
+            justify-content: space-between;
+        });
+
         .basic-content__inner {
             width: 432px;
             margin-right: 105px;
             .b(laptop; {
                 margin-right: unset;
+            });
+
+            .b(mobile; {
+            	width: 100%;
             });
         }
 
@@ -46,6 +59,11 @@
             width: 100%;
         });
 
+        .b(mobile; {
+        	height: 396px;
+            margin-top: 10px;
+        });
+
         img {
             width: 100%;
             height: 100%;
@@ -54,6 +72,10 @@
 
             .b(tablet; {
                 object-position: 0% 20px;
+            });
+
+            .b(mobile; {
+            	object-position: 0% 0px;
             });
         }
     }
@@ -68,6 +90,9 @@
 
                 .b(tablet; {
                     object-position: 31% 20px;
+                });
+                .b(mobile; {
+                    object-position: 0% 0px;
                 });
             }
         }
@@ -87,6 +112,10 @@
             margin-top: 10px;
         });
 
+        .b(mobile; {
+        	height: 450px;
+        });
+
         img {
             object-position: 55% 15px;
         }
@@ -97,12 +126,26 @@
             margin-top: 60px;
             margin-bottom: 10px;
         });
+
+        .b(mobile; {
+            margin-top: 30px;
+            margin-bottom: 0px;
+        });
     }
 }
 
 .page-id-21 .hero-half {
+    .hero-image img {
+        .b(mobile; {
+            object-position: -92px 0px;
+        });
+    }
+
     .basic-heading.h1 {
         width: 424px;
+        .b(mobile; {
+            width: 100%;
+        });
     }
 
     .basic-content .basic-content__inner {
@@ -111,7 +154,11 @@
 
         .b(laptop; {
             margin-right: unset;
-        })
+        });
+
+        .b(mobile; {
+        	width: 100%;
+        });
     }
 }
 

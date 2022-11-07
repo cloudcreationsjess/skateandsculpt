@@ -9,6 +9,10 @@
         .flex-column();
     });
 
+    .b(mobile; {
+        margin-top: 10px;
+    });
+
     .number-list__one {
         width: 478px;
         overflow: hidden;
@@ -21,6 +25,9 @@
             max-width: 745px;
         });
 
+        .b(mobile; {
+        	height: 450px;
+        });
 
         img {
 
@@ -56,6 +63,10 @@
 
             &:not(:last-of-type) {
                 margin-bottom: 50px;
+
+                .b(mobile; {
+                    margin-bottom: 30px;
+                });
             }
 
             .number-list__numbered-list__item__number {
@@ -72,10 +83,28 @@
                 .text-content {
                     line-height: 25px;
                     letter-spacing: 0.36px;
+
+                    .b(mobile; {
+                        .font-size(18);
+                        letter-spacing: 0.36px;
+                        line-height: 25px;
+                    });
+                }
+
+                .all-caps-heading {
+                    .b(mobile; {
+                    	.font-size(18);
+                        letter-spacing: 0.36px;
+                        line-height: 25px;
+                    });
                 }
 
                 .btn {
                     margin-top: 50px;
+                    .b(mobile; {
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                    });
                 }
             }
 

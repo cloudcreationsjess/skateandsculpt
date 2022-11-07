@@ -242,6 +242,10 @@
             .flex-row(center, flex-start);
         });
 
+        .b(mobile; {
+        	justify-content: space-between;
+        });
+
         h2 {
             color: @text-color-primary;
             text-align: center;
@@ -259,6 +263,12 @@
             width: 360px;
             margin-left: 10px;
             margin-right: 10px;
+        });
+
+        .b(mobile; {
+        	width: calc(50% - 7px);
+            margin-left: 0px;
+            margin-right: 0px;
         });
 
         .featured-image {
