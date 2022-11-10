@@ -9,5 +9,6 @@
 
         <?php the_content(); ?>
 
+
     <?php endwhile; endif; ?>
 @endsection

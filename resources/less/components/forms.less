@@ -31,17 +31,18 @@ textarea {
     max-height: 900px;
     width: 100%;
     max-width: 100%;
-    background-color: @white;
-    color: @text-color-dark;
-    border: 1px solid @primary-color;
+    background-color: @background-color;
+    color: @accent-orange;
+    border: 1px solid @accent-orange;
     .font-size(16);
     padding: 15px;
     line-height: @baseline;
     margin-bottom: @baseline;
 
     &:focus {
-        background: @white;
-        color: @primary-color;
+        background: @background-color;
+        border: 2px solid @accent-blue;
+        color: @accent-blue;
     }
 
 }
@@ -54,15 +55,16 @@ input, select {
     padding: 0px 15px;
     text-align: left;
     .transition();
-    border: 1px solid @primary-color;
+    border: 1px solid @accent-blue;
     background-color: @white;
-    color: @text-color-dark;
+    color: @text-color-primary;
     .font-size(16);
     margin-bottom: @baseline;
 
     &:focus {
-        background: @white;
-        color: @primary-color;
+        background: @background-color;
+        border: 2px solid @accent-blue;
+        color: @accent-blue;
     }
 }
 

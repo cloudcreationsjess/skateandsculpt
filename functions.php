@@ -369,4 +369,8 @@
 
     add_filter('wpcf7_autop_or_not', '__return_false');
 
+    //DISABLE ADMIN BAR
+    /* Disable WordPress Admin Bar for all users */
+    add_filter( 'show_admin_bar', '__return_false' );
+
 

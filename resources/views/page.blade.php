@@ -6,6 +6,9 @@
 
         <?php the_content(); ?>
 
+    <button data-ripple-light="true">Material Ripple</button>
+
+
     <?php endwhile; endif; ?>
 
 @endsection

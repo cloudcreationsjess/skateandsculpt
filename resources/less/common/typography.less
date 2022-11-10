@@ -11,7 +11,7 @@
 body {
     font-family: @font-text;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: @weight-normal;
     line-height: 1;
     color: @text-color-primary;
 }
@@ -24,26 +24,13 @@ body {
 }
 
 h1, .h1 {
-    .font-size(40);
-    line-height: 55px;
+    .font-size(96);
+    line-height: 111.36px;
     font-family: @font-heading;
     color: @text-color-primary;
-    margin-bottom: @baseline * 1.5;
     margin-top: @baseline;
-    letter-spacing: 0px;
-    text-transform: none;
-    font-weight: @weight-normal;
+    font-weight: @weight-medium;
 
-    .sm({
-       .font-size(30);
-        line-height: 44px;
-    });
-
-    span {
-        text-decoration-color: @accent-color !important;
-        text-decoration-thickness: 2px !important;
-        text-underline-offset: 5px !important;
-    }
 }
 
 h2, .h2 {
@@ -55,9 +42,6 @@ h2, .h2 {
     letter-spacing: 0px;
     text-transform: uppercase;
 
-    em {
-        font-family: @font-italic;
-    }
 }
 
 h3, .h3 {
@@ -106,23 +90,12 @@ h6, .h6 {
 /*********** Paragraphs and Text Effects *******************************/
 /***********************************************************************/
 p, .p {
-    .font-size(18);
-    line-height: 1.5;
+    .font-size(20);
+    line-height: 20.2px;
     font-family: @font-text;
     color: @text-color-primary;
-    letter-spacing: 0.36px;
+    font-weight: @weight-normal;
     text-transform: none;
-    margin-bottom: 20px;
-
-    strong {
-        font-weight: normal;
-        font-family: @font-normal-semi-bold;
-    }
-
-    em {
-        font-family: @font-italic;
-        font-style: normal;
-    }
 }
 
 i, em {
@@ -198,4 +171,12 @@ main {
         list-style-position: inside;
         font-weight: normal;
     }
+}
+
+/***********************************************************************/
+/****** INPUT **********************************************************/
+/***********************************************************************/
+
+input {
+
 }

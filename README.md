@@ -1,12 +1,12 @@
 <p align="center">
-  <strong>Stealth's WordPress starter theme Built off of Sage 10 by roots</strong>
+  <strong>MTT's WordPress starter theme Built off of Sage 10 by roots</strong>
 </p>
 
 <p align="center">
   <a href="https://roots.io">Official Website</a> | <a href="https://roots.io/docs/sage/">Documentation</a>
 </p>
 
-# Stealth Boilerplate Notes
+# MTT Boilerplate Notes
 
 ## Getting Started
 1. Run `composer install` from the root of the theme

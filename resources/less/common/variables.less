@@ -6,38 +6,38 @@
 /*==== SITE COLORS ====================================================*/
 /***********************************************************************/
 /* Primary Color */
-@primary-color: #FFFFFF;
-@footer-color: #F8FAF9;
+@primary-color: #FFF9F2;
+@footer-color: #FFE2DA;
 
 /* Secondary Color */
-@secondary-color: #FFFDF8;
-@secondary-color-dark: #F1EEE4;
+@secondary-color: #5F82C9;
 
 /* Accent Color */
-@accent-color: #F5F97A;
-@accent-color-dark: #F4FE79;
-@accent-grey: #F8FAF9;
-@accent-pink: #EFE7DF;
-@accent-tan: #F1EEE4;
-@accent-cream: #FFFDF8;
+@accent-color: #5F82C9;
+@accent-blue: #5F82C9;
+@accent-lime: #CCFF00;
+@accent-orange: #FF6700;
+@accent-pink: #FFE2DA ;
+@accent-dark-purple: #D9BBDC;
+@accent-light-purple: #ECDCE1;
+@accent-grey: #F2F2F2;
 
 /* Text Color */
-@text-color-primary: #000000;
-@text-color-secondary: #FFFFFF;
-@text-color-light: #FFFFFF; // Fonts on a dark background
-@text-color-dark: #263238; // Fonts on a light background
+@text-color-primary: #5F82C9;
+@text-color-secondary: #FF6700;
+@text-color-header: @accent-light-purple;
 
 /* Body Color (default text color) */
-@body-color: #000000;
+@body-color: #5F82C9;
 
 /* Background Color (For page. Typically white or grey) */
-@background-color: @white;
-@background-color-light: #FFFDF8;
-@background-color-dark: #F1EEE4;
+@background-color: #FFF9F2;
+@background-color-light: #FFF9F2;
+@background-color-dark: #5F82C9;
 
 /* Link color <a> */
 @link-color: @text-color-primary;
-@link-hover-color: @text-color-primary;
+@link-hover-color: @accent-orange;
 
 /* Input Place Holder Color */
 @input-placeholder-color: #bbbbbb;
@@ -79,52 +79,47 @@
 
 // OPENTYPE ------------------------------------------------------------
 @font-face {
-  font-family: 'Haute Couture';
-  src: url(../../fonts/HauteCouture-Regular.otf) format('opentype');
+  font-family: 'Cooper';
+  src: url(../../fonts/CooperNouveau.otf) format('opentype');
 }
 
-// TRUETYPE ------------------------------------------------------------
 @font-face {
-  font-family: 'Libre';
-  src: url(../../fonts/LibreFranklin-Light.ttf) format('truetype');
+    font-family: 'Termina';
+    src: url(../../fonts/Termina-Demi.otf) format('opentype');
 }
+
+// WOFF ----------------------------------------------------------------
+
 @font-face {
-    font-family: 'Libre Bold';
-    src: url(../../fonts/LibreFranklin-Bold.ttf) format('truetype');
+    font-family: 'Apercu Bold';
+    src: url(../../fonts/apercu-bold.woff) format('woff');
 }
+
 @font-face {
-    font-family: 'Libre SemiBold';
-    src: url(../../fonts/LibreFranklin-SemiBold.ttf) format('truetype');
+    font-family: 'Apercu Light';
+    src: url(../../fonts/apercu-light.woff) format('woff');
 }
-@font-face {
-  font-family: 'Ivy Mode';
-  src: url(../../fonts/IvyMode-Light.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Ivy Mode Italic';
-  src: url(../../fonts/IvyMode-LightItalic.ttf) format('truetype');
-}
+
 
 /* Font families */
 // Set from fonts loading above or in ../inc/enqueue.php
 // Some fonts have different font-families for different font weights. Set them here.
 
-@font-bold: 'Libre Bold', sans-serif;
-@font-italic: 'Ivy Mode Italic', sans-serif;
-@font-normal: 'Libre', sans-serif;
-@font-normal-semi-bold: 'Libre SemiBold', sans-serif;
-@font-normal-bold: 'Libre Bold', sans-serif;
-@font-light: 'Ivy Mode', sans-serif;
-@font-script: 'Haute Couture', serif;
+@font-heading: 'Cooper', serif;
+@font-sans-bold: 'Termina', sans-serif;
+@font-normal: 'Apercu Light', sans-serif;
+@font-script: 'Cooper', serif;
+@font-bold: 'Apercu Bold', sans-serif;
 
 /* Font Weights */
 @weight-thin: 100;
 @weight-normal: 300;
-@weight-medium: 500;
+@weight-medium: 400;
 @weight-bold: 700;
 
 // Set font-family that will be used for titles, text, buttons, and nav.
-@font-heading: @font-light;
+
+@font-sans-heading: @font-sans-bold;
 @font-text: @font-normal;
 @font-btn: @font-bold;
 @font-nav: @font-normal;
@@ -138,7 +133,7 @@
 @bl: @baseline;
 
 /* Header (Main navigation) */
-@header-height: @baseline*4;
+@header-height: 129px;
 
 /***********************************************************************/
 /*==== OTHER ==========================================================*/

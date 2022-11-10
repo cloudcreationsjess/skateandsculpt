@@ -1,0 +1,85 @@
+.hero-main {
+    height: auto;
+    min-height: calc(92vh - @header-height);
+    width: 100%;
+    overflow: hidden;
+    background-color: @background-color;
+    position: relative;
+
+    .hero-title {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        z-index: 2;
+
+        p {
+            font-family: @font-sans-heading;
+            .font-size(64);
+            line-height: 64.64px;
+            text-transform: uppercase;
+            text-align: center;
+            color: @accent-light-purple;
+
+        }
+
+    }
+}
+
+.media-container {
+    width: 100%;
+    height: calc(92vh - @header-height);
+    border-top: 2px solid @accent-blue;
+    border-radius: 0px 0px 50px 50px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    iframe {
+        pointer-events: none;
+    }
+
+    .fixed-button {
+        position: fixed;
+        bottom: calc(10vh + 20px);
+        right: calc( 50% - 757px + 20px);
+        width: 200px;
+        height: 102px;
+        padding: 0 50px;
+        .flex-row(flex-end, center);
+
+        a {
+            background-image: url("/wp-content/uploads/2022/11/fixed-button.svg.svg");
+            background-size: contain;
+            height: 100%;
+            width: 102px;
+            font-family: @font-btn;
+            .font-size(16);
+            line-height: 19.92px;
+            color: @accent-orange;
+            text-transform: uppercase;
+            background-repeat: no-repeat;
+            .flex-column();
+            text-align: center;
+
+            &:hover {
+                color: @accent-blue;
+            }
+        }
+    }
+
+}
