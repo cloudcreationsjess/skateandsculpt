@@ -28,26 +28,25 @@ button:focus {outline: 0 !important;}
     }
 }
 
-
 /* Primary Button - LIME AND ORANGE */
-.btn--primary, .btn--lime-orange  .btn--primary:visited {
+.btn--primary, .btn--lime-orange, .btn--primary:visited, .btn--lime-orange:visited {
     background-color: @accent-lime;
     color: @accent-orange;
-
+    border: 1px solid @accent-lime;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
-        border: none;
-        background-color: @accent-color;
-        color: @text-color-primary;
+        border-color: @accent-orange;
+        .box-shadow-button-orange();
+        color: @accent-orange;
     }
 
     /* Click */
 
     &:focus {
-        background-color: lighten(@accent-color, 25%);
-        color: @text-color-primary;
+        background-color: lighten(@accent-lime, 25%);
+        color: @accent-orange;
     }
 }
 
@@ -56,14 +55,14 @@ button:focus {outline: 0 !important;}
 .btn--blue-white, .btn--blue-white:visited {
     background-color: @accent-blue;
     color: @background-color;
-
-
+    border: 1px solid @accent-blue;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
-        background-color: @accent-orange;
-        color: @background-color;
+        background-color: @background-color;
+        color: @accent-blue;
+        .box-shadow-button-blue();
     }
 
     /* Click */
@@ -79,19 +78,20 @@ button:focus {outline: 0 !important;}
 .btn--orange-white, .btn--orange-white:visited {
     background-color: @accent-orange;
     color: @background-color;
-
+    border: 1px solid @accent-orange;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
-        background-color: @accent-lime;
-        color: @accent-blue;
+        background-color: @background-color;
+        color: @accent-orange;
+        .box-shadow-button-orange();
     }
 
     /* Click */
 
     &:focus {
-        background-color: lighten(@accent-lime, 25%);
+        background-color: lighten(@background-color, 25%);
     }
 }
 
@@ -100,20 +100,22 @@ button:focus {outline: 0 !important;}
 .btn--white-orange, .btn--white-orange:visited {
     background-color: @background-color;
     color: @accent-orange;
-
+    border: 1px solid @background-color;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
-        background-color: @accent-orange;
-        color: @background-color;
+        background-color: @background-color;
+        color: @accent-orange;
+        .box-shadow-button-orange();
+        border-color: @accent-orange;
     }
 
     /* Click */
 
     &:focus {
-        background-color: lighten(@accent-orange, 25%);
-        color:@background-color;
+        background-color: lighten(@background-color, 25%);
+        color: @accent-orange;
     }
 }
 
@@ -122,12 +124,14 @@ button:focus {outline: 0 !important;}
 .btn--green-blue, .btn--green-blue:visited {
     background-color: @accent-lime;
     color: @secondary-color;
-
+    border: 1px solid @accent-lime;
 
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
         background-color: @accent-orange;
+        border-color: @accent-blue;
+        .box-shadow-button-blue();
     }
 
     /* Click */
@@ -144,19 +148,19 @@ button:focus {outline: 0 !important;}
     color: @accent-orange;
     border: 2px solid @accent-orange;
 
-
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
         background-color: @accent-orange;
         color: @background-color;
+        .box-shadow-button-orange();
     }
 
     /* Click */
 
     &:focus {
         background-color: lighten(@accent-orange, 25%);
-        color:@background-color;
+        color: @background-color;
     }
 }
 

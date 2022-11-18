@@ -1,6 +1,7 @@
 .testimonials {
     padding: 145px 0 260px 0;
     position: relative;
+    overflow: hidden;
 
     .blue-outline-squiggle--1, .blue-outline-squiggle--2 {
         position: absolute;
@@ -8,13 +9,14 @@
     }
 
     .blue-outline-squiggle--1 {
-        top: 0;
+        top: -30vh;
         right: 0;
     }
 
     .blue-outline-squiggle--2 {
-        left: 0;
-        bottom: 0;
+        left: 0vh;
+        bottom: -30vh;
+        transform: rotate(180deg);
     }
 
     .testimonials-container {
@@ -33,7 +35,12 @@
         }
 
         .swiper-testimonials {
+            width: 579px;
+            height: auto;
+
             .swiper-slide {
+                width: 579px;
+                height: auto;
                 color: @accent-orange;
 
                 .testimonial-quote {
@@ -51,7 +58,7 @@
             }
         }
 
-        .swiper-btn-prev, swiper-btn-next {
+        .swiper-button-prev, .swiper-button-next {
             height: 70px;
             width: 70px;
 
@@ -59,6 +66,20 @@
                 content: '';
             }
 
+        }
+
+        .swiper-button-prev {
+            left: 0;
+            transform: translateX(-50%);
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        .swiper-button-next {
+            right: 0;
+            transform: translateX(50%);
         }
     }
 }

@@ -21,8 +21,11 @@
         'orderby'     => 'date',
         'order'       => 'DESC',
     ];
-    $the_query = new WP_Query($params);
+
+    query_posts($params);
 ?>
+
+
 
 
 
@@ -40,31 +43,28 @@
         <div class="swiper-testimonials">
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                @if(have_posts($the_query))
-                    @while(have_posts($the_query))
+                @if(have_posts($params))
+                    @while(have_posts())
                         @php(the_post())
                         <div class="swiper-slide">
                             <div class="testimonial-quote">
-                                {!! get_field('testimonial_quote') !!}
+                                {!! get_post_meta(get_the_ID(), 'testimonial_quote', TRUE) !!}
                             </div>
                             <div class="quote-author">
-                                {!! get_field('quote_author') !!}
+                                {!! get_post_meta(get_the_ID(), 'quote_author', TRUE) !!}
                             </div>
                         </div>
                     @endwhile
                 @endif
             </div>
-            <div class="swiper-btn-prev">
-                <x-svg.swiper-prev />
+            @php(wp_reset_query())
+            <div class="swiper-button-prev">
+                <x-svg.swiper-next />
             </div>
-            <div class="swiper-btn-next">
+            <div class="swiper-button-next">
                 <x-svg.swiper-next />
             </div>
         </div>
-
-    </div>
-
-    @php(wp_reset_query())
     </div>
 </section>
 

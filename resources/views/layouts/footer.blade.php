@@ -94,12 +94,17 @@
                    var citySlug = city.toLowerCase().replace(' ', '-');
                    document.querySelector(".js__city").href = citySlug;
                },
-               slideChangeTransitionEnd: function () {
+               slideChangeTransitionStart: function () {
+                   document.querySelector(".js__city").style.opacity = "1";
                    var city =  document.querySelector(".swiper-slide-active").getAttribute('data-city');
                    document.querySelector(".js__city").innerHTML = city + '!';
                    var citySlug = city.toLowerCase().replace(' ', '-');
                    document.querySelector(".js__city").href = citySlug;
                },
+
+               slideChange: function () {
+                   document.querySelector(".js__city").style.opacity = "0";
+               }
            },
 
            navigation: {
@@ -129,13 +134,13 @@
 
            // Navigation arrows
            navigation: {
-               nextEl: '.swiper-btn-next',
-               prevEl: '.swiper-btn-prev',
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
            },
 
            //fade
            effect: 'fade',
-           speed: 175,
+           speed: 300,
            fadeEffect: {
                crossFade: true,
            },

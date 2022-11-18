@@ -76,11 +76,19 @@
     box-shadow: 0px @distance @blur 0px rgba(0, 0, 0, @opacity);
 }
 
-.box-shadow-secondary(@distance: 2px, @blur: 10px, @opacity: 0.15) {
-    -webkit-box-shadow: 0px @distance @blur 0px rgba(0, 0, 0, @opacity);
-    -moz-box-shadow: 0px @distance @blur 0px rgba(0, 0, 0, @opacity);
-    box-shadow: 0px @distance @blur 0px rgba(0, 0, 0, @opacity);
+.box-shadow-button-orange(@distance: 3px, @blur: 0px, @opacity: 1) {
+    -webkit-box-shadow: 2px @distance @blur 0px rgba(255, 103, 0, @opacity);
+    -moz-box-shadow: 2px @distance @blur 0px rgba(255, 103, 0, @opacity);
+    box-shadow: 2px @distance @blur 0px rgba(255, 103, 0, @opacity);
 }
+
+.box-shadow-button-blue(@distance: 3px, @blur: 0px, @opacity: 1) {
+    -webkit-box-shadow: 2px @distance @blur 0px rgba(95, 130, 201, @opacity);
+    -moz-box-shadow: 2px @distance @blur 0px rgba(95, 130, 201, @opacity);
+    box-shadow: 2px @distance @blur 0px rgba(95, 130, 201, @opacity);
+}
+
+
 
 /* Apply a well shadow */
 .well-shadow(@distance: 5px, @blur: 5px, @opacity: 0.2) {
