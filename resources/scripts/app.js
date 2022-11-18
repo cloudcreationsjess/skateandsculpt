@@ -13,22 +13,21 @@ $(document).ready(() => {
     // if (url_pathname == "/page-name/") {
     // yourScript();
     // }
-    $('.collapse').collapse();
 
-    window.onscroll = function () {
-        scrollRotate();
-    };
-
-    function scrollRotate() {
-        let images = document.querySelector(".spinning-logo");
-        images.style.transform = "rotate(" + window.scrollY / 5 + "deg)";
-    }
+    // window.onscroll = function () {
+    //     scrollRotate();
+    // };
+    //
+    // function scrollRotate() {
+    //     let images = document.querySelector(".spinning-logo");
+    //     images.style.transform = "rotate(" + window.scrollY / 5 + "deg)";
+    // }
 
     mobileMenu();
 
     fixDiv();
 
-    bannerPop();
+    // bannerPop();
 
 });
 
@@ -166,45 +165,45 @@ function fixDiv() {
 $(window).scroll(fixDiv);
 
 //SEARCH POP OUT
-
-const $menu = $('.search-popout');
-
-const onMouseUp = e => {
-    if (!$menu.is(e.target) // If the target of the click isn't the container...
-        && $menu.has(e.target).length === 0) // ... or a descendant of the container.
-    {
-        $menu.removeClass('search-popout__active');
-        $('.sf-field-search').removeClass('display-search');
-    }
-};
-
-$('.search-popout').on('click', () => {
-    $('.sf-field-search').toggleClass('display-search') && $menu.toggleClass('search-popout__active').promise().done(() => {
-        if ($menu.hasClass('search-popout__active')) {
-            $(document).on('mouseup', onMouseUp); // Only listen for mouseup when menu is active...
-        } else {
-            $(document).off('mouseup', onMouseUp); // else remove listener.
-        }
-    });
-
-    $('input[name="_sf_search[]"]').focus();
-});
+//
+// const $menu = $('.search-popout');
+//
+// const onMouseUp = e => {
+//     if (!$menu.is(e.target) // If the target of the click isn't the container...
+//         && $menu.has(e.target).length === 0) // ... or a descendant of the container.
+//     {
+//         $menu.removeClass('search-popout__active');
+//         $('.sf-field-search').removeClass('display-search');
+//     }
+// };
+//
+// $('.search-popout').on('click', () => {
+//     $('.sf-field-search').toggleClass('display-search') && $menu.toggleClass('search-popout__active').promise().done(() => {
+//         if ($menu.hasClass('search-popout__active')) {
+//             $(document).on('mouseup', onMouseUp); // Only listen for mouseup when menu is active...
+//         } else {
+//             $(document).off('mouseup', onMouseUp); // else remove listener.
+//         }
+//     });
+//
+//     $('input[name="_sf_search[]"]').focus();
+// });
 
 //BANNER POPUP
 
-function bannerPop() {
-
-    const $banner = $('#nav-popup')
-
-    $('.nav-popup-close').on('click', () => {
-        $('#header').removeClass('nav-popup-enabled')
-        $('.has-banner').removeClass('has-banner');
-        $banner.toggleClass('nav-popup--hide')
-    });
-
-    $('.popup-underlined-link').on('click', () => {
-        $('#header').removeClass('nav-popup-enabled')
-        $('.has-banner').removeClass('has-banner');
-        $banner.toggleClass('nav-popup--hide')
-    });
-}
+// function bannerPop() {
+//
+//     const $banner = $('#nav-popup')
+//
+//     $('.nav-popup-close').on('click', () => {
+//         $('#header').removeClass('nav-popup-enabled')
+//         $('.has-banner').removeClass('has-banner');
+//         $banner.toggleClass('nav-popup--hide')
+//     });
+//
+//     $('.popup-underlined-link').on('click', () => {
+//         $('#header').removeClass('nav-popup-enabled')
+//         $('.has-banner').removeClass('has-banner');
+//         $banner.toggleClass('nav-popup--hide')
+//     });
+// }

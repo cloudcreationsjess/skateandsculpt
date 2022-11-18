@@ -8,7 +8,7 @@
   Align: center
   PostTypes: page post
   SupportsAlign: left right
-  SupportsMode: false
+  SupportsMode: true
   SupportsMultiple: true
 --}}
 
@@ -24,12 +24,6 @@
                 </iframe>
             @elseif ( get_field('media_type') == 'video')
                 <video autoplay muted loop src='{{ get_field('video_file') }}'></video>
-            @endif
-            @if ( get_field('button'))
-                <div class='fixed-button'>
-                    @php($button = get_field('button'))
-                    <a href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
-                </div>
             @endif
         </div>
         <div class='hero-title'>

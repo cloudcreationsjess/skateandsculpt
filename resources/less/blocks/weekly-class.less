@@ -1,0 +1,99 @@
+.weekly-class {
+    margin: 148px 0;
+
+    .weekly-class-container {
+        .flex-row(flex-start, center);
+
+        .city-content {
+            .flex-column(flex-start, flex-start);
+            text-align: left;
+            margin-right: 213px;
+            position: relative;
+            padding: 148px 0;
+
+            .all-caps-heading {
+                margin-bottom: 16px;
+                max-width: 400px;
+            }
+
+           .city-title {
+               color: @accent-dark-purple;
+               font-family: @font-script;
+               .font-size(96);
+               line-height: 96.96px;
+               font-weight: 400;
+               display: block;
+               margin-bottom: 80px;
+               .transition();
+           }
+
+            .swiper-button-next {
+
+                left: 0;
+                bottom: 0;
+                height: 70px;
+                width: 70px;
+                position: relative;
+                top: 0;
+                margin-top: 20px;
+
+                svg {
+                    height: 70px;
+                    width: 70px;
+                    .transition();
+                }
+
+                &:after {
+                    content: '';
+                }
+
+                &:hover {
+                    svg {
+
+                        path:first-of-type {
+                            filter: brightness(0) saturate(100%) invert(53%) sepia(54%) saturate(512%) hue-rotate(183deg) brightness(84%) contrast(84%);
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .swiper {
+            position: absolute;
+            right: 0;
+            margin: 118px 0;
+            z-index: 1;
+
+            .swiper-wrapper {
+                width: 808px;
+                height: auto;
+
+                .swiper-slide {
+                    width: 463px;
+                    height: 562px;
+                    overflow: hidden;
+
+                    &.swiper-slide-item--odd {
+                        border-radius: 50px 50px 0 0;
+                    }
+
+                    &.swiper-slide-item--even {
+                        border-radius: 500px 500px 0 0;
+                    }
+
+                    img {
+                        object-fit: cover;
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}

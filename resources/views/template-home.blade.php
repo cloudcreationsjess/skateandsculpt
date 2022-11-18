@@ -9,6 +9,11 @@
 
         <?php the_content(); ?>
 
-
+    @if ( get_field('button') )
+        <div class='fixed-button'>
+            @php($button = get_field('button'))
+            <a href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
+        </div>
+    @endif
     <?php endwhile; endif; ?>
 @endsection

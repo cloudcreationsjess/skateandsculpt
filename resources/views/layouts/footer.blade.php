@@ -76,75 +76,81 @@
     //
     //    // init Swiper:
     //
-    //    const swiper = new Swiper('.swiper', {
-    //        // Optional parameters
-    //        direction: 'horizontal',
-    //        clickable: true,
-    //        watchOverflow: false,
-    //        loop: true,
-    //        autoplay: true,
-    //
-    //        // If we need pagination
-    //        pagination: {
-    //            el: '.swiper-pagination',
-    //            type: 'bullets',
-    //            bulletActiveClass: 'swiper-pagination-bullet-active',
-    //            bulletClass: 'swiper-pagination-bullet',
-    //            clickable: true,
-    //            autoHeight: true,
-    //        },
-    //
-    //        //fade
-    //        effect: 'fade',
-    //        speed: 300,
-    //        fadeEffect: {
-    //            crossFade: true,
-    //        },
-    //
-    //        //accessible
-    //        keyboard: {
-    //            enabled: true,
-    //            onlyInViewport: true,
-    //        },
-    //
-    //        a11y: {
-    //            prevSlideMessage: 'Previous slide',
-    //            nextSlideMessage: 'Next slide',
-    //        },
-    //    });
-    //
-    //    const swiper2 = new Swiper('.swiper-2', {
-    //        // Optional parameters
-    //        direction: 'horizontal',
-    //        clickable: true,
-    //        watchOverflow: false,
-    //        loop: true,
-    //        autoplay: true,
-    //
-    //        // Navigation arrows
-    //        navigation: {
-    //            nextEl: '.swiper-button-next',
-    //            prevEl: '.swiper-button-prev',
-    //        },
-    //
-    //        //fade
-    //        effect: 'fade',
-    //        speed: 300,
-    //        fadeEffect: {
-    //            crossFade: true,
-    //        },
-    //
-    //        //accessible
-    //        keyboard: {
-    //            enabled: true,
-    //            onlyInViewport: true,
-    //        },
-    //
-    //        a11y: {
-    //            prevSlideMessage: 'Previous slide',
-    //            nextSlideMessage: 'Next slide',
-    //        },
-    //    });
+       const swiper = new Swiper('.swiper', {
+           // Optional parameters
+           direction: 'horizontal',
+           clickable: true,
+           watchOverflow: true,
+           loop: true,
+           autoplay: false,
+           slidesPerView: 1.6,
+           // centeredSlides: true,
+           spaceBetween: 114,
+
+           on: {
+               init: function () {
+                   var city =  document.querySelector(".swiper-slide-active").getAttribute('data-city');
+                   document.querySelector(".js__city").innerHTML = city + '!';
+                   var citySlug = city.toLowerCase().replace(' ', '-');
+                   document.querySelector(".js__city").href = citySlug;
+               },
+               slideChangeTransitionEnd: function () {
+                   var city =  document.querySelector(".swiper-slide-active").getAttribute('data-city');
+                   document.querySelector(".js__city").innerHTML = city + '!';
+                   var citySlug = city.toLowerCase().replace(' ', '-');
+                   document.querySelector(".js__city").href = citySlug;
+               },
+           },
+
+           navigation: {
+               nextEl: '.swiper-button-next'
+           },
+
+
+           //accessible
+           keyboard: {
+               enabled: true,
+               onlyInViewport: true,
+           },
+
+           a11y: {
+               prevSlideMessage: 'Previous slide',
+               nextSlideMessage: 'Next slide',
+           },
+       });
+
+       const swiper2 = new Swiper('.swiper-testimonials', {
+           // Optional parameters
+           direction: 'horizontal',
+           clickable: true,
+           watchOverflow: false,
+           loop: true,
+           autoplay: false,
+
+           // Navigation arrows
+           navigation: {
+               nextEl: '.swiper-btn-next',
+               prevEl: '.swiper-btn-prev',
+           },
+
+           //fade
+           effect: 'fade',
+           speed: 175,
+           fadeEffect: {
+               crossFade: true,
+           },
+
+           //accessible
+           keyboard: {
+               enabled: true,
+               onlyInViewport: true,
+           },
+
+           a11y: {
+               prevSlideMessage: 'Previous slide',
+               nextSlideMessage: 'Next slide',
+           },
+       });
 
 </script>
 </body>

@@ -4,7 +4,7 @@ html {
     overflow-y: scroll;
 
     ::selection {
-        background-color: @accent-orange;
+        background-color: @accent-lime;
         color: @background-color;
     }
 
@@ -14,3 +14,108 @@ html {
     overflow: hidden;
     background-color: @background-color;
 }
+
+.all-caps-heading {
+    color: @accent-light-purple;
+    font-family: @font-sans-heading;
+    .font-size(64);
+    line-height: 64.64px;
+    font-weight: @font-bold;
+    text-transform: uppercase;
+
+    p {
+        color: @accent-light-purple;
+        font-family: @font-sans-heading;
+        .font-size(64);
+        line-height: 64.64px;
+        font-weight: @font-bold;
+        text-transform: uppercase;
+    }
+}
+
+.script-heading {
+    p {
+        color: @accent-orange;
+        font-family: @font-script;
+        .font-size(96);
+        font-weight: 400;
+        line-height: 96.96px;
+    }
+}
+
+.sub-heading {
+    p {
+        margin-bottom: 32px;
+        color: @accent-orange;
+        .font-size(28);
+        font-weight: 300;
+        line-height: 28.28px;
+    }
+}
+
+.basic-text {
+    p {
+        .font-size(20);
+        line-height: 20.2px;
+        font-weight: 300;
+        color: @accent-orange;
+    }
+}
+
+.fixed-button {
+    position: fixed;
+    top: calc(92vh - 129px);
+    left: calc(50vw + 707px - 91px);
+    transform: translateX(-50%);
+    width: 102px;
+    height: 102px;
+    .flex-row(flex-end, center);
+    z-index: 9999;
+
+    a {
+        background-image: url("/wp-content/uploads/2022/11/fixed-button.svg.svg");
+        background-size: contain;
+        height: 100%;
+        width: 102px;
+        font-family: @font-btn;
+        .font-size(16);
+        line-height: 19.92px;
+        color: @accent-orange;
+        text-transform: uppercase;
+        background-repeat: no-repeat;
+        .flex-column();
+        text-align: center;
+        z-index: 9999;
+        position: relative;
+
+        &:hover {
+            color: @accent-blue;
+        }
+    }
+}
+
+//BACKGROUND COLORS
+
+.background-color--grey {
+    background-color: @accent-grey;
+}
+.background-color--blue {
+    background-color: @accent-blue;
+}
+.background-color--lime {
+    background-color: @accent-lime;
+}
+.background-color--orange {
+    background-color: @accent-orange;
+}
+.background-color--pink {
+    background-color: @accent-pink;
+}
+.background-color--dark-purple {
+    background-color: @accent-dark-purple;
+}
+.background-color--light-purple {
+    background-color: @accent-light-purple;
+}
+
+
