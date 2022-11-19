@@ -1,0 +1,56 @@
+.two-column-content-and-image {
+    position: relative;
+    padding-bottom: 142px;
+    color: @accent-orange;
+
+    .purple-blob {
+        position: absolute;
+        bottom: -21%;
+        right: 0;
+        z-index: 0;
+    }
+
+    .two-column-container {
+        .flex-row(space-between, center);
+
+        .left-column {
+            .flex-column(flex-start, flex-start);
+            margin-right: 19px;
+            padding-top: 80px;
+
+            .all-caps-heading {
+                p {
+                    color: @accent-orange;
+                    margin-bottom: 0;
+                }
+            }
+
+            .sub-heading p {
+                margin-bottom: 0;
+            }
+
+            .btn {
+                min-width: 191px;
+            }
+
+        }
+
+        .right-column {
+
+            .flex-column(flex-start, flex-start);
+
+            .floating-image {
+                position: relative;
+                z-index: 1;
+
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+
+
+        }
+    }
+}

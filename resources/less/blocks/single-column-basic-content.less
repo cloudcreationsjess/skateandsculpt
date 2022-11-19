@@ -1,0 +1,48 @@
+.single-column-basic-content {
+    position: relative;
+    text-align: center;
+    padding: 90px 0;
+    min-height: calc(80vh - @header-height);
+    height: auto;
+    width: 100%;
+
+    &.overlap-next-section-button {
+        .next-section-arrow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            transform: translateY(50%);
+        }
+    }
+
+    #next-section {
+        position: relative;
+    }
+
+    .green-squiggle-1, .green-squiggle-2 {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .green-squiggle-1 {
+        top: -65%;
+        right: 0;
+    }
+
+    .green-squiggle-2 {
+        bottom: -56%;
+        left: 0;
+
+        svg {
+            width: 100vw;
+            height: auto;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}

@@ -4,23 +4,24 @@
 
             @if( $row['acf_fc_layout'] == 'spacer')
                 @php($space = $row['space'])
-                <div class="desktop spacer-{{$space['desktop']}}"></div>
-                <div class="mobile spacer-{{$space['mobile']}}"></div>
+                <div class="spacer desktop" style="height: {{ $space['desktop'] }}px"></div>
+                <div class="spacer mobile" style="height: {{ $space['mobile'] }}px"></div>
             @endif
 
             @if( $row['acf_fc_layout'] == 'script_heading')
                 @php($text = $row['text'])
-                <div class='script-heading'>{!! $text !!}</div>
+                <div class='script-heading color--{{$row['text_color']}}'>{!! $text !!}</div>
             @endif
 
             @if( $row['acf_fc_layout'] == 'all_caps_heading')
                 @php($text = $row['text'])
-                <div class='all-caps-heading'>{!! $text !!}</div>
+                @php($color = $row['text_color'])
+                <div class='all-caps-heading color--{{$row['text_color']}}'>{!! $text !!}</div>
             @endif
 
             @if( $row['acf_fc_layout'] == 'sub_heading')
                 @php($text = $row['text'])
-                <div class='sub-heading'>{!! $text !!}</div>
+                <div class='sub-heading color--{{$row['text_color']}}'>{!! $text !!}</div>
             @endif
 
 
@@ -32,7 +33,7 @@
 
             @if( $row['acf_fc_layout'] == "basic_text")
                 @php($text = $row['text'])
-                <div class='basic-text'>
+                <div class='basic-text color--{{$row['text_color']}}'>
                  {!! $text !!}
                 </div>
             @endif

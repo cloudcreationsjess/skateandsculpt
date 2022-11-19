@@ -14,20 +14,9 @@ $(document).ready(() => {
     // yourScript();
     // }
 
-    // window.onscroll = function () {
-    //     scrollRotate();
-    // };
-    //
-    // function scrollRotate() {
-    //     let images = document.querySelector(".spinning-logo");
-    //     images.style.transform = "rotate(" + window.scrollY / 5 + "deg)";
-    // }
 
     mobileMenu();
 
-    fixDiv();
-
-    // bannerPop();
 
 });
 
@@ -58,19 +47,6 @@ function mobileMenu() {
     });
 }
 
-
-
-/*
- * Removes loading animation when page load is completed
-//  */
-// function windowLoad() {
-//     // var loader;
-//     if (document.readyState == 'loading') {
-//         // loader = requestAnimationFrame(animateLoaderScript);
-//     }
-//     $(".page-loader").fadeOut("slow");
-//     $("body").removeClass("preload");
-// }
 
 /*
  * Any on scroll functionality should be placed here so only one window scroll is called
@@ -149,61 +125,3 @@ function mobileMenu() {
 //     });
 // }
 
-function fixDiv() {
-    var $div = $(".blog-search");
-
-    if ($(window).width() > 767) {
-
-        if (($(window).scrollTop() > (($(window).height()) / 2) + 50)) {
-            $div.css({'position': 'fixed', 'top': 'calc(50% + @header-height + 50px)'});
-        } else {
-            $div.css({'position': 'absolute', 'top': '50%', 'right': '0'});
-        }
-    }
-}
-
-$(window).scroll(fixDiv);
-
-//SEARCH POP OUT
-//
-// const $menu = $('.search-popout');
-//
-// const onMouseUp = e => {
-//     if (!$menu.is(e.target) // If the target of the click isn't the container...
-//         && $menu.has(e.target).length === 0) // ... or a descendant of the container.
-//     {
-//         $menu.removeClass('search-popout__active');
-//         $('.sf-field-search').removeClass('display-search');
-//     }
-// };
-//
-// $('.search-popout').on('click', () => {
-//     $('.sf-field-search').toggleClass('display-search') && $menu.toggleClass('search-popout__active').promise().done(() => {
-//         if ($menu.hasClass('search-popout__active')) {
-//             $(document).on('mouseup', onMouseUp); // Only listen for mouseup when menu is active...
-//         } else {
-//             $(document).off('mouseup', onMouseUp); // else remove listener.
-//         }
-//     });
-//
-//     $('input[name="_sf_search[]"]').focus();
-// });
-
-//BANNER POPUP
-
-// function bannerPop() {
-//
-//     const $banner = $('#nav-popup')
-//
-//     $('.nav-popup-close').on('click', () => {
-//         $('#header').removeClass('nav-popup-enabled')
-//         $('.has-banner').removeClass('has-banner');
-//         $banner.toggleClass('nav-popup--hide')
-//     });
-//
-//     $('.popup-underlined-link').on('click', () => {
-//         $('#header').removeClass('nav-popup-enabled')
-//         $('.has-banner').removeClass('has-banner');
-//         $banner.toggleClass('nav-popup--hide')
-//     });
-// }

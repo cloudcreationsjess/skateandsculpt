@@ -1,0 +1,39 @@
+.two-column-color-blocks {
+    width: 100%;
+    height: auto;
+    .flex-row();
+    position: relative;
+
+    .left-container {
+        width: 50%;
+        height: 797px;
+        padding: 143px 128px;
+
+        .left-content {
+            .flex-column();
+            text-align: center;
+
+        }
+
+    }
+
+    .right-container {
+        width: 50%;
+        height: auto;
+        max-height: 797px;
+
+        .right-content {
+            height: 100%;
+            width: 100%;
+            .flex-column();
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

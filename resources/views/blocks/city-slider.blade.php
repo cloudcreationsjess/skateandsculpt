@@ -1,6 +1,6 @@
 {{--
-  Title: Weekly Class Block
-  Description: Block with Weekly Class Slider in each city
+  Title: City Slider
+  Description: Block with title, city name and slider of every city
   Category: formatting
   Icon: menu
   Keywords: weekly class slider city
@@ -30,9 +30,14 @@
             </div>
             <a href="/" class='js__city city-title'>
             </a>
-            <div class='swiper-button-next'>
-                <x-svg.swiper-button />
-            </div>
+            @if(get_field('add_cta'))
+                <x-button />
+            @endif
+            @if(get_field('arrow_navigation'))
+                <div class='swiper-button-next'>
+                    <x-svg.swiper-button />
+                </div>
+            @endif
         </div>
         <div class="swiper">
             <div class="swiper-wrapper">
