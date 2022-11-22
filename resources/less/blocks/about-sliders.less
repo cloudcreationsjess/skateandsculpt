@@ -1,0 +1,120 @@
+.orange-slider {
+    padding-top: 108px;
+    padding-bottom: 53px;
+    position: relative;
+
+    .orange-slider-container {
+       .flex-column(space-between, flex-start);
+
+        .slider-content {
+            .flex-row(flex-start, center);
+        }
+
+        .navigation-container {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            transform: translateY(100%);
+
+            .flex-row();
+            .navigation {
+                position: relative;
+                .flex-row();
+                margin-right: 18px;
+
+                .swiper-button-next, .swiper-button-prev {
+                    position: relative;
+                    top: 0;
+                    bottom: 0;
+                    height: 84px;
+                    width: 84px;
+
+                    svg {
+                        height: 84px;
+                        width: 84px;
+                    }
+
+                    &:after {
+                        content: '';
+                    }
+                }
+
+                .swiper-button-prev {
+                    margin-right: 11px;
+                    left: 0;
+
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .swiper-button-next {
+                    right: 0;
+
+                }
+            }
+
+            .orange-border-bottom {
+                width: 100%;
+                height: 2px;
+                background-color: @accent-orange;
+            }
+        }
+
+        .left-column {
+            text-align: left;
+            margin-right: 221px;
+            max-width: 487px;
+            .flex-column();
+            min-height: 617px;
+
+            .slide-content {
+                opacity: 0;
+                display: none;
+
+                &.content-active {
+                    opacity: 1;
+                    display: block;
+                }
+            }
+
+        }
+
+        .swiper-about {
+            position: absolute;
+            right: 0;
+            padding-bottom: 53px;
+            width: 705px;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+
+            .swiper-wrapper {
+                width: 100%;
+                height: auto;
+
+                .swiper-slide {
+                    width: 435px;
+                    height: 617px;
+                    border-radius: 50px;
+                    overflow: hidden;
+
+                    .slider-image {
+                        img {
+                            object-fit: cover;
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+}

@@ -76,86 +76,148 @@
     //
     //    // init Swiper:
     //
-       const swiper = new Swiper('.swiper', {
-           // Optional parameters
-           direction: 'horizontal',
-           clickable: true,
-           watchOverflow: true,
-           loop: true,
-           autoplay: false,
-           slidesPerView: 1.6,
-           // centeredSlides: true,
-           spaceBetween: 114,
+    const swiper1 = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        clickable: true,
+        watchOverflow: true,
+        loop: true,
+        autoplay: false,
+        slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 114,
 
-           on: {
-               init: function () {
-                   var city =  document.querySelector(".swiper-slide-active").getAttribute('data-city');
-                   document.querySelector(".js__city").innerHTML = city + '!';
-                   var citySlug = city.toLowerCase().replace(' ', '-');
-                   document.querySelector(".js__city").href = citySlug;
-               },
-               slideChangeTransitionStart: function () {
-                   document.querySelector(".js__city").style.opacity = "1";
-                   var city =  document.querySelector(".swiper-slide-active").getAttribute('data-city');
-                   document.querySelector(".js__city").innerHTML = city + '!';
-                   var citySlug = city.toLowerCase().replace(' ', '-');
-                   document.querySelector(".js__city").href = citySlug;
-               },
+        on: {
+            init: function() {
+                var city = document.querySelector('.swiper-slide-active').getAttribute('data-city');
+                document.querySelector('.js__city').innerHTML = city + '!';
+                var citySlug = city.toLowerCase().replace(' ', '-');
+                document.querySelector('.js__city').href = citySlug;
+            },
+            slideChangeTransitionStart: function() {
+                document.querySelector('.js__city').style.opacity = '1';
+                var city = document.querySelector('.swiper-slide-active').getAttribute('data-city');
+                document.querySelector('.js__city').innerHTML = city + '!';
+                var citySlug = city.toLowerCase().replace(' ', '-');
+                document.querySelector('.js__city').href = citySlug;
+            },
 
-               slideChange: function () {
-                   document.querySelector(".js__city").style.opacity = "0";
-               }
-           },
+            slideChange: function() {
+                document.querySelector('.js__city').style.opacity = '0';
+            },
+        },
 
-           navigation: {
-               nextEl: '.swiper-button-next'
-           },
+        navigation: {
+            nextEl: '.swiper-button-next',
+        },
 
+        //accessible
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
 
-           //accessible
-           keyboard: {
-               enabled: true,
-               onlyInViewport: true,
-           },
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+    });
 
-           a11y: {
-               prevSlideMessage: 'Previous slide',
-               nextSlideMessage: 'Next slide',
-           },
-       });
+    const swiper2 = new Swiper('.swiper-testimonials', {
+        // Optional parameters
+        direction: 'horizontal',
+        clickable: true,
+        watchOverflow: false,
+        loop: true,
+        autoplay: false,
 
-       const swiper2 = new Swiper('.swiper-testimonials', {
-           // Optional parameters
-           direction: 'horizontal',
-           clickable: true,
-           watchOverflow: false,
-           loop: true,
-           autoplay: false,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-           // Navigation arrows
-           navigation: {
-               nextEl: '.swiper-button-next',
-               prevEl: '.swiper-button-prev',
-           },
+        //fade
+        effect: 'fade',
+        speed: 300,
+        fadeEffect: {
+            crossFade: true,
+        },
 
-           //fade
-           effect: 'fade',
-           speed: 300,
-           fadeEffect: {
-               crossFade: true,
-           },
+        //accessible
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
 
-           //accessible
-           keyboard: {
-               enabled: true,
-               onlyInViewport: true,
-           },
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+    });
 
-           a11y: {
-               prevSlideMessage: 'Previous slide',
-               nextSlideMessage: 'Next slide',
-           },
-       });
+    // let detailSwiper = document.querySelectorAll('.swiper-about');
+    // let sliderCount = 1;
+    // for(swipe of detailSwiper) {
+    //     swipe.classList.add('instance-' + sliderCount);
+    //     document.querySelector('.js__slider-count-' + sliderCount + ' .swiper-button-prev').classList.add('btn-prev-' + sliderCount);
+    //     document.querySelector('.js__slider-count-' + sliderCount + ' .swiper-button-next').classList.add('btn-next-' + sliderCount);
+    //
+    //     new Swiper('.instance-' + sliderCount, {
+    //         // your settings ...
+    //         direction: 'horizontal',
+    //         clickable: true,
+    //         watchOverflow: true,
+    //         loop: false,
+    //         autoplay: false,
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 14,
+    //         centeredSlides: false,
+    //
+    //         on: {
+    //             init: function() {
+    //                 let currentSwiper = document.querySelector('.instance-' + sliderCount);
+    //                 let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
+    //                 let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');
+    //                 let element = document.querySelector('#content-' + id + '-' + count);
+    //                 element.classList.add('content-active');
+    //             },
+    //             slideChangeTransitionEnd: function() {
+    //                 console.log('item------');
+    //                 console.log(sliderCount);
+    //                 let currentSwiper = document.querySelector('.instance-' + sliderCount);
+    //                 let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
+    //                 console.log('id: ' + id);
+    //                 let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');
+    //                 console.log('count: ' + count);
+    //
+    //                 let element = document.querySelector('#content-' + id + '-' + count);
+    //                 element.classList.add('content-active');
+    //             },
+    //
+    //         },
+    //
+    //         navigation: {
+    //             nextEl: 'btn-next-' + sliderCount,
+    //             prevEl: 'btn-prev-' + sliderCount,
+    //         },
+    //
+    //         //accessible
+    //         keyboard: {
+    //             enabled: true,
+    //             onlyInViewport: true,
+    //         },
+    //
+    //         a11y: {
+    //             prevSlideMessage: 'Previous slide',
+    //             nextSlideMessage: 'Next slide',
+    //         },
+    //     });
+    //
+    //     sliderCount = sliderCount + 1;
+    //
+    // }
+
 
 </script>
 </body>
