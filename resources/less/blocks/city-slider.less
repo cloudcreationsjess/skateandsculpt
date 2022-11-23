@@ -36,11 +36,12 @@
                 position: relative;
                 top: 0;
                 margin-top: 20px;
+                .transition();
 
                 svg {
                     height: 70px;
                     width: 70px;
-                    .transition();
+
                 }
 
                 &:after {
@@ -51,12 +52,12 @@
                     svg {
 
                         path:first-of-type {
-                            filter: brightness(0) saturate(100%) invert(99%) sepia(74%) saturate(4712%) hue-rotate(188deg) brightness(88%) contrast(95%);
+                            fill: @accent-dark-purple;
 
                         }
 
                         path:nth-of-type(2) {
-                            filter: brightness(0) saturate(100%) invert(94%) sepia(66%) saturate(2143%) hue-rotate(15deg) brightness(105%) contrast(104%);
+                            fill: @accent-lime;
                         }
                     }
                 }
@@ -65,11 +66,12 @@
 
 
 
-        .swiper {
+        .swiper-city {
             position: absolute;
             right: 0;
             margin: 118px 0;
             z-index: 1;
+            overflow: hidden;
 
             .swiper-wrapper {
                 width: 808px;

@@ -31,6 +31,7 @@
                     bottom: 0;
                     height: 84px;
                     width: 84px;
+                    .transition();
 
                     svg {
                         height: 84px;
@@ -39,6 +40,19 @@
 
                     &:after {
                         content: '';
+                    }
+
+                    &:hover {
+                        svg{
+                            path:first-of-type {
+                                filter: brightness(0) saturate(100%) invert(42%) sepia(81%) saturate(2854%) hue-rotate(3deg) brightness(106%) contrast(102%);
+                                fill: @accent-orange;
+                            }
+
+                            path:nth-of-type(2) {
+                                filter: brightness(0) saturate(100%) invert(100%) sepia(44%) saturate(616%) hue-rotate(297deg) brightness(102%) contrast(102%);
+                            }
+                        }
                     }
                 }
 
@@ -67,13 +81,16 @@
         .left-column {
             text-align: left;
             margin-right: 221px;
-            max-width: 487px;
             .flex-column();
             min-height: 617px;
 
             .slide-content {
                 opacity: 0;
                 display: none;
+
+                .basic-text {
+                    max-width: 487px;
+                }
 
                 &.content-active {
                     opacity: 1;
@@ -103,6 +120,8 @@
                     overflow: hidden;
 
                     .slider-image {
+                        .flex-column();
+
                         img {
                             object-fit: cover;
                             width: auto;

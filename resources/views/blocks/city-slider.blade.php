@@ -31,7 +31,7 @@
             <a href="/" class='js__city city-title'>
             </a>
             @if(get_field('add_cta'))
-                <x-button />
+                <a class="btn btn--lime-orange" href='/{{ str_replace(' ', '-', strtolower(get_the_title())) }}'>Learn more about {{ get_the_title() }}</a>
             @endif
             @if(get_field('arrow_navigation'))
                 <div class='swiper-button-next'>
@@ -39,7 +39,7 @@
                 </div>
             @endif
         </div>
-        <div class="swiper">
+        <div class="swiper-city">
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 @if(have_posts())
@@ -52,10 +52,10 @@
                         @php($i++)
                     @endwhile
                 @endif
+                @php(wp_reset_query())
             </div>
 
         </div>
     </div>
 </section>
 
-@php(wp_reset_query())

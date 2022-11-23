@@ -1,0 +1,48 @@
+
+
+.giant-button-mosaic {
+    padding-bottom: 177px;
+
+    .mosaic {
+        .flex-row(space-between, center);
+        flex-wrap: wrap;
+    }
+
+    .mosaic-btn, .spinning-circle {
+        margin-bottom: 32px;
+
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+
+    .mosaic-btn {
+        font-family: @font-script;
+        .font-size(96);
+        line-height: 96.96px;
+        font-weight: 400;
+        color: @accent-pink;
+        text-transform: none;
+        background-color: @accent-blue;
+        pointer-events: none;
+        border-radius: 100px;
+        padding: 55px 126px 36px 126px;
+        width: auto;
+    }
+
+    .spinning-circle {
+        height: 188px;
+        width: 188px;
+        animation: rotate 8s infinite linear;
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @keyframes rotate {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+}

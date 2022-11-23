@@ -36,8 +36,6 @@
         @endif
     </div>
 
-        //THIS DOESNT WORK
-
     @if(get_field('next_section_arrow'))
 
         <div class='next-section-arrow'>

@@ -75,7 +75,9 @@
                     </div>
                 </div>
             </section>
+            @php(wp_reset_query())
             <script>
+
                 let detailSwiper{{$postCount}} = document.querySelector('.swiper-about-{{$postCount}}');
                 // let sliderCount = 1;
                 // for(swipe of detailSwiper) {
@@ -83,7 +85,7 @@
                 document.querySelector('.js__slider-count-{{$postCount}} .swiper-button-next').classList.add('btn-next-{{$postCount}}');
                 document.querySelector('.js__slider-count-{{$postCount}} .swiper-button-prev').classList.add('btn-prev-{{$postCount}}');
 
-                new Swiper('.instance-{{$postCount}}', {
+                var swiper{{$postCount}} = new Swiper('.instance-{{$postCount}}', {
                     // your settings ...
                     direction: 'horizontal',
                     clickable: true,
@@ -102,17 +104,22 @@
                             let element = document.querySelector('#content-' + id + '-' + count);
                             element.classList.add('content-active');
                         },
-                        slideChangeTransitionStart: function() {
+
+                        slideChangeTransitionEnd: function() {
                             let currentSwiper = document.querySelector('.instance-{{$postCount}}');
                             let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
                             let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');
                             let element = document.querySelector('#content-' + id + '-' + count);
-                            document.querySelector(".js__slider-count-{{$postCount}} .slide-content.content-active").classList.toggle('content-active');
                             element.classList.add('content-active');
-                            {{--document.querySelector("#slide-{{ get_the_ID() }}-{{$imageIt}}").classList.toggle('swiper-slide-active');--}}
+                            document.querySelector(".js__slider-count-{{$postCount}} .slide-content.content-active").classList.remove('content-active');
+                            element.classList.add('content-active');
                         },
 
+                        loopFix: function() {
+                            document.querySelector(".js__slider-count-{{$postCount}} .slide-content.content-active").classList.remove('content-active');
+                        },
                     },
+
 
                     navigation: {
                         nextEl: '.btn-next-{{$postCount}}',

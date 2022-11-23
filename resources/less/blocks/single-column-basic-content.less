@@ -2,7 +2,6 @@
     position: relative;
     text-align: center;
     padding: 90px 0;
-    min-height: calc(80vh - @header-height);
     height: auto;
     width: 100%;
 
@@ -44,5 +43,20 @@
     .container {
         position: relative;
         z-index: 1;
+    }
+}
+
+//SPECIFIC ELEMENTS
+
+.single-column-basic-content {
+
+    &.our-core-values {
+        min-height: none!important;
+    }
+}
+
+.single-column-basic-content {
+    &.overlap-next-section-button {
+        min-height: calc(80vh - @header-height);
     }
 }

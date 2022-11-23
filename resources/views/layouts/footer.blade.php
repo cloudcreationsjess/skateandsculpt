@@ -76,7 +76,7 @@
     //
     //    // init Swiper:
     //
-    const swiper1 = new Swiper('.swiper', {
+    const swiperCity = new Swiper('.swiper-city', {
         // Optional parameters
         direction: 'horizontal',
         clickable: true,
@@ -123,7 +123,7 @@
         },
     });
 
-    const swiper2 = new Swiper('.swiper-testimonials', {
+    const swiperTestimonial = new Swiper('.swiper-testimonials', {
         // Optional parameters
         direction: 'horizontal',
         clickable: true,
@@ -156,67 +156,28 @@
         },
     });
 
-    // let detailSwiper = document.querySelectorAll('.swiper-about');
-    // let sliderCount = 1;
-    // for(swipe of detailSwiper) {
-    //     swipe.classList.add('instance-' + sliderCount);
-    //     document.querySelector('.js__slider-count-' + sliderCount + ' .swiper-button-prev').classList.add('btn-prev-' + sliderCount);
-    //     document.querySelector('.js__slider-count-' + sliderCount + ' .swiper-button-next').classList.add('btn-next-' + sliderCount);
-    //
-    //     new Swiper('.instance-' + sliderCount, {
-    //         // your settings ...
-    //         direction: 'horizontal',
-    //         clickable: true,
-    //         watchOverflow: true,
-    //         loop: false,
-    //         autoplay: false,
-    //         slidesPerView: 1.5,
-    //         spaceBetween: 14,
-    //         centeredSlides: false,
-    //
-    //         on: {
-    //             init: function() {
-    //                 let currentSwiper = document.querySelector('.instance-' + sliderCount);
-    //                 let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
-    //                 let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');
-    //                 let element = document.querySelector('#content-' + id + '-' + count);
-    //                 element.classList.add('content-active');
-    //             },
-    //             slideChangeTransitionEnd: function() {
-    //                 console.log('item------');
-    //                 console.log(sliderCount);
-    //                 let currentSwiper = document.querySelector('.instance-' + sliderCount);
-    //                 let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
-    //                 console.log('id: ' + id);
-    //                 let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');
-    //                 console.log('count: ' + count);
-    //
-    //                 let element = document.querySelector('#content-' + id + '-' + count);
-    //                 element.classList.add('content-active');
-    //             },
-    //
-    //         },
-    //
-    //         navigation: {
-    //             nextEl: 'btn-next-' + sliderCount,
-    //             prevEl: 'btn-prev-' + sliderCount,
-    //         },
-    //
-    //         //accessible
-    //         keyboard: {
-    //             enabled: true,
-    //             onlyInViewport: true,
-    //         },
-    //
-    //         a11y: {
-    //             prevSlideMessage: 'Previous slide',
-    //             nextSlideMessage: 'Next slide',
-    //         },
-    //     });
-    //
-    //     sliderCount = sliderCount + 1;
-    //
-    // }
+    const swiperCoaches = new Swiper('.swiper-coach', {
+        // Optional parameters
+        direction: 'horizontal',
+        clickable: true,
+        watchOverflow: true,
+        loop: true,
+        autoplay: false,
+        slidesPerView: 1.9,
+        centeredSlides: true,
+        spaceBetween: 115,
+
+        //accessible
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+    });
 
 
 </script>

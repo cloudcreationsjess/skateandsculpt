@@ -164,6 +164,29 @@ button:focus {outline: 0 !important;}
     }
 }
 
+/* BLUE with PINK TEXT */
+
+.btn--blue-pink, .btn--blue-pink:visited {
+    background-color: @accent-blue;
+    color: @accent-pink;
+    border: 1px solid @accent-blue;
+
+    /* Hover */
+
+    &:hover, &:active, &:not(:disabled):not(.disabled):active {
+        background-color: @accent-pink;
+        color: @accent-blue;
+        .box-shadow-button-blue();
+    }
+
+    /* Click */
+
+    &:focus {
+        background-color: lighten(@accent-orange, 25%);
+        color: @text-color-primary;
+    }
+}
+
 
 
 
