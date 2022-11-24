@@ -10,6 +10,21 @@
         z-index: 0;
     }
 
+    .green-blob {
+        position: absolute;
+        right: 0;
+        transform: rotate(180deg);
+        top: -10%;
+        z-index: 0;
+        height: 1288px;
+        width: auto;
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+
     .purple-blob--1, .purple-blob--2 {
         position: absolute;
         z-index: 0;
@@ -44,7 +59,7 @@
         .flex-row(space-between, center);
         z-index: 1;
         position: relative;
-        padding: 127px 0;
+        padding: 127px 50px;
 
         .left-column {
             .flex-column(flex-start, flex-start);
@@ -85,6 +100,10 @@
             }
 
         }
+    }
+
+    &.green-blob-overlap {
+        overflow: visible;
     }
 }
 

@@ -3,7 +3,7 @@
   Description: Two column, full-width block with image and colored block with content
   Category: formatting
   Icon: menu
-  Keywords: single column basic content
+  Keywords: two column color blocks
   Mode: edit
   Align: center
   PostTypes: page post
@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="two-column-color-blocks">
+<section class="two-column-color-blocks {{ $block['classes'] }}">
     <div class='left-container background-color--{{ get_field('left_column')['block_background_color'] }}'>
         <div class='left-content'>
             @if(get_field('left_column'))

@@ -32,7 +32,7 @@
         @php(the_post())
         @if(get_field('slider', get_the_ID()))
             @php( $slider = get_field('slider', get_the_ID()))
-            <section class="orange-slider js__slider-count-{{$postCount}}">
+            <section class="orange-slider js__slider-count-{{$postCount}} {{ $block['classes'] }}">
                 <div class="container orange-slider-container">
                     <div class='slider-content'>
                         <div class='left-column'>

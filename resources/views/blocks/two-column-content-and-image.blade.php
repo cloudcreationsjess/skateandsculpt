@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="two-column-content-and-image @if(get_field('class')) {{ get_field('class') }} @endif">
+<section class="two-column-content-and-image @if(get_field('class')) {{ get_field('class') }} @endif {{ $block['classes'] }}">
     @if(get_field('backgrounds') == "No Background")
     @endif
     @if(get_field('backgrounds') == "Purple Blobs")

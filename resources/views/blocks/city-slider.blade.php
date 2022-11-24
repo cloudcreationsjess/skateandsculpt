@@ -22,7 +22,7 @@
 
     query_posts($args); ?>
 
-<section class="weekly-class">
+<section class="weekly-class {{ $block['classes'] }}">
     <div class='container weekly-class-container'>
         <div class='city-content'>
             <div class='all-caps-heading'>
@@ -47,7 +47,7 @@
                     @php($i = 1)
                     @while(have_posts())
                         @php(the_post())
-                        <a href="/{{ str_replace(' ', '-', strtolower(get_the_title())) }}" class="swiper-slide swiper-slide-item--{{ $i % 2 == 0 ? 'odd' : 'even' }}" data-city="{{ get_the_title() }}">
+                        <a href="/{{ str_replace(' ', '-', strtolower(get_the_title())) }}" class="swiper-slide" data-city="{{ get_the_title() }}">
                             {!! get_the_post_thumbnail() !!}
                         </a>
                         @php($i++)

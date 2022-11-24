@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="single-column-basic-content @if(get_field('class')) {{ get_field('class') }} @endif">
+<section class="single-column-basic-content {{ $block['classes'] }} @if(get_field('class')) {{ get_field('class') }} @endif">
     @if(get_field('backgrounds')['green_squiggles'])
         <div class='green-squiggle-1'>
             <x-svg.squiggle />

@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="bordered-image-color-block">
+<section class="bordered-image-color-block {{ $block['classes'] }}">
      <div class='container'>
          <div class='colored-container background-color--{{ get_field('right_column')['block_background_color'] }}'>
              <div class='left-container'>

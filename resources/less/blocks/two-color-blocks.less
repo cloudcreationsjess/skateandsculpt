@@ -1,0 +1,47 @@
+
+.two-colored-blocks {
+    padding-bottom: 119px;
+    position: relative;
+    z-index: 2;
+
+    .colored-blocks {
+        .flex-row();
+        align-items: stretch;
+
+        .left-colored-block, .right-colored-block {
+            width: 50%;
+            height: auto;
+            padding: 85px 92px;
+            border-radius: 50px;
+            flex: 1 1 auto;
+            text-align: center;
+            .flex-column(space-between, center);
+
+            .script-heading {
+                .font-size(48);
+                line-height: 48.48px;
+                margin-bottom: 0;
+
+                p {
+                    margin-bottom: 36px;
+                }
+            }
+
+            .sub-heading {
+                margin-bottom: 0;
+
+                p {
+                    margin-bottom: 36px;
+                }
+            }
+        }
+
+        .left-colored-block {
+            margin-right: 16px;
+        }
+
+        .right-colored-block {
+            margin-left: 16px;
+        }
+    }
+}
