@@ -1,5 +1,5 @@
 {{--
-  Title: About Details
+  Title: About Details Slider
   Description: Each About Details post is made into an orange slider
   Category: formatting
   Icon: menu
@@ -104,7 +104,7 @@
                             element.classList.add('content-active');
                         },
 
-                        slideChangeTransitionEnd: function() {
+                        slideChangeTransitionStart: function() {
                             let currentSwiper = document.querySelector('.instance-{{$postCount}}');
                             let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
                             let count = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-count');

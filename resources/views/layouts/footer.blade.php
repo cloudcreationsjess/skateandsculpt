@@ -118,7 +118,7 @@
         watchOverflow: true,
         loop: true,
         autoplay: false,
-        slidesPerView: 1.9,
+        slidesPerView: 4,
         centeredSlides: true,
         spaceBetween: 115,
 
