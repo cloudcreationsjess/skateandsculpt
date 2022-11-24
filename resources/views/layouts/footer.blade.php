@@ -76,52 +76,7 @@
     //
     //    // init Swiper:
     //
-    const swiperCity = new Swiper('.swiper-city', {
-        // Optional parameters
-        direction: 'horizontal',
-        clickable: true,
-        watchOverflow: true,
-        loop: true,
-        autoplay: false,
-        slidesPerView: 1.6,
-        // centeredSlides: true,
-        spaceBetween: 114,
 
-        on: {
-            init: function() {
-                var city = document.querySelector('.swiper-slide-active').getAttribute('data-city');
-                document.querySelector('.js__city').innerHTML = city + '!';
-                var citySlug = city.toLowerCase().replace(' ', '-');
-                document.querySelector('.js__city').href = citySlug;
-            },
-            slideChangeTransitionStart: function() {
-                document.querySelector('.js__city').style.opacity = '1';
-                var city = document.querySelector('.swiper-slide-active').getAttribute('data-city');
-                document.querySelector('.js__city').innerHTML = city + '!';
-                var citySlug = city.toLowerCase().replace(' ', '-');
-                document.querySelector('.js__city').href = citySlug;
-            },
-
-            slideChange: function() {
-                document.querySelector('.js__city').style.opacity = '0';
-            },
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-        },
-
-        //accessible
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-
-        a11y: {
-            prevSlideMessage: 'Previous slide',
-            nextSlideMessage: 'Next slide',
-        },
-    });
 
     const swiperTestimonial = new Swiper('.swiper-testimonials', {
         // Optional parameters

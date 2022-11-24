@@ -1,28 +1,59 @@
 .two-column-content-and-image {
     position: relative;
-    padding-bottom: 142px;
     color: @accent-orange;
+    overflow: hidden;
 
-    .purple-blob {
+    .purple-blob--single {
         position: absolute;
         bottom: -21%;
         right: 0;
         z-index: 0;
     }
 
-    .two-column-container {
+    .purple-blob--1, .purple-blob--2 {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .purple-blob--1 {
+        top: -112%;
+        left: -5%;
+        transform: rotate(180deg);
+        width: 56vw;
+        height: auto;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .purple-blob--2 {
+        bottom: -92%;
+        right: 0;
+        width: 56vw;
+        height: auto;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .container {
         .flex-row(space-between, center);
+        z-index: 1;
+        position: relative;
+        padding: 127px 0;
 
         .left-column {
             .flex-column(flex-start, flex-start);
-            margin-right: 19px;
+            margin-right: 103px;
             padding-top: 80px;
+            max-width: 643px;
 
-            .all-caps-heading {
-                p {
-                    color: @accent-orange;
-                    margin-bottom: 0;
-                }
+            .all-caps-heading p {
+                margin-bottom: 0;
             }
 
             .sub-heading p {
@@ -36,13 +67,16 @@
         }
 
         .right-column {
-
             .flex-column(flex-start, flex-start);
 
-            .floating-image {
+            .image-container {
                 position: relative;
                 z-index: 1;
-
+                .flex-column();
+                border-radius: 50px;
+                overflow: hidden;
+                height: 777px;
+                width: 666px;
 
                 img {
                     width: auto;
@@ -50,7 +84,7 @@
                 }
             }
 
-
         }
     }
 }
+

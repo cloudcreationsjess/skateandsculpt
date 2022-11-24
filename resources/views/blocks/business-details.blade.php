@@ -75,7 +75,6 @@
                     </div>
                 </div>
             </section>
-            @php(wp_reset_query())
             <script>
 
                 let detailSwiper{{$postCount}} = document.querySelector('.swiper-about-{{$postCount}}');

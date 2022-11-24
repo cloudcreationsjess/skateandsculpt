@@ -1,0 +1,100 @@
+.full-width-city-slider {
+
+    width: 100%;
+    height: 562px;
+    position: relative;
+    margin-bottom: 119px;
+
+    .swiper-full-width-cities {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        .swiper-slide {
+            min-width: 463px;
+            width: 463px;
+            height: 562px;
+            overflow: hidden;
+            .flex-column();
+            .transition();
+
+            &:nth-of-type(1n) {
+                border-radius: 50px;
+            }
+
+            &:nth-of-type(2n) {
+                border-radius: 231.5px;
+            }
+
+            &:nth-of-type(3n) {
+                border-radius: 500px 500px 0px 0px;
+            }
+
+
+            .slide-image {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .slide-hover {
+                opacity: 0;
+                z-index: 2;
+                position: relative;
+                background-color: transparent;
+                min-width: 463px;
+                width: 100%;
+                height: 562px;
+                padding: 225px 62px;
+                border-radius: 50px;
+                .transition();
+                .flex-column();
+
+                .btn--blue-pink {
+                    font-family: @font-script;
+                    height: 112px;
+                    .font-size(48);
+                    line-height: 48.48px;
+                    padding: 37px 56px 27px 56px;
+                    text-transform: none;
+                    border-radius: 100px;
+                    color: @accent-pink;
+                    background-color: @accent-blue;
+                    white-space: nowrap;
+
+                    &:hover {
+                        box-shadow: none;
+                        color: @accent-blue;
+                        background-color: @accent-pink;
+                        border-color: @accent-pink;
+                    }
+
+                }
+
+
+            }
+
+            &:hover {
+
+                .slide-hover {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+    }
+}

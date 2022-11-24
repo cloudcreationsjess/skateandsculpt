@@ -31,7 +31,8 @@
             <a href="/" class='js__city city-title'>
             </a>
             @if(get_field('add_cta'))
-                <a class="btn btn--lime-orange" href='/{{ str_replace(' ', '-', strtolower(get_the_title())) }}'>Learn more about {{ get_the_title() }}</a>
+                <a class="js__city_button-text btn btn--lime-orange" href='#'>Learn
+                    more about <span></span></a>
             @endif
             @if(get_field('arrow_navigation'))
                 <div class='swiper-button-next'>
@@ -52,10 +53,64 @@
                         @php($i++)
                     @endwhile
                 @endif
-                @php(wp_reset_query())
             </div>
-
         </div>
     </div>
 </section>
+<script>
+    const swiperCity = new Swiper('.swiper-city', {
+        // Optional parameters
+        direction: 'horizontal',
+        clickable: true,
+        watchOverflow: true,
+        loop: true,
+        autoplay: false,
+        slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 114,
 
+        on: {
+            init: function() {
+                var city = document.querySelector('.swiper-city .swiper-slide-active').getAttribute('data-city');
+                document.querySelector('.js__city').innerHTML = city + '!';
+                var citySlug = city.toLowerCase().replace(' ', '-');
+                document.querySelector('.js__city').href = citySlug;
+                if (document.querySelector('.js__city_button-text')) {
+                    document.querySelector('.js__city_button-text').href = citySlug;
+                    document.querySelector('.js__city_button-text span').innerHTML = city;
+                };
+            },
+            slideChangeTransitionStart: function() {
+                document.querySelector('.js__city').style.opacity = '1';
+                var city = document.querySelector('.swiper-city .swiper-slide-active').getAttribute('data-city');
+                document.querySelector('.js__city').innerHTML = city + '!';
+                var citySlug = city.toLowerCase().replace(' ', '-');
+                document.querySelector('.js__city').href = citySlug;
+                if (document.querySelector('.js__city_button-text')) {
+                    document.querySelector('.js__city_button-text').href = citySlug;
+                    document.querySelector('.js__city_button-text span').innerHTML = city;
+                };
+            },
+
+            slideChange: function() {
+                document.querySelector('.js__city').style.opacity = '0';
+            },
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+        },
+
+        //accessible
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+    });
+</script>
+@php(wp_reset_query())

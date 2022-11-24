@@ -8,6 +8,25 @@ html {
         color: @background-color;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+        box-shadow: none;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: @accent-grey;
+        box-shadow: none;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: @accent-orange;
+        border-radius: 15px;
+        box-shadow: none;
+    }
+
 }
 
 #main {
@@ -26,6 +45,24 @@ html {
     padding: 0 50px;
     max-width: 1414px;
     margin: 0 auto;
+}
+
+.blue-top-border, .blue-bottom-border {
+    height: 2px;
+    width: 100%;
+    background-color: @accent-blue;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.blue-top-border {
+    top: 0;
+}
+
+.blue-bottom-border {
+    bottom: 0;
+
 }
 
 .all-caps-heading {
@@ -111,6 +148,38 @@ html {
             color: @accent-blue;
         }
     }
+}
+
+ul.bullet-list {
+    list-style-type: none;
+
+    li.bullet-list__item {
+        color: inherit;
+        .font-size(28);
+        line-height: 28px;
+        .flex-row(flex-start, flex-start);
+        padding-left: calc(28px * 2);
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-bottom: 34px;
+        }
+
+        &:before {
+            content: '';
+            background-image: url("/wp-content/uploads/2022/11/fixed-button.svg.svg");
+            background-size: contain;
+            height: 28px;
+            width: 28px;
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+    }
+
 }
 
 //BACKGROUND COLORS

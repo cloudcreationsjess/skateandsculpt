@@ -119,9 +119,9 @@ button:focus {outline: 0 !important;}
     }
 }
 
-/* GREEN with BLUE TEXT */
+/* LIME with BLUE TEXT */
 
-.btn--green-blue, .btn--green-blue:visited {
+.btn--lime-blue, .btn--lime-blue:visited {
     background-color: @accent-lime;
     color: @secondary-color;
     border: 1px solid @accent-lime;
@@ -129,15 +129,16 @@ button:focus {outline: 0 !important;}
     /* Hover */
 
     &:hover, &:active, &:not(:disabled):not(.disabled):active {
-        background-color: @accent-orange;
-        border-color: @accent-blue;
+        background-color: @accent-lime;
+        color: @secondary-color;
         .box-shadow-button-blue();
+        border-color: @accent-blue;
     }
 
     /* Click */
 
     &:focus {
-        background-color: lighten(@accent-orange, 25%);
+        background-color: lighten(@accent-lime, 25%);
     }
 }
 
@@ -186,6 +187,10 @@ button:focus {outline: 0 !important;}
         color: @text-color-primary;
     }
 }
+
+
+
+
 
 
 
