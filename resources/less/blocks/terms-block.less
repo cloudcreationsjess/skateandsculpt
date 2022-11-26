@@ -7,7 +7,7 @@
 
 
     .container {
-        .flex-row(flex-start, space-between);
+        .flex-row(space-between, flex-start);
 
         .left-column {
             max-width: 573px;
@@ -19,13 +19,22 @@
             max-width: 706px;
             .flex-column(flex-start, flex-start);
 
-            .sub-heading {
-                margin-bottom: 32px;
+        }
+    }
 
-                p {
-                    margin-bottom: 50px;
-                }
+    &.faq-p-spacing {
+
+        .sub-heading {
+            margin-bottom: 32px;
+
+            p {
+                margin-bottom: 50px;
             }
         }
+
+        .basic-text p {
+            margin-bottom: 32px;
+        }
+
     }
 }

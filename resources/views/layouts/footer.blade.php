@@ -53,7 +53,7 @@
                 © <?php echo date('Y'); ?> {!! the_field('business_name', 'options') !!}.
                 All Rights Reserved.
                 <a href='/privacy'>Privacy Policy</a>.
-                <a href='/terms-of-use'>Terms of Use</a>.
+                <a href='/legal-policies'>Terms of Use</a>.
             </div>
         </div>
     </div>

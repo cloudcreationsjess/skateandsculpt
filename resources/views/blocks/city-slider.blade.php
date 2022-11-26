@@ -47,7 +47,7 @@
                     @php($i = 1)
                     @while(have_posts())
                         @php(the_post())
-                        <a href="/{{ str_replace(' ', '-', strtolower(get_the_title())) }}" class="swiper-slide" data-city="{{ get_the_title() }}">
+                        <a href="/cities/{{ str_replace(' ', '-', strtolower(get_the_title())) }}" class="swiper-slide" data-city="{{ get_the_title() }}">
                             {!! get_the_post_thumbnail() !!}
                         </a>
                         @php($i++)
@@ -74,9 +74,9 @@
                 var city = document.querySelector('.swiper-city .swiper-slide-active').getAttribute('data-city');
                 document.querySelector('.js__city').innerHTML = city + '!';
                 var citySlug = city.toLowerCase().replace(' ', '-');
-                document.querySelector('.js__city').href = citySlug;
+                document.querySelector('.js__city').href = "cities/" + citySlug;
                 if (document.querySelector('.js__city_button-text')) {
-                    document.querySelector('.js__city_button-text').href = citySlug;
+                    document.querySelector('.js__city_button-text').href = "cities/" + citySlug;
                     document.querySelector('.js__city_button-text span').innerHTML = city;
                 };
             },
@@ -85,9 +85,9 @@
                 var city = document.querySelector('.swiper-city .swiper-slide-active').getAttribute('data-city');
                 document.querySelector('.js__city').innerHTML = city + '!';
                 var citySlug = city.toLowerCase().replace(' ', '-');
-                document.querySelector('.js__city').href = citySlug;
+                document.querySelector('.js__city').href = "cities/" + citySlug;
                 if (document.querySelector('.js__city_button-text')) {
-                    document.querySelector('.js__city_button-text').href = citySlug;
+                    document.querySelector('.js__city_button-text').href = "cities/" + citySlug;
                     document.querySelector('.js__city_button-text span').innerHTML = city;
                 };
             },

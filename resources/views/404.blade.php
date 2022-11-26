@@ -1,16 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="error404">
-    <div class="error404__text-404">404</div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h1>Whoops!</h1>
-                <h2 class="mb-3">The page you are trying to reach does not exist.</h2>
-                <a href="/" class="btn btn--primary btn--icon-left"><i class="fas fa-home"></i> Go Home</a>
+    <section id="error404" class="single-column-basic-content">
+        <div class='blue-top-border'></div>
+        <div class='green-squiggle-1'>
+            <x-svg.squiggle />
+        </div>
+        <div class='green-squiggle-2'>
+            <x-svg.squiggle-2 />
+        </div>
+        <div class="container">
+            <div class='error-404-content'>
+                <div class='missing-page-image'>{{ the_image(get_field('missing_page', 'option')['missing_page_image']) }}</div>
+                <div class='script-heading color--orange'>{!! get_field('missing_page', 'option')['missing_page_script_heading'] !!}</div>
+                <div class='sub-heading color--orange'>{!!get_field('missing_page', 'option')['missing_page_sub_heading'] !!}</div>
+                <a class="btn btn--orange-outline" href='{{ get_field('missing_page', 'option')['missing_page_button']['url'] }}'>{{ get_field('missing_page', 'option')['missing_page_button']['call_to_action'] }}</a>
             </div>
         </div>
-    </div>
     </section>
 @endsection

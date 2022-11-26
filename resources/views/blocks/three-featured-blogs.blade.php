@@ -26,12 +26,16 @@
                     @php($title = get_the_title( $post->ID ))
                     @php($image = get_the_post_thumbnail( $post->ID ))
                     <div class='featured-post'>
-                        <div class='post-image'>
-                            {!! $image !!}
-                        </div>
-                        <div class='post-title'>
-                            {!! $title !!}
-                        </div>
+                        <a class="" href="{{ $permalink }}">
+                            <div class='post-image'>
+                                {!! $image !!}
+                            </div>
+                        </a>
+                        <a class="" href="{{ $permalink }}">
+                            <div class='post-title'>
+                                {!! $title !!}
+                            </div>
+                        </a>
                         <a class="post-button btn btn--lime-orange" href="{{ $permalink }}">read</a>
                     </div>
                 @endforeach

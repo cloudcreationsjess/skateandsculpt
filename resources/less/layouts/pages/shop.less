@@ -1,0 +1,59 @@
+.shop-coming-soon {
+    position: relative;
+    padding: 103px 0;
+
+    .purple-blob {
+        height: 893px;
+        width: 893px;
+        position: absolute;
+        bottom: -270px;
+        z-index: 0;
+        right: -20%;
+
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .container {
+        .flex-row(space-between, center);
+        z-index: 1;
+
+        .left-column {
+            .flex-column(flex-start, flex-start);
+
+            .sub-heading {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .right-column {
+            .flex-column();
+            position: relative;
+            z-index: 1;
+
+            .shop-image {
+                border-radius: 50px;
+                overflow: hidden;
+                .flex-column();
+                height: 777px;
+                width: 666px;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+
+    }
+}
+
+.page-id-590 {
+    .sub-heading {
+        margin-bottom: 20px!important;
+    }
+}
