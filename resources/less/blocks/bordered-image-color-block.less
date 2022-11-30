@@ -31,6 +31,7 @@
                     bottom: 0;
                     left: 0;
                     right: 0;
+                    .flex-column();
 
                     img {
                         width: auto;
@@ -47,45 +48,51 @@
 
 .bordered-image-color-block {
     &.meet-the-founder {
-        .container .colored-container .right-container {
-            .flex-column(center, flex-start);
-            padding: 54px 0;
-            margin-left: 117px;
-            margin-right: 28px;
-            max-width: 607px;
-            height: auto;
-            text-align: left;
 
-            .all-caps-heading, .script-heading, .basic-text, .sub-heading {
-                max-width: 607px;
-                margin-right: auto;
-            }
+        .container {
+            .colored-container {
 
-            .basic-text {
-                overflow-y: scroll;
-                max-height: 380px;
+                .right-container {
+                    .flex-column(center, flex-start);
+                    padding: 54px 0;
+                    margin-left: 117px;
+                    margin-right: 28px;
+                    max-width: 607px;
+                    height: auto;
+                    text-align: left;
 
-                p {
-                    margin-right: 55px;
-                }
+                    .all-caps-heading, .script-heading, .basic-text, .sub-heading {
+                        max-width: 607px;
+                        margin-right: auto;
+                    }
 
-                /* width */
+                    .basic-text {
+                        overflow-y: scroll;
+                        max-height: 380px;
 
-                &::-webkit-scrollbar {
-                    width: 5px;
-                }
+                        p {
+                            margin-right: 55px;
+                        }
 
-                /* Track */
+                        /* width */
 
-                &::-webkit-scrollbar-track {
-                    background-color: transparent;
-                }
+                        &::-webkit-scrollbar {
+                            width: 5px;
+                        }
 
-                /* Handle */
+                        /* Track */
 
-                &::-webkit-scrollbar-thumb {
-                    background: @accent-orange;
-                    border-radius: 5px;
+                        &::-webkit-scrollbar-track {
+                            background-color: transparent;
+                        }
+
+                        /* Handle */
+
+                        &::-webkit-scrollbar-thumb {
+                            background: @accent-orange;
+                            border-radius: 5px;
+                        }
+                    }
                 }
             }
         }

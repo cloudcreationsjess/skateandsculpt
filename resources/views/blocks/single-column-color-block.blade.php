@@ -12,9 +12,10 @@
   SupportsMultiple: true
 --}}
 
+
 <section class="single-column-colored-block {{ $block['classes'] }}">
     <div class='container'>
-        <div class='colored-block background-color--{{ get_field('background_color') }}'>
+        <div class='colored-block @if(get_field('background_color')) background-color--{{ get_field('background_color')['background_color'] }} @endif'>
             @if(get_field('block_content'))
                 @php($column = get_field('block_content')['basic_content'])
                 <x-basic-content :content="$column" />

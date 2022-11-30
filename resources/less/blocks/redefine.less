@@ -17,13 +17,19 @@
     }
 
     .green-squiggle-1 {
-        top: -35%;
-        right: -20%;
+        top: -37%;
+        right: -37%;
+        transform: rotate(9deg);
+        width: 1990.93px;
+        height: auto;
     }
 
     .green-squiggle-2 {
-        bottom: -67%;
-        left: -1%;
+        bottom: -60%;
+        left: -27%;
+        transform: rotate(1deg);
+        width: 119%;
+        height: auto;
 
     }
 
@@ -33,31 +39,42 @@
         .font-size(96);
         line-height: 111.36px;
         position: relative;
-        margin-bottom: -50px;
+        margin-bottom: -58px;
         z-index: 1;
 
     }
 
     .redefine-bottom {
-        .flex-row(space-between, center);
+        .flex-row();
         position: relative;
         z-index: 0;
         position: relative;
 
         .content {
-            max-width: 485px;
-            width: 100%;
+            width: calc(50% - 80px);
             height: auto;
+            margin-left: 88px;
 
             .basic-content {
                 margin-bottom: 56px;
+                font-weight: 300;
+                max-width: 473px;
+
+                p {
+                    font-family: inherit;
+                }
+            }
+
+            .btn {
+                padding: 22px 51px;
             }
 
         }
 
         .image {
-            width: 707px;
-            height: 515px;
+            max-width: 707px;
+            width: 50%;
+            max-height: 515px;
             border-radius: 50px;
             overflow: hidden;
             position: relative;

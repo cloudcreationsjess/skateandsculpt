@@ -125,9 +125,9 @@
                 watchOverflow: true,
                 loop: true,
                 autoplay: false,
-                slidesPerView: 4.9,
+                slidesPerView: 2.9,
                 centeredSlides: true,
-                spaceBetween: 115,
+                spaceBetween: 200,
 
                 //accessible
                 keyboard: {

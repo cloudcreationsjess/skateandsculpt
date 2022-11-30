@@ -1,5 +1,5 @@
 .weekly-class {
-    margin: 148px 0;
+    margin: 168px 0;
 
     .weekly-class-container {
         .flex-row(flex-start, center);
@@ -7,9 +7,9 @@
         .city-content {
             .flex-column(flex-end, flex-start);
             text-align: left;
-            margin-right: 213px;
             position: relative;
             padding: 148px 0 0 0;
+            z-index: 2;
 
             .all-caps-heading {
                 margin-bottom: 16px;
@@ -35,12 +35,14 @@
                 width: 70px;
                 position: relative;
                 top: 0;
-                margin-top: 20px;
                 .transition();
 
                 svg {
                     height: 70px;
                     width: 70px;
+                    path {
+                        .transition();
+                    }
 
                 }
 

@@ -6,17 +6,25 @@
     .blue-outline-squiggle--1, .blue-outline-squiggle--2 {
         position: absolute;
         z-index: 0;
+        height: auto;
+        width: 1990.92px;
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
     }
 
     .blue-outline-squiggle--1 {
-        top: -30vh;
-        right: 0;
+        top: -30%;
+        right: -54%;
+        transform: rotate(180deg);
+
     }
 
     .blue-outline-squiggle--2 {
-        left: 0vh;
-        bottom: -30vh;
-        transform: rotate(180deg);
+        left: -37%;
+        bottom: -23%;
     }
 
     .testimonials-container {
@@ -44,8 +52,10 @@
                 color: @accent-orange;
 
                 .testimonial-quote {
-                    margin-bottom: 36px;
                     text-align: center;
+                    max-width: 508px;
+                    margin: 0 auto;
+                    margin-bottom: 36px;
                 }
 
                 .quote-author {
@@ -54,6 +64,7 @@
                     .font-size(28);
                     line-height: 27.72px;
                     text-align: center;
+                    font-family: @font-bold;
                 }
             }
         }
@@ -61,6 +72,10 @@
         .swiper-button-prev, .swiper-button-next {
             height: 70px;
             width: 70px;
+
+            svg path {
+                .transition();
+            }
 
             &:after {
                 content: '';

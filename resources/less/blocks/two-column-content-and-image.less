@@ -5,7 +5,7 @@
 
     .purple-blob--single {
         position: absolute;
-        bottom: -21%;
+        bottom: -16%;
         right: 0;
         z-index: 0;
     }
@@ -31,8 +31,8 @@
     }
 
     .purple-blob--1 {
-        top: -112%;
-        left: -5%;
+        top: -87%;
+        left: -10%;
         transform: rotate(180deg);
         width: 56vw;
         height: auto;
@@ -44,7 +44,7 @@
     }
 
     .purple-blob--2 {
-        bottom: -92%;
+        bottom: -66%;
         right: 0;
         width: 56vw;
         height: auto;
@@ -56,7 +56,7 @@
     }
 
     .container {
-        .flex-row(space-between, center);
+        .flex-row();
         z-index: 1;
         position: relative;
         padding: 127px 50px;
@@ -64,7 +64,6 @@
         .left-column {
             .flex-column(flex-start, flex-start);
             margin-right: 103px;
-            padding-top: 80px;
             max-width: 643px;
 
             .all-caps-heading p {
@@ -77,6 +76,10 @@
 
             .btn {
                 min-width: 191px;
+            }
+
+            ul {
+                max-width: 561px;
             }
 
         }
@@ -107,8 +110,36 @@
     }
 
     &.tshirt-basic-content {
-        .image-container {
-            overflow: visible!important;
+
+        .container {
+            padding-bottom: 147px;
+            .flex-row(flex-start);
+
+            .left-column {
+                padding-bottom: 81px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-right: 53px;
+                padding-top: 80px;
+                max-width: 643px;
+                margin-left: 56px;
+            }
+
+            .right-column {
+
+                .image-container {
+                    overflow: visible!important;
+                    height: 610px;
+                    width: 561px;
+                }
+            }
+        }
+
+
+        .sub-heading {
+            max-width: 405px!important;
         }
     }
 }

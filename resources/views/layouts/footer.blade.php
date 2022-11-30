@@ -5,7 +5,7 @@
         </div>
         <div class='footer__top__subscribe'>
             <input type='text' placeholder="email address">
-            <button class="btn btn--pink-blue footer-subscribe-button" type="submit">we won't bug you</button>
+            <button class="btn btn--pink-blue footer-subscribe-button" type="submit">{{ get_field('footer_subscribe_button', 'option')['call_to_action'] }}</button>
         </div>
     </div>
     <div class='footer__bottom'>
@@ -25,7 +25,7 @@
                             @php( $label = get_sub_field('social_label', 'option'))
                             @php($url = get_sub_field('social_url', 'option') )
                             @if ( $url )
-                                <li><a href='{{ $url }}'>{!! $label !!}</a></li>
+                                <li><a target="_blank" href='{{ $url }}'>{!! $label !!}</a></li>
                             @else
                                 <p class="disabled-footer-link">{!! $label !!} <span>(Coming Soon)</span></p>
                             @endif
@@ -50,7 +50,7 @@
     <div class="footer__bottom__copyright">
         <div class='footer__bottom__copyright__container'>
             <div class='footer__bottom__copyright__content'>
-                © <?php echo date('Y'); ?> {!! the_field('business_name', 'options') !!}.
+                © <?php echo date('Y'); ?> {!! get_field('business_name', 'option') !!}.
                 All Rights Reserved.
                 <a href='/privacy'>Privacy Policy</a>.
                 <a href='/legal-policies'>Terms of Use</a>.
@@ -118,7 +118,7 @@
         watchOverflow: true,
         loop: true,
         autoplay: false,
-        slidesPerView: 4,
+        slidesPerView: 2.9,
         centeredSlides: true,
         spaceBetween: 115,
 
