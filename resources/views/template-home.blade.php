@@ -9,9 +9,9 @@
 
         <?php the_content(); ?>
 
-    @if ( get_field('button') )
+    @if ( get_field('fixed_button', 'option') )
         <div class='fixed-button'>
-            @php($button = get_field('button'))
+            @php($button = get_field('fixed_button', 'option'))
             <a href='{{ $button['url'] }}'>{!! $button['call_to_action'] !!}</a>
         </div>
     @endif

@@ -47,7 +47,7 @@
                                 @php($contentIt++)
                             @endforeach
                         </div>
-                        <div class="swiper-about swiper-about-{{$postCount}}">
+                        <div class="swiper-orange swiper-about swiper-about-{{$postCount}}">
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 @php($imageIt = 1)

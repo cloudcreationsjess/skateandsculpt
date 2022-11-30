@@ -87,10 +87,11 @@
 
         acf_add_options_page(array(
             'page_title'    => 'Theme General Settings',
-            'menu_title'    => 'Theme Settings',
+            'menu_title'    => 'General Info',
             'menu_slug'     => 'theme-general-settings',
             'capability'    => 'edit_posts',
-            'redirect'      => false
+            'redirect'      => false,
+            'position' => 3
         ));
 
         acf_add_options_sub_page(array(

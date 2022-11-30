@@ -1,0 +1,320 @@
+.contact-hero {
+    min-height: calc(100vh - @header-height - @header-height / 2);
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    .blue-border {
+        z-index: 2;
+    }
+
+    .green-squiggle-1, .green-squiggle-2 {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .green-squiggle-1 {
+        transform: rotate(-164.2deg);
+        left: -47%;
+        bottom: -49%;
+    }
+
+    .green-squiggle-2 {
+        transform: rotate(151.15deg);
+        right: -45%;
+        bottom: -42%;
+    }
+
+    .blue-border-bottom {
+        height: 2px;
+        width: 100%;
+        max-width: 1414px;
+        padding: 0 50px;
+        background-color: @accent-blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        margin: 0 auto;
+    }
+
+    .container {
+        .flex-column();
+        z-index: 1;
+        position: relative;
+        text-align: center;
+
+        .half-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 86px;
+            overflow: hidden;
+            z-index: 0;
+            max-height: calc(50vh - @header-height);
+            .flex-column();
+        }
+
+        .all-caps-heading {
+            max-width: 900px;
+            margin-bottom: 41px;
+            color: @accent-dark-purple;
+        }
+
+        .sub-heading {
+            max-width: 432px;
+            color: @accent-dark-purple;
+            font-family: @font-bold;
+            font-weight: 700;
+        }
+    }
+
+}
+
+.city-slider-contact-page {
+    margin: 190px 0 !important;
+
+    .city-content {
+        padding: 0 !important;
+
+        .sub-heading {
+            color: @accent-dark-purple;
+            font-family: @font-bold;
+            max-width: 336px;
+            font-weight: 700;
+            margin-bottom: 35px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .all-caps-heading {
+            p {
+                margin-bottom: 0;
+            }
+
+        }
+
+        .script-heading {
+            color: @accent-dark-purple;
+            .font-size(96);
+            max-width: 571px;
+        }
+    }
+
+    .city-swiper {
+        margin: 0 auto !important;
+
+        .swiper-wrapper {
+            width: 50vw !important;
+        }
+
+        .swiper-slide {
+            border-radius: 50px !important;
+            width: 435px;
+            height: 617px !important;
+        }
+    }
+}
+
+.contact-form {
+    text-align: center;
+    max-width: 685px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .all-caps-heading {
+        margin-bottom: 59px;
+    }
+
+    input {
+        border-radius: 50px;
+        height: 64px;
+        border: 1px solid @accent-orange;
+        background-color: @background-color;
+        padding-left: 51px !important;
+        color: @accent-orange;
+        font-weight: 700;
+        font-family: @font-bold;
+
+        &:focus {
+            border-color: @accent-blue;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+            .font-size(16);
+            line-height: 19.92px;
+            color: @accent-orange;
+            font-weight: 700;
+        }
+    }
+
+    textarea {
+        border-radius: 25px;
+        height: 64px;
+        border: 1px solid @accent-orange;
+        background-color: @background-color;
+        padding-left: 51px !important;
+        padding-top: 22px !important;
+        color: @accent-orange;
+        font-weight: 700;
+        font-family: @font-bold;
+
+        &:focus {
+            border-color: @accent-blue;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+            .font-size(16);
+            line-height: 19.92px;
+            color: @accent-orange;
+            font-weight: 700;
+        }
+    }
+
+    .gform_wrapper {
+        margin-bottom: 66px;
+
+        .gform_heading {
+            display: none !important;
+        }
+
+    }
+
+    #gform_submit_button_1 {
+        width: 287px;
+        background-color: @accent-pink;
+        color: @accent-orange;
+        margin: 0 auto;
+        text-transform: uppercase;
+        border: 1px solid @accent-pink;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 50px;
+
+        &:hover {
+            border-color: @accent-orange;
+        }
+    }
+
+    .basic-text {
+        max-width: 372px;
+        .font-size(16);
+        line-height: 16.16px;
+        font-weight: 300px;
+        margin: 0 auto;
+        margin-bottom: 65px;
+    }
+}
+
+.questions-section {
+    position: relative;
+    padding-top: 256px;
+    overflow: hidden;
+    padding-bottom: 208px;
+
+    .blue-border {
+        z-index: 1;
+    }
+
+    .green-squiggle-1 {
+        position: absolute;
+        left: -20%;
+        top: -29%;
+        transform: rotate(138.72deg);
+        z-index: 0;
+
+    }
+
+    .green-squiggle-2 {
+        position: absolute;
+        right: 0;
+        top: 21%;
+        transform: rotate(150.86deg);
+        z-index: 0;
+        width: 100%;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        .flex-column();
+    }
+
+    .script-heading {
+        .font-size(48);
+        line-height: 101%;
+        max-width: 603px;
+        margin: 0 auto;
+        margin-bottom: 59px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn {
+        margin-bottom: 259px;
+    }
+
+    .container .colored-container .right-container {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 80px 28px 80px 117px;
+
+        .all-caps-heading {
+            margin-bottom: 41px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .sub-heading {
+            max-width: 475px;
+            margin-bottom: 41px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.full-width-city-slider {
+    text-align: center;
+
+    .all-caps-heading {
+        margin-bottom: 155px;
+    }
+}
+
+.giant-playlist-button-contact {
+    padding-top: 300px!important;
+    padding-bottom: 191px;
+
+    .container a {
+        background-color: @accent-orange;
+        color: @accent-pink;
+        .transition();
+
+        &:hover {
+            background-color: @accent-pink;
+            color: @accent-orange;
+        }
+    }
+
+}
