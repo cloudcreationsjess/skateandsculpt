@@ -11,7 +11,7 @@
     <div class='footer__bottom'>
         <div class='footer__bottom__container'>
             <div class='footer__bottom__logo'>
-                <img src='{{ get_field('site_branding_logo', 'option') }}' alt='Skate & Sculpt Logo'></div>
+                {!! the_image(get_field('site_branding_logo', 'option')) !!}
             <div class='footer__bottom__menus'>
                 <div class='footer__bottom__menus--info footer__bottom__menus__content'>
                     <div class='footer-menus-title'>Info</div>
@@ -98,29 +98,6 @@
         fadeEffect: {
             crossFade: true,
         },
-
-        //accessible
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-
-        a11y: {
-            prevSlideMessage: 'Previous slide',
-            nextSlideMessage: 'Next slide',
-        },
-    });
-
-    const swiperCoaches = new Swiper('.swiper-coach', {
-        // Optional parameters
-        direction: 'horizontal',
-        clickable: true,
-        watchOverflow: true,
-        loop: true,
-        autoplay: false,
-        slidesPerView: 2.9,
-        centeredSlides: true,
-        spaceBetween: 115,
 
         //accessible
         keyboard: {

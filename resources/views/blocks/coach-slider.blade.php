@@ -40,7 +40,7 @@
                                 {!! $name['first'] !!}<br/>{!! $name['last'] !!}
                             </div>
                             <div class='coach-bio'>
-                                <div class='basic-text'>
+                                <div class='sub-heading'>
                                     {{ get_field('short_bio', get_the_ID()) }}
                                 </div>
                             </div>
@@ -54,5 +54,31 @@
         </div>
     </div>
 </section>
+<script>
+    const swiperCoaches = new Swiper('.swiper-coach', {
+        // Optional parameters
+        direction: 'horizontal',
+        clickable: true,
+        watchOverflow: true,
+        loop: true,
+        autoplay: false,
+        slidesPerView: 2.8,
+        centeredSlides: true,
+        spaceBetween: 115,
+        slideToClickedSlide: true,
+
+        //accessible
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+    });
+
+</script>
 @php(wp_reset_query())
 

@@ -47,9 +47,9 @@
                     @php($i = 1)
                     @while(have_posts())
                         @php(the_post())
-                        <a href="/cities/{{ str_replace(' ', '-', strtolower(get_the_title())) }}" class="swiper-slide" data-city="{{ get_the_title() }}">
+                        <div class="swiper-slide" data-city="{{ get_the_title() }}">
                             {!! get_the_post_thumbnail() !!}
-                        </a>
+                        </div>
                         @php($i++)
                     @endwhile
                 @endif
@@ -68,6 +68,7 @@
         slidesPerView: 1.7,
         // centeredSlides: true,
         spaceBetween: 114,
+        slideToClickedSlide: true,
 
         on: {
             init: function() {

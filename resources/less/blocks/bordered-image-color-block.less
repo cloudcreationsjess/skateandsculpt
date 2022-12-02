@@ -52,26 +52,41 @@
         .container {
             .colored-container {
 
+                .left-container {
+                    min-width: 50%;
+                }
+
                 .right-container {
-                    .flex-column(center, flex-start);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
                     padding: 54px 0;
                     margin-left: 117px;
-                    margin-right: 28px;
-                    max-width: 607px;
+                    margin-right: 23px;
                     height: auto;
                     text-align: left;
+                    width: 50%;
 
                     .all-caps-heading, .script-heading, .basic-text, .sub-heading {
                         max-width: 607px;
                         margin-right: auto;
                     }
 
+                    .all-caps-heading {
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+
                     .basic-text {
                         overflow-y: scroll;
-                        max-height: 380px;
+                        max-height: 382px;
 
                         p {
-                            margin-right: 55px;
+                            margin-right: 70px;
+                            max-width: 494px;
+                            line-height: 21.2px;
                         }
 
                         /* width */

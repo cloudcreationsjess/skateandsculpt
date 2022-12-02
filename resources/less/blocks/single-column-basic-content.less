@@ -5,17 +5,6 @@
     height: auto;
     width: 100%;
 
-    &.overlap-next-section-button {
-        .next-section-arrow {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 99;
-            transform: translateY(50%);
-
-        }
-    }
 
     #next-section {
         position: relative;
@@ -36,14 +25,14 @@
         left: 0;
 
         svg {
-            width: 100vw;
+            width: 100%;
             height: auto;
         }
     }
 
     .green-blob {
         left: 0;
-        bottom: -20%;
+        bottom: -39%;
         position: absolute;
         z-index: 0;
         height: 822px;
@@ -65,25 +54,54 @@
 
 .single-column-basic-content {
 
+    &.overlap-next-section-button {
+        min-height: calc(89vh - 129px);
+
+        .next-section-arrow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            transform: translateY(50%);
+
+        }
+
+        .green-squiggle-1 {
+            top: -53%;
+            right: -39%;
+            transform: rotate(7deg);
+        }
+
+        .green-squiggle-2 {
+            bottom: -45%;
+            left: -12%;
+            width: 2024px;
+            transform: rotate(-2deg);
+        }
+    }
+
     &.our-core-values {
         min-height: none !important;
     }
 
-    &.overlap-next-section-button {
-        min-height: calc(80vh - @header-height);
-    }
-
     &.class-near-you {
+        padding-top: 106px;
+        padding-bottom: 156px;
 
         .green-squiggle-1 {
-            right: -59%;
-            transform: rotate(-147.91deg);
-            top: 25%;
+            right: -77%;
+            transform: rotate(-162.91deg);
+            top: 73%;
+            height: 440px;
         }
 
         .green-squiggle-2 {
-            left: -14.49%;
-            top: 130%;
+            left: -11%;
+            top: 116%;
+            height: 440px;
+            width: 121%;
+            transform: rotate(5deg);
         }
 
         .container {
@@ -95,6 +113,7 @@
 
     &.green-blob-overlap {
         overflow: visible;
+        padding-bottom: 0;
     }
 
     &.keep-link-orange {
@@ -120,6 +139,15 @@
             top: 30%;
         }
     }
+
+    &.what-is-this-hero {
+        padding-bottom: 62px;
+    }
+
+    &.meet-the-coaches {
+        padding-bottom: 55px;
+    }
+
 }
 
 

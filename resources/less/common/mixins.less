@@ -189,28 +189,31 @@
 /* ##########################
 breakpoints
 ########################## */
+
+.b(large-desktop; @content) {
+    @media (min-width: 1514px) { @content();
+    }
+}
+//1351-1513
 .b(desktop; @content) {
-    @media (min-width: 1351px) { @content();
+    @media (max-width: 1513px) { @content();
     }
 }
 
-.b(small-destop; @content) {
-    @media (max-width: 1350px) { @content();
-    }
-}
 
+//1024-1350
 .b(laptop; @content) {
     @media (max-width: 1300px) { @content();
     }
 }
-
+//768-1023.9
 .b(tablet; @content) {
-    @media (max-width: 1164px) { @content();
+    @media (max-width: 1023.9px) { @content();
     }
 }
-
+//0-768
 .b(mobile; @content) {
-    @media (max-width: 784px) { @content();
+    @media (max-width: 767.9px) { @content();
     }
 }
 

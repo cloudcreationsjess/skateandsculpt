@@ -73,9 +73,10 @@
         watchOverflow: true,
         loop: {{ $postCount > 1 ? 'true' : 'false' }},
         autoplay: false,
-        slidesPerView: 1.6,
+        slidesPerView: {{ $postCount > 1 ? '1.6' : '1' }},
         spaceBetween: {{ $postCount > 1 ? '14' : '0' }},
         centeredSlides: false,
+        slideToClickedSlide: true,
 
         on: {
             init: function() {
@@ -86,6 +87,9 @@
                 if({{$postCount}} <= 1 ) {
                     document.querySelector('.orange-slider .navigation').style.marginRight = "0px";
                     document.querySelector('.orange-slider .swiper-city-coach .swiper-slide').style.marginRight = "0px";
+                    document.querySelector('.navigation-container').style.paddingTop = "53px";
+                    document.querySelector('.swiper-orange').style.right = "50px";
+                    document.querySelector('.swiper-orange').style.width = "calc(50vw - 50px)";
                 }
             },
 

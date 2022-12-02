@@ -10,14 +10,29 @@
         .flex-row(space-between, flex-start);
 
         .left-column {
-            max-width: 573px;
-            margin-right: 139px;
+            width: 50%;
             .flex-column(flex-start, flex-start);
         }
 
         .right-column {
-            max-width: 706px;
+            width: 50%;
             .flex-column(flex-start, flex-start);
+
+            .sub-heading {
+
+                strong {
+                    font-family: @font-bold;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-family: inherit;
+                }
+            }
+
+            .basic-text {
+                line-height: 21.2px;
+            }
 
         }
     }
@@ -29,12 +44,20 @@
 
             p {
                 margin-bottom: 50px;
+                line-height: 33.29px;
             }
         }
 
         .basic-text p {
             margin-bottom: 32px;
+
         }
 
+    }
+}
+
+.page-id-51 {
+    .terms-block {
+        padding-bottom: 140px;
     }
 }

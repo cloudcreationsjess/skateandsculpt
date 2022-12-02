@@ -3,7 +3,7 @@
     <div class='header__container'>
         <div class='header__site-branding'>
             <a id="header__site-branding__logo" class="" href="{{ esc_url(home_url('/')) }}" title="{{ esc_attr(get_bloginfo('name', 'display')) }}" rel="home">
-                <img src='{{ get_field('site_branding_logo', 'option') }}' alt='Skate & Sculpt Logo'>
+                {!! the_image(get_field('site_branding_logo', 'option')) !!}
             </a>
         </div>
         <div class="header__site-menu text-center desktop" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

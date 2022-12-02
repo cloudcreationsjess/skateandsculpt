@@ -40,7 +40,7 @@
 
     <div id="panel"><!-- Needed for mobile menu. This is what slides when you click mobile menu button -->
         <div class="mobile-popout">
-{{--           <x-mobile_menu/>--}}
+           <x-mobile-menu/>
         </div>
 
     <!-- MOBILE NAV -->

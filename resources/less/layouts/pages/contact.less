@@ -16,14 +16,14 @@
 
     .green-squiggle-1 {
         transform: rotate(-164.2deg);
-        left: -47%;
-        bottom: -49%;
+        left: -58%;
+        bottom: -46%;
     }
 
     .green-squiggle-2 {
         transform: rotate(151.15deg);
-        right: -45%;
-        bottom: -42%;
+        right: -60%;
+        bottom: -34%
     }
 
     .blue-border-bottom {
@@ -53,7 +53,7 @@
             margin-bottom: 86px;
             overflow: hidden;
             z-index: 0;
-            max-height: calc(50vh - @header-height);
+            max-height: calc(51vh - @header-height);
             .flex-column();
         }
 
@@ -74,7 +74,7 @@
 }
 
 .city-slider-contact-page {
-    margin: 190px 0 !important;
+    margin: 159px 0 230px 0 !important;
 
     .city-content {
         padding: 0 !important;
@@ -102,6 +102,12 @@
             color: @accent-dark-purple;
             .font-size(96);
             max-width: 571px;
+            line-height: 101.76px;
+            margin-bottom: 35px;
+
+            p {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -180,7 +186,7 @@
     }
 
     .gform_wrapper {
-        margin-bottom: 66px;
+        margin-bottom: 50px;
 
         .gform_heading {
             display: none !important;
@@ -236,6 +242,10 @@
         transform: rotate(138.72deg);
         z-index: 0;
 
+      .b(desktop, {
+          left: -29%;
+      });
+
     }
 
     .green-squiggle-2 {
@@ -245,6 +255,11 @@
         transform: rotate(150.86deg);
         z-index: 0;
         width: 100%;
+
+        .b(desktop, {
+            right: -17%;
+            top: 14%;
+        });
     }
 
     .container {
@@ -308,8 +323,8 @@
 }
 
 .giant-playlist-button-contact {
-    padding-top: 300px!important;
-    padding-bottom: 191px;
+    padding-top: 260px!important;
+    padding-bottom: 155px!important;
 
     .container a {
         background-color: @accent-orange;

@@ -63,7 +63,7 @@
 
         @if(get_field('safety_protocol', 'option'))
             @php($safety = get_field('safety_protocol', 'option'))
-            <section class="terms-block">
+            <section class="terms-block terms-block-cities">
                 <div class='container'>
                     <div class='left-column'>
                         <div class='all-caps-heading color--blue'>{!! $safety['title'] !!}</div>

@@ -12,9 +12,9 @@
 
     .green-blob {
         position: absolute;
-        right: 0;
+        right: -4%;
         transform: rotate(180deg);
-        top: -10%;
+        top: -8%;
         z-index: 0;
         height: 1288px;
         width: auto;
@@ -107,6 +107,15 @@
 
     &.green-blob-overlap {
         overflow: visible;
+        .container {
+            .flex-row(space-between);
+
+            .left-column {
+                .btn {
+                    min-width: 223px;
+                }
+            }
+        }
     }
 
     &.tshirt-basic-content {

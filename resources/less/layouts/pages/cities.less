@@ -16,20 +16,27 @@
             width: auto;
             margin-right: 155px;
 
+            .script-heading {
+                margin-bottom: 8px;
+            }
+
             .sub-heading {
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-bottom: 52px;
+                font-family: @font-bold;
             }
 
             .city-characteristics {
                 color: @accent-blue;
                 .font-size(28);
-                line-height: 28.28px;
                 .flex-column(flex-start, flex-start);
+                line-height: 38px;
 
                 .prompt {
                     font-weight: 700;
+                    font-family: @font-bold;
+
                 }
 
                 .answer {
@@ -94,7 +101,8 @@
 .giant-playlist-button {
     width: 100%;
     height: auto;
-    padding-top: 50px;
+    padding-top: 62px;
+    padding-bottom: 95px;
 
     a {
         background-color: @accent-lime;
@@ -138,9 +146,8 @@
             }
 
             .coach-traits {
-                color: @accent-blue;
                 .font-size(28);
-                line-height: 28.28px;
+                line-height: 38px;
                 .flex-column(flex-start, flex-start);
 
                 .prompt {
@@ -160,12 +167,29 @@
     }
 }
 
+.terms-block-cities {
+    padding: 9px 0 164px 0;
+
+    .container {
+        .right-column {
+            .basic-text {
+                .font-size(24);
+                line-height: 28.54px;
+
+                p {
+                    line-height: inherit;
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}
+
 .city-post-navigation {
     width: 100%;
     height: auto;
     .flex-row(space-between, center);
     padding-bottom: 53px;
-    padding-top: 110px;
 
     .city {
         .flex-row();
@@ -182,6 +206,7 @@
             font-weight: 700;
             .font-size(28);
             line-height: 27.72px;
+            font-family: @font-bold;
 
             &:hover {
                 svg path:first-of-type {

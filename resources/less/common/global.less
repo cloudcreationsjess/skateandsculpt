@@ -162,7 +162,15 @@ html {
     width: 102px;
     height: 102px;
     .flex-row(flex-end, center);
-    z-index: 9999;
+    z-index: 999;
+
+    .b(desktop; {
+        left: calc(100vw - 100px - 20px);
+    });
+
+    .b(mobile; {
+    	display: none;
+    });
 
     a {
         background-image: url("/wp-content/uploads/2022/11/fixed-button.svg.svg");
@@ -194,7 +202,7 @@ ul.bullet-list {
         .font-size(28);
         line-height: 28px;
         .flex-row(flex-start, flex-start);
-        padding-left: calc(28px * 2);
+        padding-left: calc(28px + 27px);
         position: relative;
 
         &:not(:last-of-type) {

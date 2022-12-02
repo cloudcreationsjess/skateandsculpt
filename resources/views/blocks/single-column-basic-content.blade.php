@@ -43,8 +43,8 @@
                 <x-svg.next-section-arrow />
             </a>
         </div>
+        <div id="go-to-next-section"></div>
     @endif
 
-
 </section>
-<div id="go-to-next-section"></div>
+

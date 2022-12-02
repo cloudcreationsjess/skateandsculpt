@@ -52,6 +52,7 @@
         slidesPerView: 1.6,
         // centeredSlides: true,
         spaceBetween: 14,
+        slideToClickedSlide: true,
 
 
         //accessible
