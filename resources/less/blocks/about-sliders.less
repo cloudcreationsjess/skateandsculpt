@@ -7,6 +7,15 @@
 
         .slider-content {
             .flex-row(flex-start, center);
+
+            .b(laptop; {
+            	width: 47%;
+            });
+
+            .b(tablet; {
+            	.flex-column();
+                width: 100%;
+            });
         }
 
         .navigation-container {
@@ -86,13 +95,38 @@
             min-height: 617px;
             max-width: 50vw;
 
+            .b(tablet; {
+            	width: 100%;
+                max-width: unset;
+                min-height: unset;
+                margin-bottom: 50px;
+                align-items: flex-start;
+            });
+
+            .xs({
+                margin-bottom: 30px;
+            });
+
             .slide-content {
                 opacity: 0;
                 display: none;
                 max-width: 557px;
 
+                .b(tablet; {
+                	max-width: unset;
+
+                    br {
+                        display: none;
+                    }
+                });
+
                 .basic-text {
                     max-width: 473px;
+
+                    .b(tablet; {
+                    	max-width: unset;
+                    });
+
                 }
 
                 &.content-active {
@@ -114,7 +148,19 @@
             width: 50vw;
             overflow: hidden;
             list-style: none;
-            padding: 0;
+
+            .b(tablet; {
+            	width: calc(100% + 20px);
+                position: relative;
+                padding-bottom: 30px;
+                margin-right: -20px;
+            });
+
+            .xs({
+                margin-right: 0;
+                width: 100%;
+                padding-bottom: 10px;
+            });
 
             .swiper-wrapper {
                 width: 100%;
@@ -126,12 +172,27 @@
                     border-radius: 50px;
                     overflow: hidden;
 
+                    .b(tablet; {
+                    	height: 450px;
+                    });
+
+                    .b(mobile; {
+                    	height: 250px;
+                    });
+
                     .slider-image {
                         .flex-column(stretch);
+                        height: 100%;
+                        width: 100%;
 
                         img {
                             width: auto;
                             height: 100%;
+                            object-fit: cover;
+
+                            .xs({
+                            	width: 100%;
+                            });
                         }
                     }
 

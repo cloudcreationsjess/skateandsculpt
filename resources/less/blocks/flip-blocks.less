@@ -9,12 +9,24 @@
         margin-bottom: 16px;
         align-items: stretch;
 
+        .b(tablet; {
+        	.flex-column();
+        });
+
         &:nth-of-type(2n) {
             flex-direction: row-reverse;
+
+            .b(tablet; {
+            	flex-direction: column;
+            });
 
             .colored-block {
                 margin-right: 0;
                 margin-left: 18px;
+
+                .b(tablet; {
+                    margin-left: 0;
+                });
             }
         }
 
@@ -29,18 +41,43 @@
             flex: 0 1 auto;
             .flex-column();
 
+            .b(tablet; {
+            	width: 100%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                padding: 111px 70px;
+
+                br {
+                    display: none;
+                }
+            });
+
+            .b(mobile; {
+            	padding: 60px 20px;
+            });
+
 
             .script-heading {
                 .font-size(48);
                 line-height: 58.8px;
                 font-weight: 400;
                 margin-bottom: 32px;
+
+                .b(mobile; {
+                	.font-size(38);
+                    line-height: 120%;
+                });
             }
 
             .basic-text {
                 color: @accent-orange;
                 max-width: 382px;
                 margin: 0 auto;
+
+                .b(tablet; {
+                	max-width: unset;
+                    width: 100%;
+                });
             }
         }
 
@@ -52,6 +89,20 @@
             flex: 1 0 auto;
             position: relative;
 
+            .b(tablet; {
+            	height: 300px;
+                width: 100%;
+                min-height: unset;
+            });
+
+            .sm({
+            	height: 300px;
+            });
+
+            .b(mobile; {
+            	height: 200px;
+            });
+
             img {
                 width: auto;
                 height: 100%;
@@ -60,6 +111,11 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
+
+                .b(tablet; {
+                	width: 100%;
+                    height: auto;
+                });
             }
 
         }
@@ -67,5 +123,9 @@
 
     &.booking-page {
         padding-bottom: 154px;
+
+        .b(tablet; {
+            padding-bottom: 70px;
+        });
     }
 }

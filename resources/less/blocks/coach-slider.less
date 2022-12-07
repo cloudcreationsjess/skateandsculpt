@@ -4,11 +4,19 @@
     height: 562px;
     position: relative;
 
+    .md({
+    	height: auto;
+    });
+
     .swiper-coach {
         width: 100%;
         position: absolute;
         left: 0;
         right: 0;
+
+        .md({
+        	position: relative;
+        });
 
         .swiper-slide {
             min-width: 463px;
@@ -18,6 +26,14 @@
             .flex-column();
             border-radius: 50px;
             .transition();
+
+            .xs({
+            	min-width: unset;
+                width: calc(100% - 40px);
+                max-width: 463px;
+                height: 380px;
+            });
+
 
 
             .slide-background {
@@ -63,6 +79,7 @@
                 }
 
                 .sub-heading {
+
                     margin-bottom: 33px;
                     text-align: center;
                     color: @accent-orange;

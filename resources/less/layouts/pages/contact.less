@@ -1,34 +1,112 @@
 .contact-hero {
-    min-height: calc(100vh - @header-height - @header-height / 2);
     position: relative;
     width: 100%;
     height: auto;
     overflow: hidden;
+    padding-bottom: 86px;
+
+    .b(tablet; {
+        padding-bottom: 46px;
+    });
+
+    .sm({
+        padding-bottom: 26px;
+    });
+
 
     .blue-border {
         z-index: 2;
+        padding: 0 50px;
+        width: calc(100% - 100px);
+
+        .b(tablet; {
+        	padding: 0 20px;
+            width: calc(100% - 40px);
+        });
     }
 
     .green-squiggle-1, .green-squiggle-2 {
         position: absolute;
         z-index: 0;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .green-squiggle-1 {
         transform: rotate(-164.2deg);
-        left: -58%;
-        bottom: -46%;
+        right: 540px;
+        top: 320px;
+        width: 119%;
+
+        .b(desktop; {
+            right: 360px;
+            top: 440px;
+            width: 130%;
+        });
+
+        .b(laptop; {
+            right: 300px;
+            top: 530px;
+            width: 119%;
+        });
+
+        .b(tablet; {
+            right: 256px;
+            top: 430px;
+        });
+
+        .sm({
+            right: 206px;
+            top: 400px;
+        });
+
+        .xs({
+            right: 106px;
+            top: 390px;
+        });
     }
 
     .green-squiggle-2 {
-        transform: rotate(151.15deg);
-        right: -60%;
-        bottom: -34%
+        transform: rotate(130.15deg);
+        left: 430px;
+        top: 340px;
+        width: 119%;
+
+        .b(desktop; {
+            top: 535px;
+            lefT: 258px;
+            transform: rotate(122.15deg);
+        });
+
+        .b(laptop; {
+            top: 485px;
+        });
+
+        .b(tablet; {
+            top: 385px;
+            transform: rotate(141.15deg);
+            left: 238px;
+        });
+
+        .sm({
+            top: 355px;
+            transform: rotate(141.15deg);
+            left: 178px;
+        });
+
+        .xs({
+            top: 355px;
+            transform: rotate(141.15deg);
+            left: 108px;
+        });
     }
 
     .blue-border-bottom {
         height: 2px;
-        width: 100%;
+        width: calc(100% - 100px);
         max-width: 1414px;
         padding: 0 50px;
         background-color: @accent-blue;
@@ -38,6 +116,13 @@
         right: 0;
         z-index: 2;
         margin: 0 auto;
+
+        .b(tablet; {
+            padding: 0 20px;
+            width: calc(100% - 40px);
+        });
+
+
     }
 
     .container {
@@ -55,12 +140,42 @@
             z-index: 0;
             max-height: calc(51vh - @header-height);
             .flex-column();
+            min-height: 250px;
+
+            .b(tablet; {
+                margin-bottom: 66px;
+            });
+
+            .xs({
+                margin-bottom: 26px;
+                justify-content: flex-start;
+            });
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+
+                .xs({
+                	width: auto;
+                    height: 100%;
+                });
+            }
         }
 
         .all-caps-heading {
             max-width: 900px;
             margin-bottom: 41px;
             color: @accent-dark-purple;
+
+            .sm({
+                margin-bottom: 10px;
+            });
+
+            .xs({
+            	.font-size(30);
+                line-height: 101%;
+            });
         }
 
         .sub-heading {
@@ -68,6 +183,15 @@
             color: @accent-dark-purple;
             font-family: @font-bold;
             font-weight: 700;
+
+            .sm({
+            	.font-size(20);
+                max-width: 320px;
+            });
+
+            .xs({
+                max-width: 310px;
+            });
         }
     }
 
@@ -209,6 +333,7 @@
             border-color: @accent-orange;
         }
     }
+
     #gform_confirmation_wrapper_1 {
         margin-bottom: 50px;
         font-weight: 700;
@@ -242,9 +367,9 @@
         transform: rotate(138.72deg);
         z-index: 0;
 
-      .b(desktop, {
-          left: -29%;
-      });
+        .b(desktop, {
+            left: -29%;
+        });
 
     }
 
@@ -252,7 +377,7 @@
         position: absolute;
         right: 0;
         top: 21%;
-        transform: rotate(150.86deg);
+        transform: rotate(150.15deg);
         z-index: 0;
         width: 100%;
 
@@ -323,8 +448,8 @@
 }
 
 .giant-playlist-button-contact {
-    padding-top: 260px!important;
-    padding-bottom: 155px!important;
+    padding-top: 260px !important;
+    padding-bottom: 155px !important;
 
     .container a {
         background-color: @accent-orange;

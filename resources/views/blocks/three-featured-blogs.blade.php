@@ -31,7 +31,7 @@
                                 {!! $image !!}
                             </div>
                         </a>
-                        <a class="" href="{{ $permalink }}">
+                        <a class="post-title-link" href="{{ $permalink }}">
                             <div class='post-title'>
                                 {!! $title !!}
                             </div>

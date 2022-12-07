@@ -6,8 +6,12 @@
     background-color: @background-color;
     position: relative;
 
-    .b(mobile; {
-    	min-height: calc(100vh - 100px - 50px);
+    .b(tablet; {
+    	min-height: auto;
+    });
+
+    .sm({
+    	min-height: auto;
     });
 
     .hero-title {
@@ -31,6 +35,7 @@
         .b(tablet; {
             max-width: 100%;
             .font-size(47);
+            width: 510px;
 
             p {
                 br {
@@ -41,6 +46,12 @@
 
         .b(mobile; {
         	.font-size(42);
+            width: 465px;
+            padding: 0 35px;
+        });
+
+        .xs({
+        	.font-size(34);
         });
 
     p {
@@ -66,9 +77,14 @@
     overflow: hidden;
     position: relative;
 
-    .b(mobile; {
-    	height: calc(100vh - 100px - 50px);
+    .b(tablet; {
+        height: 492px;
     });
+
+    .xs({
+    	height: 350px;
+    });
+
 
     img {
         width: 100%;

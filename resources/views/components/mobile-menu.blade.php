@@ -27,9 +27,11 @@
             @if(have_rows('follow_us_menu', 'option'))
                 @while(have_rows('follow_us_menu', 'option'))
                     @php(the_row())
-                    <a target="_blank" href="{{ get_sub_field('social_url', 'option') }}">
-                        {!! the_image(get_sub_field('social_icon', 'option')) !!}
-                    </a>
+                    @if(get_sub_field('social_url', 'option'))
+                        <a target="_blank" href="{{ get_sub_field('social_url', 'option') }}">
+                            {!! the_image(get_sub_field('social_icon', 'option')) !!}
+                        </a>
+                    @endif
                 @endwhile
             @endif
         </div>

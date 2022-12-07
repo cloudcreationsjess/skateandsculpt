@@ -3,6 +3,14 @@
 .giant-button-mosaic {
     padding-bottom: 141px;
 
+    .b(laptop; {
+        padding-bottom: 90px;
+    });
+
+    .b(tablet; {
+        padding-bottom: 70px;
+    });
+
     .mosaic {
         .flex-row(stretch, center);
         flex-wrap: wrap;
@@ -11,15 +19,27 @@
     .mosaic-btn, .spinning-circle {
         margin-bottom: 32px;
 
+        .b(tablet; {
+            margin-bottom: 15px;
+        });
+
+        .sm({
+            margin-bottom: 10px;
+        });
+
         &:not(:last-of-type) {
             margin-right: 20px;
+
+            .sm({
+                margin-right: 10px;
+            });
         }
     }
 
     .mosaic-btn {
         font-family: @font-script;
         .font-size(96);
-        line-height: 96.96px;
+        line-height: 101%;
         font-weight: 400;
         color: @accent-pink;
         text-transform: none;
@@ -29,12 +49,42 @@
         padding: 55px 100px 36px 100px;
         width: auto;
         flex: 1 0 auto;
+
+        .b(laptop; {
+        	.font-size(87);
+            padding: 50px 85px 25px 85px;
+        });
+
+        .b(tablet; {
+        	.font-size(64);
+            padding: 30px 70px 15px 70px;
+        });
+
+        .sm({
+        	.font-size(44);
+            padding: 20px 30px 10px 30px;
+        });
     }
 
     .spinning-circle {
         height: 188px;
         width: 188px;
         animation: rotate 8s infinite linear;
+
+        .b(laptop; {
+        	height: 166px;
+            width: auto;
+        });
+
+        .b(tablet; {
+            height: 112px;
+            width: auto;
+        });
+
+        .sm({
+            height: 76px;
+            width: auto;
+        });
 
         svg {
             height: 100%;

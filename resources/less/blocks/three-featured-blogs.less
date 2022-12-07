@@ -22,33 +22,94 @@
         margin-right: auto;
         color: @accent-orange;
         text-align: center;
+
+        .b(laptop; {
+        	.font-size(58);
+            line-height: 101%;
+        });
+
+        .b(tablet; {
+        	.font-size(45);
+        });
+
+        .b(mobile; {
+        	.font-size(39);
+            margin-bottom: 70px;
+        });
     }
 
     .featured-blogs {
         .flex-row(space-between, center);
+        width: 100%;
+
+        .b(tablet; {
+        	.flex-column();
+        });
 
         .featured-post {
             .flex-column();
+            width: calc(33.33% - 51.5px - 20px);
+            justify-content: space-between;
+
+            .b(laptop; {
+            	width: calc(33.33% - 25px);
+            });
+
+            .b(tablet; {
+            	width: 100%;
+                justify-content: center;
+                margin-bottom: 50px;
+            });
+
 
             &:not(:last-of-type) {
                 margin-right: 103px;
+
+                .b(laptop; {
+                    margin-right: 50px;
+                });
+
+                .b(tablet; {
+                    margin-right: 0;
+                });
+            }
+
+            a {
+                width: 100%;
+                height: auto;
             }
 
             .post-image {
-                height: 489px;
-                width: 403px;
+                max-height: 489px;
+                max-width: 403px;
+                width: 100%;
+                height: auto;
                 margin-bottom: 36px;
                 border-radius: 50px;
                 overflow: hidden;
                 .flex-column();
 
+                .b(laptop; {
+                    aspect-ratio: 1/1.21;
+                });
+
+                .b(tablet; {
+                	margin-left: auto;
+                    margin-right: auto;
+                });
+
+
+
 
                 img {
-                    height: 100%;
-                    width: auto;
+                  width: 100%;
                     object-fit: cover;
                     object-position: center;
                 }
+            }
+
+            .post-title-link {
+                flex: 1 0 auto;
             }
 
             .post-title {
@@ -60,10 +121,15 @@
                 text-align: center;
                 margin-bottom: 26px;
                 font-family: @font-bold;
+
+                .b(laptop; {
+                	.font-size(23);
+                });
             }
 
             .btn {
                 padding: 22px 42px;
+                width: unset;
             }
 
         }

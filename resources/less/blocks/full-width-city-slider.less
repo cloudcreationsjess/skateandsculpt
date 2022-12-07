@@ -1,15 +1,24 @@
 .full-width-city-slider {
 
-    width: 100%;
-    height: 562px;
+    width: 100vw;
+    height: auto;
     position: relative;
     margin-bottom: 119px;
 
+    .b(tablet; {
+        margin-bottom: 70px;
+    });
+
+    .b(mobile; {
+        margin-bottom: 60px;
+    });
+
     .swiper-full-width-cities {
-        width: 100%;
-        position: absolute;
+        width: 100vw;
+        position: relative;
         left: 0;
         right: 0;
+
 
         .swiper-slide {
             min-width: 463px;
@@ -18,6 +27,22 @@
             overflow: hidden;
             .flex-column();
             .transition();
+            max-width: 463px;
+
+            .b(laptop; {
+                height: 562px;
+            });
+
+            .b(tablet; {
+            	min-width: unset;
+
+            });
+
+            .b(mobile; {
+                width: calc(100% - 40px);
+                max-width: 463px;
+                height: 450px;
+            });
 
             &:nth-of-type(1n) {
                 border-radius: 231.5px;
@@ -65,6 +90,10 @@
                 .transition();
                 .flex-column();
 
+                .b(tablet; {
+                	opacity: 1;
+                });
+
                 .btn--blue-pink {
                     font-family: @font-script;
                     height: 112px;
@@ -76,6 +105,12 @@
                     color: @accent-pink;
                     background-color: @accent-blue;
                     white-space: nowrap;
+
+                    .b(mobile; {
+                        .font-size(43);
+                        line-height: 101%;
+                        padding: 37px 33px 27px 33px;
+                    });
 
                     &:hover {
                         box-shadow: none;

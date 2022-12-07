@@ -50,14 +50,13 @@
     const swiperFullWidthCity = new Swiper('.swiper-full-width-cities', {
         // Optional parameters
         direction: 'horizontal',
-        clickable: true,
+        clickable: false,
         watchOverflow: true,
         loop: true,
         autoplay: false,
-        slidesPerView: 2.799,
+        slidesPerView: 2.8,
         centeredSlides: true,
         spaceBetween: 115,
-        slideToClickedSlide: true,
 
         //accessible
         keyboard: {
@@ -69,6 +68,48 @@
             prevSlideMessage: 'Previous slide',
             nextSlideMessage: 'Next slide',
         },
+
+        breakpoints: {
+            1600: {
+                slidesPerView: "auto",
+            },
+
+            1480: {
+                slidesPerView: "auto",
+                spaceBetween: 100,
+            },
+
+            1350: {
+                slidesPerView: "auto",
+                spaceBetween: 100,
+                centeredSlides: true,
+            },
+            1024: {
+              slidesPerView: "auto",
+                spaceBetween: 100,
+            },
+
+            768: {
+              slidesPerView: "auto"
+            },
+
+            576: {
+                slidesPerView: "auto",
+                spaceBetween: 80,
+            },
+
+            300: {
+                slidesPerView: "auto",
+                spaceBetween: 60,
+
+            }
+
+            // 375: {
+            //     slidesPerView: 1.2,
+            //     spaceBetween: 50,
+            // }
+
+        }
     });
 </script>
 

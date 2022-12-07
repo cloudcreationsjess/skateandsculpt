@@ -3,6 +3,14 @@
     height: auto;
     padding: 131px 0;
 
+    .b(laptop; {
+    	padding: 90px 0;
+    });
+
+    .b(tablet; {
+    	padding: 70px 0;
+    });
+
     .colored-block {
         max-width: 1039px;
         height: auto;
@@ -11,8 +19,37 @@
         border-radius: 50px;
         margin: 0 auto;
 
+        .b(laptop; {
+        	padding: 75px 80px;
+        });
+
+        .b(tablet; {
+        	padding: 75px 60px;
+        });
+
+        .xs({
+        	padding: 75px 30px;
+        });
+
         .btn {
             min-width: 287px;
+
+            .xs({
+            	width: 100%;
+                min-width: unset;
+                max-width: 287px;
+            });
+        }
+
+        .script-heading {
+            .b(tablet; {
+            	.font-size(64);
+                line-height: 101%;
+            });
+
+            .xs({
+            	.font-size(44);
+            });
         }
     }
 }

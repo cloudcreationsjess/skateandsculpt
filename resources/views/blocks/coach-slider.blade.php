@@ -77,6 +77,45 @@
             prevSlideMessage: 'Previous slide',
             nextSlideMessage: 'Next slide',
         },
+
+        breakpoints: {
+            1600: {
+                slidesPerView: "auto",
+            },
+
+            1480: {
+                slidesPerView: "auto",
+                spaceBetween: 100,
+            },
+
+            1350: {
+                slidesPerView: "auto",
+                spaceBetween: 100,
+                centeredSlides: true,
+            },
+            1024: {
+                slidesPerView: "auto",
+                spaceBetween: 100,
+            },
+
+            576: {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 20,
+            },
+
+            462: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+                centeredSlides: true,
+            },
+
+            300: {
+                slidesPerView: "auto",
+                spaceBetween: 60,
+
+            }
+        }
     });
 
 </script>

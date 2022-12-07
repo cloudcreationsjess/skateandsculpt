@@ -112,6 +112,46 @@
             prevSlideMessage: 'Previous slide',
             nextSlideMessage: 'Next slide',
         },
+
+        breakpoints: {
+            1491: {
+              spaceBetween: 114,
+                slidesPerView: 1.7,
+            },
+            1350: {
+              spaceBetween: 50,
+                slidesPerView: 1.6,
+            },
+
+            1024: {
+                slidesPerView: 1.4,
+                spaceBetween: 40,
+            },
+
+            768: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+            },
+
+            576: {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 20,
+            },
+
+            462: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+                centeredSlides: true,
+            },
+
+            2: {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                centeredSlides: true,
+
+            }
+        }
     });
 </script>
 @php(wp_reset_query())

@@ -12,6 +12,7 @@
         <div class='footer__bottom__container'>
             <div class='footer__bottom__logo'>
                 {!! the_image(get_field('site_branding_logo', 'option')) !!}
+            </div>
             <div class='footer__bottom__menus'>
                 <div class='footer__bottom__menus--info footer__bottom__menus__content'>
                     <div class='footer-menus-title'>Info</div>
@@ -77,7 +78,6 @@
     //    // init Swiper:
     //
 
-
     const swiperTestimonial = new Swiper('.swiper-testimonials', {
         // Optional parameters
         direction: 'horizontal',
@@ -110,7 +110,6 @@
             nextSlideMessage: 'Next slide',
         },
     });
-
 
 </script>
 </body>

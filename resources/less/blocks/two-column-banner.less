@@ -1,5 +1,13 @@
 .two-column-banner {
     margin-bottom: 80px;
+
+    .b(laptop; {
+        margin-bottom: 60px;
+    });
+
+    .sm({
+        margin-top: 100px;
+    });
     .container {
         .banner {
             width: 100%;
@@ -9,14 +17,41 @@
             .flex-row(space-between, flex-start);
             border-radius: 50px;
 
+            .b(laptop; {
+            	.flex-column();
+                text-align: center;
+            });
+
+            .b(tablet; {
+            	padding: 70px 60px;
+            });
+
+            .sm({
+                padding: 80px 40px;
+            });
+
             .left-column {
                 margin-right: 100px;
+
+                .xl({
+                    margin-right: 40px;
+                });
+
+                .b(laptop; {
+                	margin: 0 auto;
+                    margin-bottom: 40px;
+                });
 
                 .script-heading {
                     p {
                         .font-size(48);
                         line-height: 48.48px;
                         margin-bottom: 32px;
+
+                        .sm({
+                        	.font-size(44);
+                            line-height: 101%;
+                        });
                     }
                 }
 
@@ -26,6 +61,40 @@
             .right-column {
                 max-width: 549px;
                 height: auto;
+
+                .xs({
+                	max-width: unset;
+                    max-height: 250px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    margin-right: -15px;
+
+                    /* width */
+
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
+
+                    /* Track */
+
+                    &::-webkit-scrollbar-track {
+                        background-color: transparent;
+                    }
+
+                    /* Handle */
+
+                    &::-webkit-scrollbar-thumb {
+                        background: @accent-orange;
+                        border-radius: 5px;
+                    }
+
+                });
+
+                .basic-text p {
+                    .xs({
+                        margin-right: 15px;
+                    });
+                }
             }
         }
     }

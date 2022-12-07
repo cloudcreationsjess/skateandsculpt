@@ -1,8 +1,28 @@
 .weekly-class {
     margin: 168px 0;
 
+    .b(laptop; {
+    	margin: 140px 0;
+    });
+
+    .b(tablet; {
+    	margin: 90px 0;
+    });
+
+
+    .xs({
+    	margin: 50px 0;
+    });
+
     .weekly-class-container {
         .flex-row(flex-start, center);
+
+        .sm({
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        });
+
 
         .city-content {
             .flex-column(flex-end, flex-start);
@@ -11,20 +31,83 @@
             padding: 148px 0 0 0;
             z-index: 2;
 
+            .sm({
+            	max-width: 100%;
+                margin-bottom: 50px;
+                align-items: center;
+            });
+
+            .xs({
+                margin-bottom: 30px;
+            });
+
+            .xs({
+                padding: 30px 0 0 0;
+                max-width: unset;
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            });
+
+            .btn {
+                .sm({
+                    line-height: 101%;
+                });
+            }
+
             .all-caps-heading {
                 margin-bottom: 16px;
                 max-width: 400px;
+
+                .b(laptop; {
+                	.font-size(55);
+                    line-height: 101%;
+                });
+
+                .b(tablet; {
+                	.font-size(45);
+                });
+
+                .sm({
+                	.font-size(34);
+                });
+
+                .xs({
+                	max-width: unset;
+                    text-align: center;
+                    .font-size(37);
+                });
             }
 
            .city-title {
                color: @accent-dark-purple;
                font-family: @font-script;
                .font-size(96);
-               line-height: 96.96px;
+               line-height: 101%;
                font-weight: 400;
                display: block;
                margin-bottom: 80px;
+
+               .b(laptop; {
+               	.font-size(64);
+               });
+
+               .b(tablet; {
+               	.font-size(54);
+               });
+
+               .sm({
+               	.font-size(54);
+                   margin-bottom: 15px;
+               });
+
+               .xs({
+                   text-align: center;
+                   .font-size(54);
+               });
            }
+
 
 
             .swiper-button-next {
@@ -36,6 +119,11 @@
                 position: relative;
                 top: 0;
                 .transition();
+
+                .xs({
+                	display: none;
+                });
+
 
                 svg {
                     height: 70px;
@@ -75,15 +163,53 @@
             z-index: 1;
             overflow: hidden;
 
+
+            .sm({
+                position: unset;
+                margin: 10px 20px;
+            });
+
+
             .swiper-wrapper {
                 width: 808px;
                 height: auto;
+
+                .b(desktop; {
+                	width: 660px;
+                });
+
+                .b(laptop; {
+                    width: 50vw;
+                });
+
+                .sm({
+                	width: 100vw;
+                });
 
                 .swiper-slide {
                     width: 463px;
                     height: 562px;
                     overflow: hidden;
                     .flex-column();
+
+                    .b(laptop; {
+                    	height: 500px;
+                    });
+
+                    .b(tablet; {
+                    	height: 75vh;
+                        max-height: 462px;
+                    });
+
+                    .sm({
+                        width: calc(100% - 40px);
+                        max-width: 463px;
+                        height: 562px;
+                    });
+
+                    .xs({
+                    	height: 380px;
+                    });
 
                     &:nth-of-type(1n) {
                         border-radius: 50px;
@@ -109,6 +235,19 @@
     &.remove-margin {
         margin-top: 20px;
         margin-bottom: 70px;
+
+        .b(laptop; {
+            margin-bottom: 50px;
+        });
+
+        .b(tablet; {
+            margin-bottom: 20px;
+        });
+
+        .sm({
+            margin-top: 0;
+            margin-bottom: 0;
+        });
     }
 
     &.about-city-slider {
@@ -116,11 +255,29 @@
         padding: 149px 0;
         padding-bottom: 80px;
 
+        .b(laptop; {
+            margin: 140px 0;
+        });
+
+        .b(tablet; {
+            margin: 210px 0;
+            padding: 0;
+        });
+
+
+        .sm({
+            margin: 70px 0;
+        });
+
         .city-content {
             padding: 0;
 
             .city-title {
                 margin-bottom: 32px;
+
+                .xs({
+                    margin-bottom: 15px;
+                });
             }
         }
     }

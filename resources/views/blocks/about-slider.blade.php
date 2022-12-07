@@ -135,6 +135,34 @@
                         prevSlideMessage: 'Previous slide',
                         nextSlideMessage: 'Next slide',
                     },
+
+                    breakpoints: {
+                        1491: {
+                            spaceBetween: 14,
+                            slidesPerView: 1.7,
+                        },
+                        1350: {
+                            spaceBetween: 14,
+                            slidesPerView: 1.6,
+                        },
+
+                        1024: {
+                            slidesPerView: "auto",
+                            spaceBetween: 14,
+                        },
+
+                        576: {
+                            slidesPerView: "auto",
+                            spaceBetween: 14,
+                        },
+
+
+                        2: {
+                            slidesPerView: 1,
+                            spaceBetween: 14,
+
+                        },
+                    }
                 });
 
                 // sliderCount = sliderCount + 1;
