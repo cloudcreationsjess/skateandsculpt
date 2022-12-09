@@ -4,8 +4,9 @@
             {!! get_field('subscribe_title', 'option') !!}
         </div>
         <div class='footer__top__subscribe'>
-            <input type='text' placeholder="email address">
-            <button class="btn btn--pink-blue footer-subscribe-button" type="submit">{{ get_field('footer_subscribe_button', 'option')['call_to_action'] }}</button>
+{{--            <input type='text' placeholder="email address">--}}
+{{--            <button class="btn btn--pink-blue footer-subscribe-button" type="submit">{{ get_field('footer_subscribe_button', 'option')['call_to_action'] }}</button>--}}
+            {!!  do_shortcode(get_field('form_shortcode', 'option')) !!}
         </div>
     </div>
     <div class='footer__bottom'>
@@ -55,6 +56,7 @@
                 All Rights Reserved.
                 <a href='/privacy'>Privacy Policy</a>.
                 <a href='/legal-policies'>Terms of Use</a>.
+                Site by <a href='https://www.wilda.co/'>Wilda</a> & <a href='https://madetothrive.com/'>MTT</a>
             </div>
         </div>
     </div>
@@ -69,6 +71,18 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
+
+<script>
+    window.markerConfig = {
+        project: '63923f8dfe339a194e188529',
+        source: 'snippet'
+    };
+</script>
+
+<script>
+    !function(e,r,a){if(!e.__Marker){e.__Marker={};var t=[],n={__cs:t};["show","hide","isVisible","capture","cancelCapture","unload","reload","isExtensionInstalled","setReporter","setCustomData","on","off"].forEach(function(e){n[e]=function(){var r=Array.prototype.slice.call(arguments);r.unshift(e),t.push(r)}}),e.Marker=n;var s=r.createElement("script");s.async=1,s.src="https://edge.marker.io/latest/shim.js";var i=r.getElementsByTagName("script")[0];i.parentNode.insertBefore(s,i)}}(window,document);
+</script>
+
 
 <script>
 

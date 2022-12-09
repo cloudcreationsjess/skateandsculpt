@@ -69,14 +69,12 @@
 <script>
     const swiperCityCoach = new Swiper('.swiper-city-coach', {
         direction: 'horizontal',
-        clickable: true,
         watchOverflow: true,
         loop: {{ $postCount > 1 ? 'true' : 'false' }},
         autoplay: false,
         slidesPerView: {{ $postCount > 1 ? '1.6' : '1' }},
         spaceBetween: {{ $postCount > 1 ? '14' : '0' }},
         centeredSlides: false,
-        slideToClickedSlide: true,
 
         on: {
             init: function() {
@@ -84,13 +82,26 @@
                 let id = currentSwiper.querySelector('.swiper-slide-active').getAttribute('data-id');
                 let element = document.querySelector('.js--coach-details--' + id);
                 element.classList.add('content-active');
-                if({{$postCount}} <= 1 ) {
+                if({{$postCount}} <= 1 && window.innerWidth >= 768) {
                     document.querySelector('.orange-slider .navigation').style.marginRight = "0px";
                     document.querySelector('.orange-slider .swiper-city-coach .swiper-slide').style.marginRight = "0px";
                     document.querySelector('.navigation-container').style.paddingTop = "53px";
                     document.querySelector('.swiper-orange').style.right = "50px";
                     document.querySelector('.swiper-orange').style.width = "calc(50vw - 50px)";
                 }
+                if({{$postCount}} <= 1 && window.innerWidth >= 1513) {
+                    document.querySelector('.orange-slider .slider-content').style.width = "100%";
+                    document.querySelector('.orange-slider .slider-content').style.justifyContent = "space-between";
+                    document.querySelector('.orange-slider .slider-content').style.justifyContent = "space-between";
+                    document.querySelector('.orange-slider .orange-slider-container .swiper-orange').style.position = "relative";
+                    document.querySelector('.orange-slider .orange-slider-container .swiper-orange').style.right = "0";
+                    document.querySelector('.orange-slider .orange-slider-container .swiper-orange').style.width = "50%";
+                }
+                if({{$postCount}} <= 1 && window.innerWidth <= 768) {
+                    document.querySelector('.orange-slider .swiper-city-coach .swiper-slide').style.height = "450px";
+                    document.querySelector('.swiper-orange').style.marginRight = "0";
+                }
+
             },
 
             slideChangeTransitionStart: function() {
@@ -122,6 +133,37 @@
             prevSlideMessage: 'Previous slide',
             nextSlideMessage: 'Next slide',
         },
+
+        breakpoints: {
+            1491: {
+                spaceBetween: 14,
+                slidesPerView: {{ $postCount > 1 ? '1.7' : '1' }},
+            },
+            1350: {
+                spaceBetween: 14,
+                slidesPerView: {{ $postCount > 1 ? '1.6' : '1' }},
+            },
+
+            1024: {
+                slidesPerView: {{ $postCount > 1 ? '1.6' : '1' }},
+                spaceBetween: 14,
+            },
+
+            768: {
+              slidesPerView: {{ $postCount > 1 ? '1.2' : '1' }},
+            },
+
+            576: {
+              slidesPerView: {{ $postCount > 1 ? '1.2' : '1' }},
+            },
+
+
+            2: {
+                slidesPerView: 1,
+                spaceBetween: 14,
+
+            },
+        }
     });
 </script>
 @php(wp_reset_query())

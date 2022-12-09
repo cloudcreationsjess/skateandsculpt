@@ -50,7 +50,6 @@
         loop: true,
         autoplay: false,
         slidesPerView: 1.6,
-        // centeredSlides: true,
         spaceBetween: 14,
         slideToClickedSlide: true,
 
@@ -65,6 +64,45 @@
             prevSlideMessage: 'Previous slide',
             nextSlideMessage: 'Next slide',
         },
+
+        breakpoints: {
+            1491: {
+                slidesPerView: 1.7,
+            },
+            1350: {
+                spaceBetween: 14,
+                slidesPerView: "auto",
+            },
+
+            1024: {
+                slidesPerView: 1.4,
+                spaceBetween: 14,
+            },
+
+            768: {
+                slidesPerView: 1.3,
+                spaceBetween: 14,
+            },
+
+            576: {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 14,
+            },
+
+            462: {
+                slidesPerView: "auto",
+                spaceBetween: 14,
+                centeredSlides: true,
+            },
+
+            100: {
+                slidesPerView: "auto",
+                spaceBetween: 14,
+                centeredSlides: true,
+
+            }
+        }
     });
 </script>
 @php(wp_reset_query())

@@ -12,7 +12,6 @@
         .banner {
             width: 100%;
             height: auto;
-            min-height: 454px;
             padding: 77px 92px;
             .flex-row(space-between, flex-start);
             border-radius: 50px;
@@ -55,6 +54,10 @@
                     }
                 }
 
+                .btn {
+                    min-width: 272.54px;;
+                }
+
 
             }
 
@@ -68,6 +71,7 @@
                     overflow-y: scroll;
                     overflow-x: hidden;
                     margin-right: -15px;
+                    text-align: left;
 
                     /* width */
 
@@ -94,6 +98,10 @@
                     .xs({
                         margin-right: 15px;
                     });
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

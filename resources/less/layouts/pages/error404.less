@@ -27,6 +27,27 @@
         top: -48%;
         right: -39%;
         transform: rotate(5deg);
+
+        .b(laptop; {
+            top: -28%;
+            right: -36%;
+            width: 119%;
+        });
+
+        .b(tablet; {
+            top: -21%;
+            right: -31%;
+        });
+
+        .sm({
+            top: -16%;
+        });
+
+        .xs({
+            top: -12%;
+            width: 180%;
+            right: -56%;
+        });
     }
 
     .green-squiggle-2 {
@@ -34,6 +55,26 @@
         left: -12%;
         width: 2024px;
         transform: rotate(-2deg);
+
+        .b(laptop; {
+            bottom: -25%;
+            left: -6%;
+            width: 119%;
+        });
+
+        .b(tablet; {
+            bottom: -21%;
+        });
+
+        .sm({
+            bottom: -16%;
+        });
+
+        .xs({
+            bottom: -14%;
+            width: 160%;
+            left: -24%;
+        });
     }
 
     .error-404-content {
@@ -44,6 +85,10 @@
 
     .sub-heading {
         margin-bottom: 59px;
+
+        .sm({
+            margin-bottom: 30px;
+        });
         p {
             margin-bottom: 0;
         }
@@ -64,9 +109,20 @@
         overflow: hidden;
         .flex-column();
 
+        .sm({
+            width: 100%;
+            max-width: 429px;
+            margin-bottom: 40px;
+        });
+
         img {
             width: 100%;
             height: auto;
+
+            .xs({
+            	height: 100%;
+                object-fit: cover;
+            });
         }
     }
 

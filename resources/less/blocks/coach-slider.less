@@ -76,6 +76,12 @@
                     margin-bottom: 45px;
                     text-align: center;
 
+                    .xs({
+                    	.font-size(34);
+                        line-height: 101%;
+                        margin-bottom: 20px;
+                    });
+
                 }
 
                 .sub-heading {
@@ -84,10 +90,19 @@
                     text-align: center;
                     color: @accent-orange;
                     max-width: 266px;
+
+                    .xs({
+                        margin-bottom: 20px;
+                        .font-size(20);
+                    });
                 }
 
                 .btn {
                     min-width: 247px;
+
+                    .sm({
+                    	min-width: unset;
+                    });
                 }
 
             }

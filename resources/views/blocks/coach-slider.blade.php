@@ -79,6 +79,15 @@
         },
 
         breakpoints: {
+
+            1800: {
+              slidesPerView: "auto",
+            },
+
+            1700: {
+                slidesPerView: 2.8,
+            },
+
             1600: {
                 slidesPerView: "auto",
             },

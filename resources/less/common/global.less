@@ -64,11 +64,17 @@ html {
 
 .blue-top-border, .blue-bottom-border {
     height: 2px;
-    width: 100%;
+    width: calc(100% - 100px);
     background-color: @accent-blue;
     position: absolute;
     right: 0;
     left: 0;
+    margin: 0 auto;
+
+    .b(tablet; {
+    	width: calc(100% - 40px);
+        z-index: 1;
+    });
 }
 
 .blue-top-border {
@@ -122,11 +128,15 @@ html {
     });
 
     .b(tablet; {
-    	.font-size(74);
+    	.font-size(72);
     });
 
     .b(mobile; {
     	.font-size(54);
+    });
+
+    .xs({
+    	.font-size(43);
     });
 
     p {
@@ -147,8 +157,16 @@ html {
     line-height: 101%;
     font-family: @font-normal;
 
+    .b(laptop; {
+    	.font-size(26);
+    });
+
+    .b(tablet; {
+    	.font-size(24);
+    });
+
     .xs({
-    	.font-size(22);
+    	.font-size(20);
         margin-bottom: 20px;
     });
 
@@ -195,8 +213,8 @@ html {
 
 .fixed-button {
     position: fixed;
-    top: calc(100vh - 129px - 43px);
-    left: calc(50vw + 707px - 80px);
+    top: calc(100vh - 129px - 39px);
+    left: calc(50vw + 707px - 71px);
     transform: translateX(-50%);
     width: 102px;
     height: 102px;
@@ -211,7 +229,8 @@ html {
         left: calc(100vw - 60px - 20px);
         width: 80px;
         height: 80px;
-        top: calc(100vh - 100px - 50px);
+        bottom: 30px;
+        top: unset;
     });
 
     .b(mobile; {
@@ -256,14 +275,28 @@ ul.bullet-list {
         padding-left: calc(28px + 27px);
         position: relative;
 
+        .b(tablet; {
+        	.font-size(24);
+            line-height: 1;
+            max-width: 444px;
+        });
+
         .b(mobile; {
             padding-left: calc(20px + 27px);
             .font-size(22);
             line-height: 101%;
         });
 
+        .xs({
+        	.font-size(20);
+        });
+
         &:not(:last-of-type) {
             margin-bottom: 34px;
+
+            .b(mobile; {
+                margin-bottom: 20px;
+            });
         }
 
         &:before {

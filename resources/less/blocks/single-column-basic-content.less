@@ -52,6 +52,21 @@
         height: 822px;
         width: auto;
 
+        .b(laptop; {
+            right: 77%;
+            left: unset;
+            bottom: -26%;
+            height: 100%;
+        });
+
+        .b(tablet; {
+            right: 86%;
+        });
+
+        .sm({
+            right: 81%;
+        });
+
         svg {
             width: auto;
             height: 100%;
@@ -61,6 +76,14 @@
     .container {
         position: relative;
         z-index: 1;
+
+    }
+
+
+    .next-section-arrow {
+        .sm({
+            display: none;
+        });
     }
 }
 
@@ -102,13 +125,20 @@
         }
 
         .green-squiggle-1 {
-            top: -50%;
-            right: -33%;
+            top: -53%;
+            right: -25%;
             transform: rotate(5deg);
             width: 2024px;
 
-            .b(desktop; {
+            .b(large-desktop; {
                 top: -50%;
+                right: -33%;
+                transform: rotate(5deg);
+                width: 2024px;
+            });
+
+            .b(desktop; {
+                top: -45%;
                 right: -33%;
                 transform: rotate(5deg);
                 width: 120%;
@@ -130,13 +160,22 @@
         }
 
         .green-squiggle-2 {
-            bottom: -45%;
-            left: -5%;
-            width: 2024px;
+            bottom: -50%;
+            left: 0;
+            width: 100%;
             transform: rotate(-4deg);
+            min-width: 2024px;
+
+            .b(large-desktop; {
+                bottom: -45%;
+                left: -5%;
+                width: 2024px;
+                transform: rotate(-4deg);
+                min-width: unset;
+            });
 
             .b(desktop; {
-                bottom: -45%;
+                bottom: -40%;
                 left: -4%;
                 width: 120%;
             });
@@ -297,6 +336,28 @@
     &.green-blob-overlap {
         overflow: visible;
         padding-bottom: 0;
+
+        .sub-heading {
+            .b(tablet; {
+            	max-width: 575px;
+                margin-left: auto;
+                margin-right: auto;
+                .font-size(26);
+
+                br {
+                    display: none;
+                }
+            });
+
+            .sm({
+                max-width: 330px;
+                .font-size(24);
+            });
+
+            .xs({
+            	.font-size(20);
+            });
+        }
     }
 
     &.keep-link-orange {

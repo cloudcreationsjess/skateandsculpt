@@ -140,6 +140,48 @@
                     prevSlideMessage: 'Previous slide',
                     nextSlideMessage: 'Next slide',
                 },
+
+                breakpoints: {
+                    1600: {
+                        slidesPerView: "auto",
+                    },
+
+                    1480: {
+                        slidesPerView: "auto",
+                        spaceBetween: 100,
+                    },
+
+                    1350: {
+                        slidesPerView: "auto",
+                        spaceBetween: 100,
+                        centeredSlides: true,
+                    },
+                    1024: {
+                        slidesPerView: "auto",
+                        spaceBetween: 100,
+                        centeredSlides: true,
+                    },
+
+                    768: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                    },
+
+                    576: {
+                        slidesPerView: "auto",
+                        spaceBetween: 40,
+                        centeredSlides: true,
+                    },
+
+                    300: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                        centeredSlides: true
+
+                    }
+
+                }
+
             });
         </script>
 

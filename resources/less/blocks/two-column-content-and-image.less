@@ -29,6 +29,19 @@
         height: 1288px;
         width: auto;
 
+        .b(laptop; {
+            right: -11%;
+            top: 49%;
+            z-index: 0;
+            height: 888px;
+            width: auto;
+        });
+
+        .sm({
+        	height: 444px;
+            top: 62%;
+        });
+
         svg {
             height: 100%;
             width: auto;
@@ -111,6 +124,7 @@
         z-index: 1;
         position: relative;
         padding: 127px 50px;
+        justify-content: space-between;
 
         .b(laptop; {
         	.flex-column();
@@ -133,11 +147,10 @@
 
             .b(laptop; {
                 margin-bottom: 60px;
-                margin-right: auto;
-                margin-left: auto;
-                max-width: 666px;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
+                margin-right: 0;
             });
 
             .b(tablet; {
@@ -193,8 +206,10 @@
                 .flex-column();
                 border-radius: 50px;
                 overflow: hidden;
-                height: 777px;
-                width: 666px;
+                max-height: 777px;
+                max-width: 666px;
+                height: auto;
+                width: 100%;
 
                 .b(desktop; {
                 	height: 100%;
@@ -216,11 +231,30 @@
     &.green-blob-overlap {
         overflow: visible;
         .container {
-            .flex-row(space-between);
 
             .left-column {
+                width: 50%;
+
+                .b(laptop; {
+                	width: 100%;
+                });
+
                 .btn {
                     min-width: 223px;
+                }
+            }
+
+            .right-column {
+                width: 50%;
+                max-width: 666px;
+
+                .b(laptop; {
+
+                    width: 100%;
+                });
+
+                .image-container {
+                    max-height: 777px;
                 }
             }
         }
@@ -236,7 +270,6 @@
                 padding: 20px 50px 80px 50px;
                 padding-bottom: 20px;
             });
-
 
 
             .b(tablet; {
@@ -261,6 +294,9 @@
 
                 .b(laptop; {
                 	max-width: 50%;
+                    text-align: left;
+                    align-items: flex-start;
+                    justify-content: flex-start;
                 });
 
                 .b(tablet; {
@@ -269,6 +305,9 @@
                     margin-right: unset;
                     max-width: 100%;
                     margin-left: unset;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    text-align: center;
                 });
 
                 .b(mobile; {

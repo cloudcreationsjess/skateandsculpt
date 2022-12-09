@@ -376,5 +376,4 @@
 
 //DISABLE GRAVITY FORMS SCROLL
 
-
     add_filter( 'gform_confirmation_anchor', '__return_false' );

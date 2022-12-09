@@ -1,4 +1,6 @@
 .bordered-image-color-block, .questions-section {
+    position: relative;
+    z-index: 2;
     .container {
         .colored-container {
             width: 100%;
@@ -7,8 +9,7 @@
             height: auto;
             position: relative;
 
-
-            .md({
+            .b(tablet; {
                 .flex-column();
             });
 
@@ -16,16 +17,22 @@
                 .flex-column();
                 text-align: center;
                 padding: 80px 150px;
+                width: 50%;
 
-                .md({
+                .b(laptop; {
+                    padding: 80px 40px;
+                });
+
+                .b(tablet; {
                 	width: 100%;
+                    padding: 80px 60px;
+                    br {
+                        display: none;
+                    }
                 });
 
                 .sm({
 
-                    br {
-                        display: none;
-                    }
                 });
 
                 .xs({
@@ -42,6 +49,12 @@
                 display: flex;
                 align-items: stretch;
                 height: auto;
+
+                .b(tablet; {
+                    height: 390px;
+                    width: 100%;
+                });
+
 
 
 
@@ -60,8 +73,7 @@
                         height: 100%;
                         object-fit: cover;
 
-
-                        .md({
+                        .b(tablet; {
                             width: 100%;
                             height: auto;
                             object-fit: cover;
@@ -91,10 +103,11 @@
                 .left-container {
                     min-width: 50%;
 
-                    .md({
+                    .b(tablet; {
                         height: 390px;
                         width: 100%;
                     });
+
                 }
 
                 .right-container {
@@ -113,12 +126,13 @@
                         margin-left: 60px;
                     });
 
-                    .md({
+                    .b(tablet; {
                         margin-left: 0;
                         margin-right: 0;
                         width: 100%;
                         padding: 54px 50px;
                     });
+
 
                     .xs({
                     	padding: 50px 20px;
@@ -131,9 +145,10 @@
                         max-width: 607px;
                         margin-right: auto;
 
-                        .md({
+                        .b(tablet; {
                             max-width: unset;
                         });
+
                     }
 
                     .all-caps-heading {
@@ -155,8 +170,8 @@
                         	max-height: 250px;
                         });
 
-                        .md({
-                            width: 100%;
+                        .b(tablet; {
+                            width: 100px;
                         });
 
                         p {
@@ -168,8 +183,8 @@
                                 margin-right: 50px;
                             });
 
-                            .md({
-                                max-width: unset;
+                            .b(tablet; {
+                            	max-width: unset;
                             });
 
                             .xs({
@@ -195,6 +210,10 @@
                             background: @accent-orange;
                             border-radius: 5px;
                         }
+                    }
+
+                    .btn {
+                        min-width: 212px;
                     }
                 }
             }

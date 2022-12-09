@@ -13,7 +13,7 @@
         .b(tablet; {
             bottom: -44%;
             right: -23%;
-           width: 1280px;
+            width: 1280px;
         });
 
         svg {
@@ -45,14 +45,89 @@
             });
 
             .b(tablet; {
-            	align-items: center;
+                align-items: center;
                 justify-content: center;
+                margin: 0 auto;
             });
 
             .sub-heading {
                 margin-bottom: 10px;
+                margin-bottom: 56px;
             }
 
+            //GRAVITY FORMS OVERWRITE
+
+            .gform_heading {
+                display: none;
+            }
+
+            #gform_3 {
+                .b(tablet; {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    .flex-column();
+                });
+            }
+
+
+            input {
+                border: 1px solid @accent-orange;
+                width: 341px;
+                height: 71.41px;
+                padding: 24.55px 0;
+                padding-left: 38.82px;
+                border-radius: 50px;
+                background-color: transparent;
+                text-transform: uppercase;
+                font-family: @font-bold;
+                .font-size(16);
+                color: @accent-orange;
+                min-width: 341px;
+
+                .b(tablet; {
+                	padding: 22px 30px;
+                    text-align: center;
+                });
+
+                .sm({
+                	min-width: 100%;
+                });
+
+                &::placeholder {
+                    text-transform: uppercase;
+                    font-family: @font-bold;
+                    .font-size(16);
+                    color: @accent-orange;
+                }
+            }
+
+            .gform_button {
+                background-color: @accent-lime;
+                padding: 22px 50px!important;
+                min-width: 167px;
+                width: auto;
+                .flex-column();
+                color: @accent-orange;
+                border: 2px solid @accent-lime;
+
+                &:hover, &:active, &:not(:disabled):not(.disabled):active {
+                    border-color: @accent-orange;
+                    .box-shadow-button-orange();
+                    color: @accent-orange;
+                }
+
+            }
+
+            .gform_wrapper.gravity-theme .gform_footer, .gform_wrapper.gravity-theme .gform_page_footer {
+                margin: 0;
+                padding: 15px 0;
+            }
+
+        }
+
+        .gform_confirmation_message {
+            color: @accent-orange;
         }
 
         .right-column {
@@ -65,7 +140,7 @@
             });
 
             .xs({
-            	width: 100%;
+                width: 100%;
             });
 
             .shop-image {
