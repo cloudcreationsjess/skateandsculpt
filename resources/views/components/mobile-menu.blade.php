@@ -10,7 +10,8 @@
                 <?php if (have_rows('banner_button', 'option')): while (have_rows('banner_button', 'option')): the_row();
                     $cta = get_sub_field('banner_call_to_action', 'option');
                     $url = get_sub_field('banner_url', 'option'); ?>
-                <a class="btn btn--pink-blue" href='{{ $url }}'>{!! $cta !!}</a>
+                <a class="btn btn--pink- desktop" href='{{ $url }}'>{!! $cta !!}</a>
+                <a class="btn btn--pink-blue mobile" href='{{ $url }}'>{!! get_sub_field('mobile_call_to_action', 'option') !!}</a>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>

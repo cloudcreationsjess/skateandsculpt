@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="two-column-banner">
+<section class="two-column-banner"  data-aos="fade-in">
     <div class='container'>
         <div class='banner background-color--{{ get_field('background_color') }}'>
             <div class='left-column'>

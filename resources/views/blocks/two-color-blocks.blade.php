@@ -15,13 +15,13 @@
 <section class="two-colored-blocks {{ $block['classes'] }}">
     <div class='container'>
         <div class='colored-blocks'>
-            <div class='left-colored-block background-color--{{ get_field('left_block')['background_color'] }}'>
+            <div class='left-colored-block background-color--{{ get_field('left_block')['background_color'] }}' data-aos="fade-in" data-aos-anchor-placement="top-bottom">
                 @if(get_field('left_block'))
                     @php($left = get_field('left_block')['basic_content'])
                     <x-basic-content :content="$left" />
                 @endif
             </div>
-            <div class='right-colored-block background-color--{{ get_field('right_block')['background_color'] }}'>
+            <div class='right-colored-block background-color--{{ get_field('right_block')['background_color'] }}' data-aos="fade-in" data-aos-anchor-placement="top-bottom">
                 @if(get_field('right_block'))
                     @php($right = get_field('right_block')['basic_content'])
                     <x-basic-content :content="$right" />

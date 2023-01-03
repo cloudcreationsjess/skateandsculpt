@@ -62,7 +62,7 @@
         watchOverflow: true,
         loop: true,
         autoplay: false,
-        slidesPerView: 2.8,
+        slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 115,
         slideToClickedSlide: true,
@@ -82,19 +82,23 @@
 
             1800: {
               slidesPerView: "auto",
+                centeredSlides: true,
             },
 
             1700: {
                 slidesPerView: 2.8,
+                centeredSlides: true,
             },
 
             1600: {
                 slidesPerView: "auto",
+                centeredSlides: true,
             },
 
             1480: {
                 slidesPerView: "auto",
                 spaceBetween: 100,
+                centeredSlides: true,
             },
 
             1350: {
@@ -105,6 +109,7 @@
             1024: {
                 slidesPerView: "auto",
                 spaceBetween: 100,
+                centeredSlides: true,
             },
 
             576: {
@@ -122,6 +127,7 @@
             300: {
                 slidesPerView: "auto",
                 spaceBetween: 60,
+                centeredSlides: true,
 
             }
         }

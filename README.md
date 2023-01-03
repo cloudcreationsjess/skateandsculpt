@@ -66,7 +66,7 @@ Example: We can set my-component's `$foo` variable as `$bar`
 <x-my-component :foo="$bar" />
 ```
 - For more on blade, see https://laravel.com/docs/8.x/blade
-- Too create a new wordpress template, copy and paste the `template-custom.blade.php` found in `resources/views`. Then update the `Template Name:` comment at the top of the file.
+- Too create a new wordpress template, copy and paste the `template-custom.blade.php` found in `resources/views`. Then update the `Template_Name:` comment at the top of the file.
 - You can do php in blade 2 ways
     - For a single line of php you can use `@php()` ie. `@php($foo = 'bar')`
     - For multiple lines of php you can use `@php @endphp` ie

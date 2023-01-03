@@ -14,7 +14,7 @@
 
 <section class="bordered-image-color-block {{ $block['classes'] }}">
      <div class='container'>
-         <div class='colored-container background-color--{{ get_field('right_column')['block_background_color'] }}'>
+         <div class='colored-container background-color--{{ get_field('right_column')['block_background_color'] }}' data-aos="fade-in">
              <div class='left-container'>
                  <div class='left-image'>
                      {{ the_image(get_field('left_column')['image']) }}

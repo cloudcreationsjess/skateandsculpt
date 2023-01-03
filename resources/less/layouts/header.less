@@ -9,6 +9,8 @@
 #header {
     width: 100%;
     z-index: 999;
+    transition: height 150ms;
+    transition-timing-function: linear;
 
     .current-menu-parent > a:before, .home.current-page-ancestor > a:before {
         //left: 0 !important;
@@ -55,7 +57,7 @@
     background: @background-color;
 
     .b(tablet; {
-    	height: 100px;
+        height: 100px;
     });
 
     .header__container {
@@ -68,7 +70,7 @@
         width: 100%;
 
         .b(tablet; {
-        	padding: 0 20px;
+            padding: 0 20px;
             height: 100px;
         });
 
@@ -88,7 +90,6 @@
                 height: 100px;
             });
 
-
             #header__site-branding__logo {
                 height: 64px;
                 width: auto;
@@ -101,7 +102,7 @@
                     .full-width();
 
                     .b(tablet; {
-                    	width: auto;
+                        width: auto;
                         height: 100%;
                     });
                 }
@@ -199,6 +200,26 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+
+                    .b(mobile; {
+                        background-image: url("/wp-content/uploads/2022/12/blue-blob.svg");
+                        background-size: contain;
+                        background-color: transparent;
+                        text-transform: uppercase;
+                        background-repeat: no-repeat;
+                        .flex-column();
+                        text-align: center;
+                        z-index: 9999;
+                        position: relative;
+                        border: none;
+                        color: @background-color;
+                        padding: 29px 10px;
+
+                        &:hover, &:focus {
+                            box-shadow: none;
+                        }
+
+                    });
                 }
             });
         }
@@ -228,7 +249,7 @@
                 .hamburger.is-active .hamburger-inner::before,
                 .hamburger.is-active .hamburger-inner::after,
                 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-                    background-color:@accent-blue;
+                    background-color: @accent-blue;
                 }
             }
 
@@ -250,6 +271,27 @@
     height: @header-height;
 
     .b(tablet; {
-    	height: 100px;
+        height: 100px;
     });
 }
+
+// HEADER ON SCROLL
+
+#header {
+
+    &.header.header--secondary {
+        height: calc(@header-height - 30px);
+
+        .header__container {
+            height: calc(@header-height - 30px);
+
+            .header__site-branding {
+                height: calc(@header-height - 30px);
+            }
+        }
+
+    }
+
+}
+
+

@@ -18,7 +18,7 @@
         @if(have_rows($block))
             @while(have_rows($block))
                 @php(the_row())
-                <div class='flip-block'>
+                <div class='flip-block'  data-aos="fade-in">
                     <div class='colored-block background-color--{{ get_sub_field('background_color') }}'>
                         @php($cube = get_sub_field('cube_content'))
                         <div class='script-heading'>{!! $cube['script_heading'] !!}</div>

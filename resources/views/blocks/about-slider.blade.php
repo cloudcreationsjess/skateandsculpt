@@ -34,7 +34,7 @@
             @php( $slider = get_field('slider', get_the_ID()))
             <section class="orange-slider js__slider-count-{{$postCount}} {{ $block['classes'] }}">
                 <div class="container orange-slider-container">
-                    <div class='slider-content'>
+                    <div class='slider-content'  data-aos="fade-in">
                         <div class='left-column'>
                             @php( $contentIt = 1)
                             @foreach($slider as $slide)
@@ -87,13 +87,14 @@
                 var swiper{{$postCount}} = new Swiper('.instance-{{$postCount}}', {
                     // your settings ...
                     direction: 'horizontal',
-                    clickable: true,
+                    clickable: false,
                     watchOverflow: false,
                     loop: true,
                     autoplay: false,
                     slidesPerView: 1.7,
                     spaceBetween: 14,
                     centeredSlides: false,
+                    grabCursor: true,
 
                     on: {
                         init: function() {

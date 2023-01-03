@@ -36,7 +36,7 @@
     <div class='blue-outline-squiggle--2'>
          <x-svg.blue-outline-squiggle />
     </div>
-    <div class='testimonials-container'>
+    <div class='testimonials-container'  data-aos="fade-in">
         <div class='script-heading'>
             {!! get_field('title') !!}
         </div>

@@ -377,3 +377,76 @@
 //DISABLE GRAVITY FORMS SCROLL
 
     add_filter( 'gform_confirmation_anchor', '__return_false' );
+
+    //* Dashboard Widget
+    function mtt_add_dashboard_widgets() {
+        wp_add_dashboard_widget(
+            'mtt_dashboard_widget', // Widget slug.
+            'Quick Links', // Title.
+            'mtt_dashboard_widget_function' // Display function.
+        );
+    }
+    add_action( 'wp_dashboard_setup', 'mtt_add_dashboard_widgets' );
+    function mtt_dashboard_widget_function() {
+        echo "
+	<div style='display:table;' class='welcome-widget-wrap'>
+	<a href='https://madetothrive.com' target='_blank'><img class='alignleft' style='
+		float: left;
+		padding-left: 25px;
+		width: 75px;
+		padding-top: 5px;
+	' src='https://madetothrive.com/wp-content/uploads/2021/04/mtt-mark@2x.png'/></a>
+	<a style='color: white; text-decoration: none;' class='welcome-widget' href='https://madetothrive.com' target='_blank'>
+		<button style='
+			border: none;
+		    color: white;
+		    text-transform: uppercase;
+		    letter-spacing: .13em;
+		    padding: 15px 20px;
+		    font-weight: bold;
+		    font-size: 12px;
+		    display: block;
+		    margin: 5px auto;
+		    background: #c2b7ab;
+		    width: 100%;
+		    cursor: pointer;
+		    width: calc(100% - 150px);
+			float: right;
+			margin-right: 10px;
+		'>Watch Your Training Video</button>
+	</a>
+	<a style='color: white; text-decoration: none;' class='welcome-widget' href='https://madetothrive.com/support' target='_blank'>
+		<button style='
+			border: none;
+		    color: white;
+		    text-transform: uppercase;
+		    letter-spacing: .13em;
+		    padding: 15px 20px;
+		    font-weight: bold;
+		    font-size: 12px;
+		    display: block;
+		    margin: 5px auto;
+		    background: #c2b7ab;
+		    cursor: pointer;
+		    width: calc(100% - 150px);
+			float: right;
+			margin-right: 10px;
+		'>Schedule Support/Revisions</button>
+	</a>
+	</div>
+	";
+    }
+
+    //clean dashboard
+
+    function remove_dashboard_meta() {
+        remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); //Removes the 'incoming links' widget
+        remove_meta_box('dashboard_plugins', 'dashboard', 'normal'); //Removes the 'plugins' widget
+        remove_meta_box('dashboard_primary', 'dashboard', 'normal'); //Removes the 'WordPress News' widget
+        remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); //Removes the secondary widget
+        remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side'); //Removes the 'Recent Drafts' widget
+        remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); //Removes the 'Activity' widget
+        remove_meta_box('dashboard_activity', 'dashboard', 'normal'); //Removes the 'Activity' widget (since 3.8)
+        remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
+    }
+    add_action('admin_init', 'remove_dashboard_meta');

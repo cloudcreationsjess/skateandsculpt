@@ -15,7 +15,7 @@
 <section class="three-featured-blogs">
     <div class='blue-border'></div>
     <div class='container'>
-        <div class='all-caps-heading'>
+        <div class='all-caps-heading'  data-aos="fade-in">
             {!! get_field('title') !!}
         </div>
         <div class='featured-blogs'>
@@ -25,7 +25,7 @@
                     @php($permalink = get_permalink( $post->ID ))
                     @php($title = get_the_title( $post->ID ))
                     @php($image = get_the_post_thumbnail( $post->ID ))
-                    <div class='featured-post'>
+                    <div class='featured-post'  data-aos="fade-in">
                         <a class="" href="{{ $permalink }}">
                             <div class='post-image'>
                                 {!! $image !!}

@@ -40,13 +40,13 @@
         <div class='blue-bottom-border'></div>
     @endif
     <div class='container'>
-        <div class='left-column'>
+        <div class='left-column' data-aos="fade-in">
             @if(get_field('left_column'))
                 @php($column = get_field('left_column')['basic_content'])
                 <x-basic-content :content="$column" />
             @endif
         </div>
-        <div class='right-column'>
+        <div class='right-column' data-aos="fade-in">
             <div class='image-container'>
                 @if(get_field('right_column'))
                     {{ the_image(get_field('right_column')['image']) }}

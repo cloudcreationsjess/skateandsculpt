@@ -52,6 +52,7 @@
         slidesPerView: 1.6,
         spaceBetween: 14,
         slideToClickedSlide: true,
+        grabCursor: true,
 
 
         //accessible

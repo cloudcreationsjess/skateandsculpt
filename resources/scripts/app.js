@@ -5,7 +5,7 @@ import 'jquery';
 
 $(document).ready(() => {
     // windowLoad();
-    // scroller();
+    scroller();
     // animateOnScroll();
 
     // Run script on specific page
@@ -13,8 +13,6 @@ $(document).ready(() => {
     // if (url_pathname == "/page-name/") {
     // yourScript();
     // }
-
-
     mobileMenu();
 
 
@@ -51,34 +49,34 @@ function mobileMenu() {
 /*
  * Any on scroll functionality should be placed here so only one window scroll is called
  */
-// function scroller() {
-//
-//     // == Change Header on scroll ==
-// //     var header = $(".js__header");
-// //
-// //     // ******* SCROLL ************\\
-// //     $(window).on('scroll', function () {
-// //
-// //         // == Change Header on scroll ==
-// //         scroll = $(window).scrollTop();
-// //         // set scroll amount (px)
-// //         if (scroll >= 60) {
-// //             header.addClass("header--secondary");// if scroll is further than #px change class
-// //             // splashBox.css("z-index", -100);
-// //         } else {
-// //             header.removeClass("header--secondary"); // if not (is at top) change class back
-// //         }
-// //
-// //     });
-// //
-// //     // == Change Header on scroll ==
-// //     var scroll = scroll;
-// //     if (scroll >= 60) {
-// //         header.addClass("header--secondary");// if scroll is further than #px change class
-// //     } else {
-// //         header.removeClass("header--secondary"); // if not (is at top) change class back
-// //     }
-// }
+function scroller() {
+
+    // == Change Header on scroll ==
+    var header = $(".js__header");
+
+    // ******* SCROLL ************\\
+    $(window).on('scroll', function () {
+
+        // == Change Header on scroll ==
+        scroll = $(window).scrollTop();
+        // set scroll amount (px)
+        if (scroll >= 120) {
+            header.addClass("header--secondary");// if scroll is further than #px change class
+            // splashBox.css("z-index", -100);
+        } else {
+            header.removeClass("header--secondary"); // if not (is at top) change class back
+        }
+
+    });
+
+    // == Change Header on scroll ==
+    var scroll = scroll;
+    if (scroll >= 120) {
+        header.addClass("header--secondary");// if scroll is further than #px change class
+    } else {
+        header.removeClass("header--secondary"); // if not (is at top) change class back
+    }
+}
 
 /*
  * Adds scroll to animation functionality

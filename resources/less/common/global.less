@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
     overflow-y: scroll;
 
+
     ::selection {
         background-color: @accent-lime;
         color: @background-color;
@@ -89,7 +90,7 @@ html {
 .all-caps-heading {
     color: @accent-light-purple;
     font-family: @font-sans-heading;
-    .font-size(64);
+    .font-size(62);
     line-height: 101%;
     font-weight: 700;
     text-transform: uppercase;
@@ -119,7 +120,7 @@ html {
 .script-heading {
     color: @accent-orange;
     font-family: @font-script;
-    .font-size(96);
+    .font-size(94);
     font-weight: 400;
     line-height: 101%;
 
@@ -152,7 +153,7 @@ html {
 .sub-heading {
     margin-bottom: 32px;
     color: inherit;
-    .font-size(28);
+    .font-size(26);
     font-weight: 300;
     line-height: 101%;
     font-family: @font-normal;
@@ -186,8 +187,8 @@ html {
 }
 
 .basic-text {
-    .font-size(20);
-    line-height: 20.2px;
+    .font-size(18);
+    line-height: 1.2;
     font-weight: 300;
     color: inherit;
     font-family: @font-normal;
@@ -269,8 +270,8 @@ ul.bullet-list {
 
     li.bullet-list__item {
         color: inherit;
-        .font-size(28);
-        line-height: 28px;
+        .font-size(26);
+        line-height: 26px;
         .flex-row(flex-start, flex-start);
         padding-left: calc(28px + 27px);
         position: relative;
@@ -366,8 +367,12 @@ ul.bullet-list {
     color: @accent-pink !important;
 }
 
-color--dark-purple {
+.color--dark-purple {
     color: @accent-dark-purple !important;
+}
+
+.color--lime {
+    color: @accent-lime!important;
 }
 
 

@@ -20,13 +20,13 @@
         <div class='blue-bottom-border'></div>
     @endif
     <div class='container'>
-        <div class='left-column'>
+        <div class='left-column' data-aos="fade-in">
             @if(get_field('left_column'))
                 @php($left = get_field('left_column')['basic_content'])
                 <x-basic-content :content="$left"/>
             @endif
         </div>
-        <div class='right-column'>
+        <div class='right-column' data-aos="fade-in">
             @if (get_field('right_column'))
                 @php($right = get_field('right_column')['basic_content'])
                 <x-basic-content  :content="$right"/>

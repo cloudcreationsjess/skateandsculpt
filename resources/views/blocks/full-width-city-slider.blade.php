@@ -50,13 +50,15 @@
     const swiperFullWidthCity = new Swiper('.swiper-full-width-cities', {
         // Optional parameters
         direction: 'horizontal',
-        clickable: false,
+        clickable: true,
         watchOverflow: true,
         loop: true,
         autoplay: false,
         slidesPerView: 2.8,
         centeredSlides: true,
         spaceBetween: 115,
+        slideToClickedSlide: true,
+        grabCursor: true,
 
         //accessible
         keyboard: {
@@ -72,6 +74,7 @@
         breakpoints: {
             1600: {
                 slidesPerView: "auto",
+                centeredSlides: true,
             },
 
             1480: {

@@ -15,7 +15,7 @@
 <section class="redefine-block {{ get_field('class') }} {{ $block['classes'] }}">
     <div class='green-squiggle-1'><x-svg.squiggle /></div>
     <div class='green-squiggle-2'><x-svg.squiggle /></div>
-    <div class='container'>
+    <div class='container'  data-aos="fade-in" data-aos-anchor-placement="top-center">
         <div class='redefine-title'>
                 {!! get_field('heading') !!}
         </div>

@@ -69,6 +69,7 @@
         // centeredSlides: true,
         spaceBetween: 114,
         slideToClickedSlide: true,
+        grabCursor: true,
 
         on: {
             init: function() {

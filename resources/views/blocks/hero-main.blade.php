@@ -27,7 +27,9 @@
             @endif
         </div>
         <div class='hero-title'>
-            {!! get_field('title') !!}
+            <div class='color--{{ strtolower(str_replace(' ', '-', get_field('text_color'))) }}'  data-aos="fade-in" data-aos-anchor=".hero-main">
+                {!! get_field('title') !!}
+            </div>
         </div>
     </div>
 </section>
